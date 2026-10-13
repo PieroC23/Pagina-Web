@@ -1,0 +1,2761 @@
+--- PAGE 1 ---
+Restock E.I.R.L. — Contenido para la web del expediente TI 
+Contenido de cada pantalla del expediente web de Restock E.I.R.L. Los resultados de entrevistas y 
+cuestionarios son simulados para completar el diseño; reemplázalos por los datos reales antes de 
+entregar. 
+Portada 
+Etiqueta: Caso de estudio real · Tienda de sneakers de colección 
+Título: Diagnóstico del control del inventario y de la seguridad del almacén de Restock E.I.R.L. 
+Resumen: Expediente de proyecto para Restock E.I.R.L., empresa peruana de zapatillas urbanas de 
+colección, streetwear y accesorios, con tienda física en Lima y ventas por web (restock.com.pe), 
+Instagram (@restock.pe) y WhatsApp. El estudio identifica por qué el inventario físico no coincide con el 
+registro, por qué los faltantes se descubren tarde y cómo esto afecta las ventas online y la seguridad de 
+una mercadería de alto valor. 
+Firma: Por el equipo del proyecto · Ingeniería de Sistemas · Formulación de Proyectos TI 
+Problema general 
+Pérdida de trazabilidad y visibilidad en tiempo real del inventario físico, con alta 
+vulnerabilidad ante mermas y riesgos de seguridad en el almacén de Restock Perú. Se 
+origina en un control manual y descentralizado del inventario en hojas de cálculo y en 
+una custodia de la mercadería que no deja registro de quién entra, qué sale ni cuándo. 
+Así trabaja hoy Restock 
+Fotografías tomadas por el equipo en el almacén y en la tienda. Muestran el punto de partida: stock en 
+hojas de cálculo, mercadería de alto valor sin registro de accesos y coordinación suelta por WhatsApp. 
+Figura 
+Etiqueta y pie 
+1 
+Control manual · Hoja de Excel de inventario 
+abierta en el computador 
+3 
+Almacén · Anaqueles con cajas de sneakers sin 
+identificación por posición 
+4 
+Seguridad · Puerta del almacén y llaves en 
+circulación 
+5 
+Coordinación · Grupo de WhatsApp donde se 
+avisan los movimientos de stock 
+6 
+Venta digital · Pedido online cancelado por falta 
+de stock 
+Evidencias levantadas en campo, setiembre de 2026. 
+
+--- PAGE 2 ---
+Capítulos 
+Título de la sección: Del negocio al problema y de este a la solución 
+N.º 
+Etiqueta 
+Título 
+Descripción 
+01 
+Contexto del negocio 
+Planteamiento del 
+Proyecto y Contexto 
+del Negocio 
+Quiénes somos, cómo 
+vende Restock, qué 
+problema se observa y 
+qué valor está en 
+riesgo. 
+02 
+Entorno y evidencias 
+Marco Contextual, 
+Entorno Organizacional 
+y Evidencias de Campo 
+Entorno de la empresa, 
+entrevistas y 
+cuestionarios a todo el 
+personal, evidencias 
+fotográficas y 
+diagnóstico de la 
+situación actual. 
+03 
+Stakeholders 
+Gestión Estratégica de 
+Stakeholders 
+Quién decide, quién 
+opera y quién depende 
+del inventario dentro 
+de la empresa: poder, 
+interés, actitud y 
+responsabilidades 
+actuales. 
+04 
+Árbol de problemas 
+Árbol de Problemas: 
+Causas, Problema 
+Central y Efectos 
+De dónde nacen los 
+descuadres y las 
+mermas, con la 
+evidencia de las 
+entrevistas y del 
+cuestionario. 
+05 
+Objetivos y alternativas 
+Árbol de Objetivos y 
+Evaluación de 
+Proyectos Alternativos 
+Del problema a la 
+solución: objetivos, 
+acciones y la 
+alternativa que se 
+ejecutará. 
+Cuatro voces de la operación 
+Gerencia, almacén, ventas y sistemas: lo que dijo cada perfil en su entrevista, lo que marcó en la escala 
+Likert y cómo confirma el diagnóstico. 
+Perfil 
+Participantes 
+Instrumentos 
+
+--- PAGE 3 ---
+Perfil 
+Participantes 
+Instrumentos 
+Gerencia y Administración 
+Gerente General y Contador / 
+Administrador 
+Entrevista de 12 preguntas · 18 
+afirmaciones 
+Almacén e Inventarios 
+Jefe de Almacén y auxiliar de 
+almacén 
+Entrevista de 8 preguntas · 18 
+afirmaciones 
+Ventas y Tienda 
+Jefe de Ventas y 2 vendedores 
+Entrevista de 7 preguntas · 15 
+afirmaciones 
+Marketing y E-commerce 
+Especialista en Marketing y e-
+commerce 
+Entrevista de 7 preguntas · 15 
+afirmaciones 
+Integrantes del proyecto 
+Equipo formulador de TI, estudiantes de Ingeniería de Sistemas. Una ficha por integrante con nombre 
+completo y rol (Integrativo / TI).  
+• 
+Garibay Salazar Claudia 
+• 
+Correa Cardenas Piero 
+• 
+Romero Flores Sebasthian 
+• 
+Barrios Fernandez Victor Joel 
+• 
+De la Torre Zuñiga Daniela 
+Capítulo 1 · Planteamiento del Proyecto y Contexto del Negocio 
+Capítulo 01 · Contexto del negocio. Quiénes somos, cómo vende Restock, qué problema se observa y 
+qué valor está en riesgo. 
+Marco PMBOK 7: dominio de desempeño de Entrega y principio Enfocarse en el valor; el caso de 
+negocio se plantea desde la necesidad y el valor en riesgo, no desde una solución. 
+Imagen de apertura: Figura 3, anaqueles con cajas de sneakers sin identificación por posición (Estado 
+AS-IS). 
+1.1 Información General y Modelo Comercial 
+La empresa opera con la razón social Restock E.I.R.L. y el nombre comercial Restock Perú. Es una 
+empresa peruana dedicada a la venta minorista de zapatillas urbanas de colección (sneakers de alta 
+gama), ropa streetwear y accesorios. Trabaja con un modelo híbrido: una tienda física en Lima y ventas 
+digitales por Instagram, WhatsApp y su página web. 
+Sus productos tienen alta demanda, precios elevados y lanzamientos en ediciones limitadas, por lo que 
+el stock no admite errores: cada par se identifica por marca, modelo exacto, color y talla. En el último 
+conteo (agosto de 2026) el inventario registrado era de 300 pares y unas 100 prendas y accesorios, con 
+un precio promedio de S/ 700 por par. 
+
+--- PAGE 4 ---
+Aspecto 
+Descripción 
+Qué vende 
+Sneakers exclusivos, streetwear y accesorios de 
+marcas como Nike, Jordan, Adidas y OFF-WHITE. 
+Dónde vende 
+Tienda física en Lima y canales digitales: web 
+(restock.com.pe), Instagram (@restock.pe) y 
+WhatsApp. 
+Cuánto vende online 
+Unos 180 pedidos al mes, con un ticket promedio 
+de S/ 780. 
+Qué lo hace delicado 
+Alto valor unitario por lote, ediciones limitadas y 
+necesidad de identificar cada par por marca, 
+modelo, color y talla. 
+1.2 Diagnóstico Situacional y Planteamiento del Problema 
+• 
+Diagnóstico operativo: Existe un descuadre constante entre lo que dicen las hojas de cálculo y 
+lo que realmente hay en los anaqueles. En el último conteo completo se hallaron 475 de los 500 
+pares registrados (5 % de diferencia). Por eso no se detecta a tiempo si faltan pares, si sobran 
+productos por mal conteo, si una caja quedó mal ubicada o si hubo movimientos no autorizados 
+de mercadería cara. 
+• 
+Causas principales: La ubicación y la identificación de cada par dependen de la memoria y la 
+vista del personal; los accesos al almacén y los movimientos de mercadería no dejan registro; el 
+inventario se concilia a mano en hojas de cálculo separadas de la custodia física; y el personal no 
+recibió formación ni procedimientos escritos de control de inventarios. 
+• 
+Consecuencias directas: Desfases continuos entre stock físico y registro contable; detección 
+tardía o nula de mermas y sustracciones internas; pérdidas por cancelaciones de compras online 
+sin stock real; y descubrimiento tardío de ingresos no programados o incidentes. 
+Problema general 
+Pérdida de trazabilidad y visibilidad en tiempo real del inventario físico, con alta 
+vulnerabilidad ante mermas y riesgos de seguridad en el almacén de Restock Perú. Se 
+origina en un control manual y descentralizado del inventario en hojas de cálculo y en 
+una custodia de la mercadería que no deja registro de quién entra, qué sale ni cuándo. 
+1.3 Justificación, Valor en Riesgo y Caso de Negocio 
+• 
+Necesidad del negocio: Con el negocio creciendo y los lanzamientos en ediciones limitadas, 
+cuidar la mercadería se volvió un reto operativo. Restock necesita saber con certeza qué tiene, 
+dónde está y quién la mueve. 
+• 
+Valor en riesgo (tangible): Según el Gerente General, la empresa gana unos S/ 40,000 al 
+mensual, pierde cerca de S/ 1,000 en pares que no aparecen y cerca de S/ 2,000 en utilidad por 
+ventas online canceladas (entre 9 y 12 pedidos al mes). 
+
+--- PAGE 5 ---
+• 
+Valor en riesgo (tiempo): Cada conteo completo toma día y medio con cuatro personas y se 
+hace cada dos meses; cerrar el mes con contabilidad toma unos dos días de revisión de 
+diferencias. 
+• 
+Valor en riesgo (intangible): Reputación en Instagram y web por pedidos cancelados, confianza 
+de coleccionistas que esperan productos de lanzamiento limitado y seguridad del personal ante 
+faltantes sin explicación. 
+• 
+Supuestos y restricciones: Presupuesto limitado; personal con experiencia en ventas, sin 
+formación técnica; el cambio no puede detener las ventas diarias; sin área de TI definida. 
+1.5 Portafolio de Productos y Alcance del Estudio 
+Categoría de producto 
+Descripción y variantes 
+Sneakers de colección 
+Zapatillas urbanas de alta gama y ediciones 
+limitadas de Nike, Jordan, Adidas y OFF-WHITE, 
+identificadas por marca, modelo, color y talla. 
+Unos 300 pares en stock, de S/ 450 a S/ 5,000. 
+Ropa streetwear 
+Prendas urbanas de marcas de colección. Unas 
+100 unidades. 
+Accesorios 
+Gorras, medias, cordones y otros complementos 
+del rubro streetwear. Unas 100 unidades. 
+Capítulo 2 · Marco Contextual, Entorno Organizacional y Evidencias de Campo 
+Capítulo 02 · Entorno y evidencias. Entorno de la empresa, entrevistas y cuestionarios a todo el personal, 
+evidencias fotográficas y diagnóstico de la situación actual. 
+Marco PMBOK 7: principios Adaptar según el contexto y Navegar en la complejidad; dominio de 
+Medición, con una línea base de indicadores levantada en campo. 
+Imagen de apertura: Figura 1, hoja de Excel de inventario (Estado AS-IS). 
+2.1 Factores Ambientales de la Empresa (EEFs): Factores Internos y Externos 
+Factores internos 
+• 
+Cultura organizacional: Manejo flexible del negocio y apertura del personal a nuevas 
+herramientas si facilitan el registro diario. Se confirma en el cuestionario: la disposición al 
+cambio obtiene entre 4,11 y 4,50 en los cuatro perfiles. 
+• 
+Estructura: Jerarquía simple, con propietario o administrador, personal de tienda y encargado 
+de logística o almacén. No hay un área de TI definida. 
+• 
+Infraestructura tecnológica: Equipos básicos, internet estándar, sin servidores propios ni 
+monitoreo del almacén; inventario en archivos Excel. 
+• 
+Experiencia en proyectos TI: Sin experiencia previa en tecnología especializada; el único soporte 
+digital es la tienda online y el canal de Instagram. 
+
+--- PAGE 6 ---
+• 
+Recursos humanos: Personal con experiencia en ventas, sin capacitación técnica ni en gestión 
+digital de inventario. 
+• 
+Procesos actuales: Stock en hojas de cálculo y coordinación por WhatsApp, sin seguimiento ni 
+alertas ante pérdidas o movimientos irregulares. 
+Factores externos 
+• 
+Regulaciones: Código de Protección y Defensa del Consumidor (Ley 29571) y Ley 29733 de 
+Protección de Datos Personales, aplicables a la información recogida en la venta online. 
+• 
+Proveedores de servicios: La conectividad y los servicios digitales dependen de terceros, lo que 
+condiciona disponibilidad y costo. 
+• 
+Condiciones económicas: Presupuesto limitado. 
+• 
+Competencia: Tiendas formales e informales de calzado urbano compiten por posicionamiento 
+en redes; Restock puede diferenciarse con mayor seguridad y disponibilidad real de stock. 
+Organigrama (Figura 2) 
+• 
+Gerente General, con Asesor legal / contable 
+o 
+Ventas y atención al cliente: Jefe de Ventas 
+o 
+Inventario y operaciones: Jefe de Almacén 
+o 
+Marketing y e-commerce: Especialista en Marketing 
+o 
+Sistemas y tecnología: Desarrollador / Analista TI 
+o 
+Administrativa y financiera: Contador / Administrador 
+2.2 Activos de los Procesos de la Organización 
+• 
+Procesos y control: El control del inventario depende de un archivo Excel que actualizan el Jefe 
+de Almacén, el Jefe de Ventas y el Contador al cierre del día, con copias distintas del archivo en 
+circulación. Las decisiones de compra y reposición se toman sobre datos que no siempre 
+coinciden con lo que hay en los anaqueles. 
+• 
+Comunicación y seguimiento: Los movimientos se avisan por un grupo de WhatsApp de nueve 
+personas, sin formato fijo ni registro estructurado. 
+• 
+Normativa y procedimientos: No existen manuales ni reglas escritas para recibir, ubicar y 
+despachar mercadería; las tareas se aprenden observando a los compañeros más antiguos. 
+• 
+Gestión del conocimiento: No hay registros de incidentes ni de movimientos no autorizados que 
+permitan aprender de ellos. Un intento anterior de ordenar el inventario con una aplicación 
+gratuita (hace un año) se abandonó a las tres semanas porque exigía cargar todo a mano y nadie 
+la actualizaba. 
+2.3 Levantamiento de Información: Entrevistas y Cuestionarios 
+2.3.1 Diseño del levantamiento 
+El estudio es de diagnóstico: busca entender cómo funciona hoy el negocio y dónde falla, sin proponer 
+aún ninguna mejora. Por eso todas las preguntas indagan hechos (cuántas veces, quién, cómo, cuánto 
+tiempo, qué pasó la última vez) y ninguna menciona herramientas ni soluciones. Se redactaron en 
+lenguaje cotidiano, sin términos técnicos, para que cada persona las responda desde su trabajo diario y 
+sin sentirse evaluada. 
+
+--- PAGE 7 ---
+Se aplican dos instrumentos a los cuatro perfiles de la empresa: una entrevista semi-estructurada, 
+presencial y de 20 a 30 minutos, que aporta el relato y las cifras que cada persona conoce; y un 
+cuestionario con escala Likert, que mide cuán presente está cada problema. Los resultados de ambos 
+sustentan el árbol de problemas del capítulo 4. 
+Código 
+Participante 
+Perfil 
+Instrumentos 
+E1 
+Gerente General 
+1. Gerencia y 
+Administración 
+Entrevista y 
+cuestionario 
+E2 
+Contador / 
+Administrador 
+1. Gerencia y 
+Administración 
+Entrevista y 
+cuestionario 
+E3 
+Jefe de Almacén 
+2. Almacén e 
+Inventarios 
+Entrevista y 
+cuestionario 
+E4 
+Auxiliar de almacén 
+2. Almacén e 
+Inventarios 
+Entrevista y 
+cuestionario 
+E5 
+Jefe de Ventas 
+3. Ventas y Tienda 
+Entrevista y 
+cuestionario 
+E6 
+Vendedor de tienda 1 
+3. Ventas y Tienda 
+Entrevista y 
+cuestionario 
+E7 
+Especialista en 
+Marketing y e-
+commerce 
+4. Marketing, E-
+commerce y Sistemas 
+Entrevista y 
+cuestionario 
+Fechas y registro: entrevistas del 14 al 26 de setiembre de 2026 en la oficina de dirección, la tienda y el 
+almacén de Restock, con registro en audio y notas; cuestionarios impresos aplicados del 28 de setiembre 
+al 2 de octubre de 2026. 
+2.3.2 Entrevistas por perfil 
+Las respuestas se transcriben resumidas, tal como las dijo cada persona. 
+Entrevista 1 · Gerencia y Administración (E1 y E2) 
+Semi-estructurada, presencial, en la oficina de dirección, con audio. 12 preguntas en 8 dimensiones. 
+Dimensión 
+Pregunta 
+Respuesta 
+1. Mermas y pérdidas de 
+producto de alto valor 
+P1. ¿Con qué frecuencia se 
+entera de que falta un par o de 
+que está en un lugar distinto al 
+que figura? 
+E1: «Casi todas las semanas 
+aparece alguna diferencia. Los 
+pares de lanzamiento limitado 
+son los que más duelen.» 
+ 
+P2. ¿Cuánto cree que pierde la 
+empresa al año por pares que 
+no aparecen o están mal 
+E1: «Unos 20 mil soles al año, 
+pero es un cálculo mío: nadie lo 
+
+--- PAGE 8 ---
+Dimensión 
+Pregunta 
+Respuesta 
+ubicados? 
+mide.» 
+2. Ventas canceladas en la web 
+P3. ¿Qué pasa cuando un 
+cliente compra por la web o 
+Instagram y el par no está? 
+E1: «Se le llama, se le devuelve 
+el dinero o se le ofrece otro par. 
+A veces lo comenta en redes y 
+eso nos afecta.» 
+ 
+P4. ¿Cuántos pedidos online se 
+cancelan al mes por eso y qué le 
+cuesta a la empresa? 
+E1: «Entre 9 y 12 al mes, de 
+unos 180. Con un ticket de 780 
+soles, la utilidad que se pierde 
+ronda los 20 mil al año.» 
+3. Seguridad y accesos fuera de 
+horario 
+P5. Cuando el almacén está 
+cerrado, ¿cómo se entera si 
+alguien entró? 
+E1: «No me entero. Hay cuatro 
+llaves y nadie anota quién entra 
+ni a qué hora.» 
+ 
+P6. ¿Ha habido faltantes de los 
+que no se pudo saber cuándo 
+salieron? 
+E1: «Dos casos en el último año, 
+cuatro pares de edición 
+limitada, que notamos días 
+después de venderse otros del 
+mismo modelo.» 
+4. Control del inventario en 
+Excel 
+P7. ¿Cómo se lleva hoy el 
+inventario y quién lo actualiza? 
+E1: «En un Excel. Lo actualizan 
+el jefe de almacén, el jefe de 
+ventas y el contador al cerrar el 
+día, y a veces hay copias 
+distintas.» 
+ 
+P8. ¿Cuánto tiempo toma 
+cuadrar el inventario con la 
+contabilidad? 
+E2: «Cada cierre de mes me 
+toma unos dos días averiguar 
+por qué no cuadra el Excel con 
+las compras y ventas.» 
+5. Decisiones de compra y 
+reposición 
+P9. ¿Qué información usa para 
+decidir qué comprar o reponer y 
+qué tanta confianza le tiene? 
+E1: «El Excel y mi experiencia. 
+Confianza media: en agosto se 
+pidió reposición de un modelo 
+que ya estaba en una caja mal 
+ubicada.» 
+6. Intentos anteriores 
+P10. ¿Probaron antes alguna 
+forma de ordenar el inventario? 
+¿Qué pasó? 
+E1: «Hace un año probamos una 
+aplicación gratuita. A las tres 
+semanas se dejó de usar porque 
+había que cargar todo a mano y 
+nadie la actualizaba.» 
+7. Información para dirigir el 
+P11. ¿Qué información le 
+E1: «Cuántos pares hay de 
+
+--- PAGE 9 ---
+Dimensión 
+Pregunta 
+Respuesta 
+negocio 
+gustaría tener cada semana 
+para dirigir con tranquilidad? 
+verdad, cuáles se movieron y 
+cuáles están en riesgo. Hoy no 
+lo sé.» 
+8. Actitud del equipo ante 
+cambios 
+P12. ¿Cómo cree que 
+reaccionaría su equipo ante una 
+forma distinta de trabajar? 
+E1: «Son abiertos si no se les 
+complica. El temor es que se 
+retrase la venta del día.» E2: 
+«Yo dedicaría tiempo a 
+aprenderlo si me ahorra los 
+cierres.» 
+Entrevista 2 · Almacén e Inventarios (E3 y E4) 
+Semi-estructurada, en el almacén, con audio. 9 preguntas. 
+N.º 
+Pregunta 
+Respuesta 
+P1 
+Cuando llega mercadería nueva, 
+¿cómo decide dónde guardarla? 
+E3: «Donde hay espacio, y cerca 
+de la salida si rota mucho. No 
+hay una regla escrita.» E4: 
+«Hago lo que me dice el jefe o 
+lo que veo.» 
+P2 
+¿Qué pasa cuando le piden un 
+par y no está donde debería? 
+E4: «Pregunto por WhatsApp y 
+busco caja por caja. Me puedo 
+demorar de 8 a 12 minutos.» 
+P3 
+¿Cuántas veces por semana el 
+Excel dice que hay un par y no 
+está? 
+E3: «De 3 a 5 veces por 
+semana.» 
+P4 
+¿Cada cuánto se cuenta todo el 
+almacén y cuánto tiempo toma? 
+E3: «Cada dos meses; toma día 
+y medio con cuatro personas y 
+la tienda cierra medio día. En 
+agosto había 920 pares en el 
+Excel y encontramos 861; 31 
+aparecieron después en otra 
+ubicación o talla y 28 no se 
+explicaron.» 
+P5 
+¿Qué modelos o tallas se 
+confunden con más facilidad? 
+E4: «Las Jordan 1 y las Dunk en 
+tallas contiguas, y las cajas 
+parecidas.» 
+P6 
+¿Quién tiene llave del almacén y 
+cómo se registra quién entra? 
+E3: «Cuatro llaves: gerente, jefe 
+de almacén, jefe de ventas y 
+administración. No se registra 
+
+--- PAGE 10 ---
+N.º 
+Pregunta 
+Respuesta 
+nada.» 
+P7 
+¿Qué parte del trabajo le toma 
+más tiempo o le genera más 
+errores? 
+E4: «Anotar los movimientos en 
+papel y luego pasarlos al Excel. 
+A veces se me olvida.» 
+P8 
+¿Cómo aprendió su trabajo? 
+¿Existe algún manual? 
+E3: «Viendo a los que ya 
+sabían.» E4: «No hay manual; 
+me enseñó el jefe en la 
+práctica.» 
+P9 
+¿Qué reportes de stock puede 
+sacar hoy y cuánto toma? 
+E4: «Un reporte de stock se 
+arma a mano y toma de 1 a 2 
+horas.» 
+Entrevista 3 · Ventas y Tienda (E5, E6 y E7) 
+Semi-estructurada, en la tienda, con audio. 7 preguntas. 
+N.º 
+Pregunta 
+Respuesta 
+P1 
+Cuando un cliente pide un par, 
+¿cómo confirma si hay en su 
+talla? 
+E6: «Miro el Excel y pregunto al 
+almacén por WhatsApp. A veces 
+demora de 5 a 10 minutos y el 
+cliente se va.» 
+P2 
+¿Cuántas veces al mes ofrece un 
+par que luego no aparece? 
+E5: «Entre 6 y 8 veces al mes en 
+tienda.» 
+P3 
+¿Cómo se maneja la venta por 
+Instagram y WhatsApp al mismo 
+tiempo que la tienda? 
+E6: «Se confirma a mano. Una 
+vez le vendimos el mismo par a 
+dos clientes, uno en tienda y 
+otro por Instagram.» 
+P4 
+¿Qué reclaman los clientes 
+cuando se cancela una compra? 
+E5: «Se molestan y a veces lo 
+comentan en Instagram. 
+Algunos ya no vuelven.» 
+P5 
+¿Se ha entregado alguna vez un 
+producto equivocado en 
+modelo, color o talla? 
+E6: «Dos o tres veces en el 
+último trimestre.» 
+P6 
+¿Cómo se entera de que llegó 
+mercadería o de que se vendió 
+un par? 
+E6: «Por el grupo de WhatsApp. 
+A veces el aviso llega tarde o no 
+llega.» 
+P7 
+¿Qué información necesitaría 
+E5: «Saber en el momento si el 
+par está y en qué parte del 
+
+--- PAGE 11 ---
+N.º 
+Pregunta 
+Respuesta 
+para vender con más seguridad? almacén.» 
+Entrevista 4 · Marketing y E-commerce (E7) 
+Semi-estructurada, en la oficina, con audio. 6 preguntas. 
+N.º 
+Pregunta 
+Respuesta 
+P1 
+¿Cómo se actualiza el stock que 
+muestra la web? 
+E7: «A mano, al final del día, 
+según el Excel.» 
+P2 
+¿Han publicado o 
+promocionado un producto que 
+ya no había? 
+E7: «Sí. En el último 
+lanzamiento se promocionaron 
+12 pares de un modelo y al 
+revisar solo había 9.» 
+P3 
+¿Cómo se confirma un pedido 
+online? 
+E7: «Se revisa el Excel y se 
+confirma por WhatsApp. Si no 
+hay el par, se cancela.» 
+P4 
+¿Dónde se guarda la 
+información de inventario y de 
+clientes, y cada cuánto se 
+respalda? 
+E7: «Excel en las computadoras 
+de la oficina y en el correo. El 
+respaldo es manual, cada 
+semana o cuando nos 
+acordamos.» 
+P5 
+¿Cómo se protegen los datos 
+personales de los clientes de la 
+venta online? 
+E7: «No hay un procedimiento 
+definido. Los datos están en 
+hojas y en chats.» 
+P6 
+¿Qué equipos e internet tiene la 
+tienda y quién los atiende 
+cuando fallan? 
+E7: «Computadoras básicas e 
+internet estándar. Si falla 
+internet se detiene la venta 
+online. Lo veo yo cuando puedo; 
+no tengo horas dedicadas.» 
+2.3.3 Cuestionarios con escala Likert 
+Cada persona marcó, en un cuestionario impreso, su nivel de acuerdo con una serie de afirmaciones, en 
+una escala de 1 (totalmente en desacuerdo) a 5 (totalmente de acuerdo). Las afirmaciones están 
+redactadas para que un puntaje alto signifique que el problema está presente. Se agrupan en 
+dimensiones ligadas a las causas y efectos del árbol de problemas (capítulo 4); la última dimensión de 
+cada cuestionario mide la disposición al cambio, donde un puntaje alto indica una actitud favorable. 
+Para cada dimensión se calcula el promedio de sus ítems: de 1,00 a 2,33 es un nivel bajo, de 2,34 a 3,66 
+medio y de 3,67 a 5,00 alto. Cada ítem muestra el promedio de las personas del perfil. 
+
+--- PAGE 12 ---
+N.º 
+Perfil 
+Dirigido a 
+Nivel 
+Personas 
+Afirmaciones 
+1 
+Gerencia y 
+Administració
+n 
+Gerente 
+General y 
+Contador / 
+Administrador 
+Estratégico 
+2 
+18 
+2 
+Almacén e 
+Inventarios 
+Jefe de 
+Almacén y 
+auxiliar de 
+almacén 
+Táctico 
+2 
+18 
+3 
+Ventas y 
+Tienda 
+Jefe de Ventas 
+y 2 
+vendedores 
+Operativo 
+3 
+15 
+4 
+Marketing, E-
+commerce y 
+Sistemas 
+Especialista en 
+Marketing y e-
+commerce y 
+Analista TI 
+Operativo 
+2 
+15 
+Cuestionario 1 · Gerencia y Administración 
+Objetivo: dimensionar el impacto económico de las mermas y de las ventas canceladas, la calidad de la 
+información para decidir y la custodia de la mercadería. 
+Código 
+Afirmación o 
+dimensión 
+Promedio (1 a 5) 
+Nivel 
+A 
+Mermas y costos 
+4,25 
+Alto 
+A1 
+Perdemos dinero cada 
+mes por pares que no 
+aparecen o aparecen 
+tarde. 
+4,00 
+ 
+A2 
+Las diferencias de 
+inventario se 
+descubren semanas 
+después de que 
+ocurren. 
+4,50 
+ 
+A3 
+No tengo una cifra 
+confiable de cuánto se 
+pierde al año por 
+mermas. 
+4,50 
+ 
+A4 
+Las ventas canceladas 
+por falta de stock nos 
+4,00 
+ 
+
+--- PAGE 13 ---
+Código 
+Afirmación o 
+dimensión 
+Promedio (1 a 5) 
+Nivel 
+cuestan dinero y 
+clientes. 
+B 
+Información para 
+decidir 
+4,12 
+Alto 
+B1 
+El Excel suele no 
+coincidir con lo que hay 
+realmente en los 
+anaqueles. 
+4,50 
+ 
+B2 
+Para decidir compras y 
+reposiciones dependo 
+de datos que no 
+siempre son confiables. 
+4,00 
+ 
+B3 
+Cuadrar el inventario 
+con la contabilidad 
+toma más tiempo del 
+que debería. 
+3,50 
+ 
+B4 
+No puedo ver el stock 
+real en el momento en 
+que lo necesito. 
+4,50 
+ 
+C 
+Seguridad y custodia 
+4,38 
+Alto 
+C1 
+No sabemos con 
+certeza quién entra al 
+almacén fuera del 
+horario de atención. 
+4,50 
+ 
+C2 
+Si falta un par, es difícil 
+saber cuándo y cómo 
+salió. 
+4,00 
+ 
+C3 
+Una salida no 
+autorizada de 
+mercadería podría 
+pasar días sin que nos 
+enteremos. 
+4,00 
+ 
+C4 
+Las ediciones limitadas 
+son lo que más me 
+preocupa proteger. 
+5,00 
+ 
+
+--- PAGE 14 ---
+Código 
+Afirmación o 
+dimensión 
+Promedio (1 a 5) 
+Nivel 
+D 
+Organización y 
+procesos 
+4,17 
+Alto 
+D1 
+Cada persona registra y 
+ubica la mercadería a 
+su manera. 
+4,00 
+ 
+D2 
+No existen 
+procedimientos 
+escritos para recibir, 
+guardar y despachar. 
+4,50 
+ 
+D3 
+El personal no ha 
+recibido capacitación 
+formal en control de 
+inventarios. 
+4,00 
+ 
+E 
+Disposición a trabajar 
+de otra forma 
+4,50 
+Alta 
+E1 
+Estoy dispuesto a 
+cambiar la forma en 
+que hoy controlamos el 
+inventario. 
+4,50 
+ 
+E2 
+Mi equipo aceptaría 
+nuevas herramientas si 
+le facilitan el registro 
+diario. 
+4,00 
+ 
+E3 
+Prefiero cambios 
+graduales que no 
+detengan las ventas 
+diarias. 
+5,00 
+ 
+Cuestionario 2 · Almacén e Inventarios 
+Objetivo: conocer cómo se identifican, ubican y registran hoy los pares, quién accede al almacén y cómo 
+se capacita al personal. 
+Código 
+Afirmación o 
+dimensión 
+Promedio (1 a 5) 
+Nivel 
+A 
+Ubicación e 
+identificación de 
+productos 
+4,12 
+Alto 
+
+--- PAGE 15 ---
+Código 
+Afirmación o 
+dimensión 
+Promedio (1 a 5) 
+Nivel 
+A1 
+A veces la mercadería 
+se guarda donde hay 
+espacio y no en un 
+lugar fijo. 
+3,50 
+ 
+A2 
+Me cuesta distinguir a 
+simple vista pares muy 
+parecidos (mismo 
+modelo, distinta talla o 
+color). 
+4,00 
+ 
+A3 
+Hay cajas que quedan 
+en una ubicación 
+distinta a la registrada. 
+4,50 
+ 
+A4 
+Cuando falta un par, 
+perdemos mucho 
+tiempo buscándolo. 
+4,50 
+ 
+B 
+Registro e inventario 
+4,12 
+Alto 
+B1 
+El Excel se actualiza al 
+cierre del día y no 
+cuando ocurre el 
+movimiento. 
+5,00 
+ 
+B2 
+Hay movimientos que 
+se avisan por 
+WhatsApp y no llegan a 
+anotarse en el Excel. 
+4,00 
+ 
+B3 
+Existen distintas 
+versiones del archivo 
+de inventario. 
+3,50 
+ 
+B4 
+El conteo completo es 
+lento y obliga a detener 
+parte del trabajo. 
+4,00 
+ 
+C 
+Accesos y custodia 
+4,50 
+Alto 
+C1 
+Varias personas tienen 
+llave del almacén. 
+4,00 
+ 
+C2 
+No queda registro de 
+quién entra ni a qué 
+5,00 
+ 
+
+--- PAGE 16 ---
+Código 
+Afirmación o 
+dimensión 
+Promedio (1 a 5) 
+Nivel 
+hora. 
+C3 
+Alguien podría retirar 
+un par sin que quede 
+constancia. 
+4,00 
+ 
+C4 
+Fuera del horario 
+laboral no hay forma 
+de enterarse si se abrió 
+el almacén. 
+5,00 
+ 
+D 
+Procedimientos y 
+capacitación 
+4,17 
+Alto 
+D1 
+Aprendí mi trabajo 
+observando a 
+compañeros más 
+antiguos. 
+4,50 
+ 
+D2 
+No hay un manual o 
+regla escrita para 
+recibir y despachar. 
+4,50 
+ 
+D3 
+Los errores de registro 
+suelen descubrirse 
+tarde. 
+3,50 
+ 
+E 
+Disposición al cambio 
+4,50 
+Alta 
+E1 
+Me gustaría un modo 
+más simple de registrar 
+entradas y salidas. 
+5,00 
+ 
+E2 
+Aprendería a usar un 
+equipo nuevo si me 
+enseñan en el trabajo. 
+4,00 
+ 
+E3 
+Cualquier cambio 
+debería hacerse sin 
+detener el trabajo del 
+día. 
+4,50 
+ 
+Cuestionario 3 · Ventas y Tienda 
+Objetivo: medir cuánto afecta el descuadre de stock a las ventas en tienda, web, Instagram y WhatsApp 
+y cómo se coordina la información de stock. 
+
+--- PAGE 17 ---
+Código 
+Afirmación o 
+dimensión 
+Promedio (1 a 5) 
+Nivel 
+A 
+Disponibilidad real de 
+stock 
+4,25 
+Alto 
+A1 
+He ofrecido un par 
+confirmado en el Excel 
+que luego no se 
+encontró. 
+4,33 
+ 
+A2 
+Para confirmar una 
+talla debo ir a buscar a 
+los anaqueles o 
+preguntar por 
+WhatsApp. 
+4,33 
+ 
+A3 
+El stock que se muestra 
+en la web o Instagram 
+no siempre coincide 
+con lo que hay. 
+3,67 
+ 
+A4 
+Los clientes de 
+ediciones limitadas no 
+toleran que el producto 
+no esté. 
+4,67 
+ 
+B 
+Cancelaciones y 
+reclamos 
+3,50 
+Medio 
+B1 
+Se cancelan pedidos 
+online porque el 
+producto no estaba. 
+4,33 
+ 
+B2 
+Los clientes reclaman 
+en redes cuando se 
+cancela su compra. 
+3,33 
+ 
+B3 
+Perdemos ventas por 
+demorar en confirmar 
+la disponibilidad. 
+3,67 
+ 
+B4 
+Se han entregado 
+productos con error de 
+modelo, color o talla. 
+2,67 
+ 
+C 
+Coordinación e 
+información 
+4,17 
+Alto 
+
+--- PAGE 18 ---
+Código 
+Afirmación o 
+dimensión 
+Promedio (1 a 5) 
+Nivel 
+C1 
+Me entero de los 
+movimientos de stock 
+por mensajes sueltos 
+de WhatsApp. 
+4,67 
+ 
+C2 
+Hay avisos de ventas o 
+llegadas de mercadería 
+que se olvidan de 
+comunicar. 
+4,00 
+ 
+C3 
+No tengo una forma 
+única de consultar el 
+stock real. 
+4,33 
+ 
+C4 
+Atender tienda, 
+Instagram y WhatsApp 
+a la vez genera 
+confusión de stock. 
+3,67 
+ 
+D 
+Disposición al cambio 
+4,11 
+Alta 
+D1 
+Me gustaría poder 
+confirmar el stock con 
+rapidez y seguridad. 
+4,67 
+ 
+D2 
+Aprendería una nueva 
+herramienta si es 
+sencilla. 
+4,33 
+ 
+D3 
+Estaría dispuesto a 
+registrar cada venta en 
+el momento si me lo 
+piden. 
+3,33 
+ 
+Cuestionario 4 · Marketing y E-commerce 
+Objetivo: conocer cómo se sincroniza la web con el stock, dónde viven los datos y qué soporte 
+tecnológico existe hoy. 
+Código 
+Afirmación o 
+dimensión 
+Promedio (1 a 5) 
+Nivel 
+A 
+Sincronización entre 
+web y stock 
+3,88 
+Alto 
+A1 
+El stock de la web se 
+4,50 
+ 
+
+--- PAGE 19 ---
+Código 
+Afirmación o 
+dimensión 
+Promedio (1 a 5) 
+Nivel 
+actualiza a mano. 
+A2 
+Hay productos 
+publicados que ya se 
+vendieron en tienda. 
+4,00 
+ 
+A3 
+Las campañas se lanzan 
+sin certeza de cuánto 
+stock real hay. 
+3,50 
+ 
+A4 
+Los pedidos online se 
+confirman antes de 
+verificar el stock físico. 
+3,50 
+ 
+B 
+Datos e información 
+4,12 
+Alto 
+B1 
+Los datos de inventario 
+están repartidos en 
+varios archivos. 
+5,00 
+ 
+B2 
+No existe un registro 
+histórico confiable de 
+los movimientos. 
+4,00 
+ 
+B3 
+Obtener un reporte de 
+stock exige armarlo 
+manualmente. 
+4,50 
+ 
+B4 
+Los datos de clientes 
+de la venta online no 
+tienen un respaldo ni 
+un control de acceso 
+definidos. 
+3,00 
+ 
+C 
+Soporte tecnológico 
+4,12 
+Alto 
+C1 
+La empresa no tiene un 
+responsable de 
+tecnología con 
+dedicación exclusiva. 
+4,50 
+ 
+C2 
+Los equipos e internet 
+son básicos y no se 
+monitorean. 
+3,50 
+ 
+C3 
+Si falla un archivo o 
+equipo, no hay copia 
+4,50 
+ 
+
+--- PAGE 20 ---
+Código 
+Afirmación o 
+dimensión 
+Promedio (1 a 5) 
+Nivel 
+de respaldo 
+automática. 
+C4 
+Hoy no existe ninguna 
+herramienta para 
+vigilar el almacén. 
+4,00 
+ 
+D 
+Disposición al cambio 
+4,50 
+Alta 
+D1 
+La empresa está 
+abierta a usar nuevas 
+herramientas. 
+5,00 
+ 
+D2 
+Hay interés en tener la 
+información del 
+negocio en un solo 
+lugar. 
+4,50 
+ 
+D3 
+Cualquier cambio 
+exigiría capacitar al 
+personal de ventas y 
+almacén. 
+4,00 
+ 
+2.3.4 Resultados consolidados 
+De las 14 dimensiones de diagnóstico, 13 alcanzan un nivel alto en la escala Likert; solo cancelaciones y 
+reclamos del perfil de ventas queda en nivel medio. La disposición al cambio es alta en los cuatro 
+perfiles. 
+Tema 
+Dimensiones que lo 
+miden 
+Promedios 
+Lectura 
+Ubicación e 
+identificación de 
+productos 
+Almacén A 
+4,12 
+La mercadería se 
+guarda donde hay 
+espacio y las cajas no 
+coinciden con lo 
+registrado. 
+Registro e inventario 
+manual 
+Gerencia B · Almacén B 
+· Marketing y Sistemas 
+B 
+4,12 · 4,12 · 4,12 
+Los tres perfiles 
+coinciden: el Excel se 
+actualiza tarde, hay 
+copias distintas y los 
+datos están dispersos. 
+Seguridad y custodia 
+Gerencia C · Almacén C 
+4,38 · 4,50 
+Es el tema más intenso: 
+no hay registro de 
+
+--- PAGE 21 ---
+Tema 
+Dimensiones que lo 
+miden 
+Promedios 
+Lectura 
+quién entra ni cuándo. 
+Mermas, costos y 
+disponibilidad de stock 
+Gerencia A · Ventas A · 
+Ventas B · Marketing y 
+Sistemas A 
+4,25 · 4,25 · 3,50 · 3,88 
+Hay pérdidas y 
+ofrecimientos de pares 
+que no se encuentran; 
+los reclamos en redes y 
+los errores de entrega 
+son menos frecuentes. 
+Coordinación de la 
+información 
+Ventas C 
+4,17 
+Los avisos de stock 
+llegan por mensajes 
+sueltos de WhatsApp. 
+Procedimientos, 
+capacitación y soporte 
+Gerencia D · Almacén D 
+· Marketing y Sistemas 
+C 
+4,17 · 4,17 · 4,12 
+No hay manuales, el 
+aprendizaje es por 
+observación y no hay 
+un responsable de 
+tecnología con 
+dedicación exclusiva. 
+Disposición al cambio 
+Gerencia E · Almacén E 
+· Ventas D · Marketing 
+y Sistemas D 
+4,50 · 4,50 · 4,11 · 4,50 
+Hay apertura general; 
+la condición que 
+repiten todos es que el 
+cambio no detenga las 
+ventas del día. 
+Línea base de indicadores (Medición) 
+Los valores salen de las entrevistas y sirven como punto de partida para medir cualquier mejora futura. 
+Indicador 
+Valor actual 
+Fuente 
+Exactitud del inventario en el 
+último conteo (agosto de 2026) 
+93,6 % (861 de 920 pares 
+hallados) 
+E3 P4 
+Pares con diferencia sin explicar 
+tras el conteo 
+28 pares (3,0 %), unos S/ 19,600 
+E3 P4 
+Veces por semana que el par del 
+Excel no aparece a la primera 
+3 a 5 
+E3 P3 
+Tiempo de búsqueda de un par 
+que no está en su lugar 
+8 a 12 minutos 
+E4 P2 
+Duración del conteo completo 
+Día y medio con 4 personas, 
+cada 2 meses 
+E3 P4 
+
+--- PAGE 22 ---
+Indicador 
+Valor actual 
+Fuente 
+Pedidos online cancelados por 
+falta de stock 
+9 a 12 al mes de unos 180 (5,0 
+% a 6,7 %) 
+E1 P4 
+Pares ofrecidos en tienda que 
+luego no aparecen 
+6 a 8 al mes 
+E5 P2 
+Productos entregados con error 
+de modelo, color o talla 
+2 a 3 en el último trimestre 
+E6 P5 
+Llaves del almacén en 
+circulación sin registro de 
+accesos 
+4 
+E3 P6 
+Faltantes de edición limitada de 
+salida no determinada 
+4 pares en 2 casos en 12 meses 
+E1 P6 
+Tiempo de revisión de 
+diferencias en el cierre mensual 
+Unos 2 días 
+E2 P8 
+Tiempo para armar un reporte 
+de stock 
+1 a 2 horas 
+E4 P7 
+Pérdida anual estimada por la 
+gerencia 
+Unos S/ 40,000 
+E1 P2 y P4 
+2.4 Evidencias de Campo del Estado AS-IS 
+Cada ficha lleva etiqueta, título corto, imagen y un párrafo de análisis. 
+Figura 
+Etiqueta y título 
+Qué muestra la imagen 
+Análisis de evidencia 
+1 
+Control manual · 
+Inventario en Excel 
+Hoja de cálculo de 
+stock abierta en el 
+computador 
+El inventario vive en un 
+archivo Excel 
+actualizado a mano al 
+cierre del día por tres 
+personas, con copias 
+distintas en circulación. 
+No hay captura 
+automática: cada 
+conteo depende de 
+una persona. 
+2 
+Organigrama · Entorno 
+interno 
+Diagrama de la 
+estructura de la 
+empresa 
+Jerarquía simple, con 
+un solo responsable 
+por área y sin un área 
+de TI con dedicación 
+
+--- PAGE 23 ---
+Figura 
+Etiqueta y título 
+Qué muestra la imagen 
+Análisis de evidencia 
+exclusiva. 
+3 
+Almacén · Anaqueles 
+sin identificación por 
+posición 
+Cajas de sneakers en 
+los anaqueles 
+Cada par se distingue 
+por marca, modelo, 
+color y talla, pero las 
+cajas no tienen una 
+posición asignada ni 
+una etiqueta de 
+ubicación. Los modelos 
+parecidos en tallas 
+contiguas se 
+confunden. 
+4 
+Seguridad · Puerta y 
+llaves 
+Ingreso al almacén y 
+juego de llaves 
+Cuatro personas tienen 
+llave. No se anota 
+quién entra ni a qué 
+hora, y no hay forma 
+de saber si el almacén 
+se abrió fuera del 
+horario. 
+5 
+Coordinación · Grupo 
+de WhatsApp 
+Captura del chat de 
+avisos de stock, sin 
+datos personales 
+Los movimientos se 
+avisan con mensajes 
+sueltos, sin formato 
+fijo; algunos nunca 
+llegan al Excel. 
+6 
+Venta digital · Pedido 
+cancelado 
+Captura de un pedido 
+web cancelado por 
+falta de stock 
+La web vende según el 
+Excel; si el par no está, 
+la venta se cancela con 
+costo económico y de 
+reputación. 
+7 
+Conteo · Hoja del 
+conteo de agosto de 
+2026 
+Hoja del último conteo 
+completo 
+920 pares registrados, 
+861 hallados y 59 con 
+diferencia: 31 
+aparecieron en otra 
+ubicación o talla y 28 
+siguen sin explicación. 
+2.5 Diagnóstico de la Situación Actual por Factor 
+Factor interno 
+Situación actual (AS-IS) 
+Evidencia 
+1. Procesos 
+Stock en hojas de cálculo y 
+E1 P7 · E6 P1 · Likert Almacén B 
+
+--- PAGE 24 ---
+Factor interno 
+Situación actual (AS-IS) 
+Evidencia 
+coordinación por WhatsApp, sin 
+seguimiento ni alertas. 
+(4,12) 
+2. Documentación y 
+gobernanza 
+Sin reglas escritas de ubicación, 
+recepción ni despacho; las 
+tareas se aprenden observando. 
+E3 P8 · Likert Gerencia D (4,17) 
+y Almacén D (4,17) 
+3. Datos 
+Archivos Excel descentralizados 
+y con copias distintas; sin 
+historial confiable de 
+movimientos. 
+E7 P4 · Likert y Marketing B 
+(4,12) 
+4. Seguridad física 
+Cuatro llaves sin registro; no se 
+detectan accesos fuera de 
+horario. 
+E1 P5 · E3 P6 · Likert Almacén C 
+(4,50) y Gerencia C (4,38) 
+5. Cultura organizacional 
+Manejo flexible y apertura a 
+nuevas herramientas si no 
+complican la venta del día. 
+E1 P12 · Likert disposición 4,11 a 
+4,50 
+6. Estructura 
+Jerarquía simple, sin área de TI; 
+el Analista TI no tiene horas 
+dedicadas al inventario. 
+E7 P6 · Likert Marketing C (4,12) 
+7. Infraestructura tecnológica 
+Equipos básicos, internet 
+estándar y respaldo manual 
+semanal; sin monitoreo del 
+almacén. 
+E7 P4 y P6 
+8. Software 
+Inventario solo en Excel; la web 
+se actualiza a mano; una 
+aplicación gratuita fracasó hace 
+un año. 
+E1 P10 · E7 P1 
+9. Recursos 
+Presupuesto limitado; el conteo 
+completo consume cuatro 
+personas y día y medio cada dos 
+meses. 
+E3 P4 
+10. Competencia del personal 
+Experiencia en ventas, sin 
+formación en control de 
+inventarios ni en gestión digital. 
+E4 P8 · Likert Gerencia D (4,17) 
+11. Cumplimiento normativo 
+Los datos personales de la venta 
+online están en hojas y chats sin 
+procedimiento definido (Ley 
+E7 P5 · Likert Marketing y 
+Sistemas B4 (3,00) 
+
+--- PAGE 25 ---
+Factor interno 
+Situación actual (AS-IS) 
+Evidencia 
+29733). 
+Capítulo 3 · Gestión Estratégica de Stakeholders 
+Capítulo 03 · Stakeholders. Quién decide, quién opera y quién depende del inventario dentro de la 
+empresa: poder, interés, actitud y responsabilidades actuales. 
+Marco PMBOK 7: dominio de desempeño de Interesados y principio Involucrarse eficazmente con los 
+interesados. Se aplican los modelos de la guía: cuadrícula de poder e interés, cubo de interesados, 
+modelo de prominencia y dirección de la influencia. Por tratarse de la etapa de diagnóstico, solo se 
+consideran las personas que forman parte de Restock. 
+3.1 Identificación y Registro de Interesados 
+ID 
+Interesado 
+Área 
+Relación con el 
+inventario hoy 
+STK-01 
+Gerente General 
+(propietario) 
+Dirección 
+Decide compras, 
+reposición y seguridad; 
+responde por las 
+pérdidas. 
+STK-02 
+Jefe de Almacén 
+Inventario y 
+operaciones 
+Recibe, ubica y cuenta 
+la mercadería; guarda 
+una de las llaves. 
+STK-03 
+Jefe de Ventas 
+Ventas y atención al 
+cliente 
+Confirma stock en 
+tienda y actualiza el 
+Excel; guarda una de 
+las llaves. 
+STK-04 
+Contador / 
+Administrador 
+Administrativa y 
+financiera 
+Concilia el inventario 
+con la contabilidad; 
+guarda una de las 
+llaves. 
+STK-05 
+Especialista en 
+Marketing y e-
+commerce 
+Marketing y e-
+commerce 
+Publica el stock en la 
+web e Instagram y 
+lanza campañas. 
+STK-06 
+Personal de tienda 
+(vendedores) 
+Ventas y atención al 
+cliente 
+Ofrece pares al cliente 
+y confirma 
+disponibilidad por 
+WhatsApp. 
+STK-07 
+Auxiliar de almacén 
+Inventario y 
+Busca, acomoda y 
+anota los movimientos 
+
+--- PAGE 26 ---
+ID 
+Interesado 
+Área 
+Relación con el 
+inventario hoy 
+operaciones 
+físicos. 
+3.2 Matriz de Poder e Interés 
+Puntaje de 1 a 5; se considera alto un valor de 4 o más. 
+ 
+Interés bajo 
+Interés alto 
+Poder alto 
+Mantener satisfechos • 
+Ninguno 
+Gestionar de cerca • STK-01 
+Gerente General • STK-02 Jefe 
+de Almacén • STK-03 Jefe de 
+Ventas • STK-04 Contador / 
+Administrador 
+Poder bajo 
+Monitorear  
+Ninguno 
+Mantener informados • STK-05 
+Especialista en Marketing y e-
+commerce • STK-06 Personal de 
+tienda • STK-07 Auxiliar de 
+almacén 
+ 
+ID 
+Interesado 
+Poder 
+Interés 
+Estrategia de 
+participación 
+STK-01 
+Gerente General 
+5 
+5 
+Gestionar de 
+cerca: presentar 
+hallazgos y cifras 
+de pérdida; 
+validar el 
+problema general. 
+STK-02 
+Jefe de Almacén 
+4 
+5 
+Gestionar de 
+cerca: validar la 
+descripción de los 
+procesos y la línea 
+base de conteos. 
+STK-03 
+Jefe de Ventas 
+4 
+5 
+Gestionar de 
+cerca: validar 
+cancelaciones, 
+ofrecimientos 
+fallidos y 
+reclamos. 
+
+--- PAGE 27 ---
+ID 
+Interesado 
+Poder 
+Interés 
+Estrategia de 
+participación 
+STK-04 
+Contador / 
+Administrador 
+4 
+4 
+Gestionar de 
+cerca: validar las 
+diferencias 
+contables y el 
+cálculo de 
+pérdidas. 
+STK-05 
+Especialista en 
+Marketing y e-
+commerce 
+2 
+4 
+Mantener 
+informado: 
+compartir cómo el 
+descuadre de 
+stock afecta la 
+web y las 
+campañas. 
+STK-06 
+Personal de 
+tienda 
+1 
+5 
+Mantener 
+informado: 
+comunicar los 
+hallazgos y cuidar 
+su carga de 
+trabajo. 
+STK-07 
+Auxiliar de 
+almacén 
+1 
+5 
+Mantener 
+informado: 
+comunicar los 
+hallazgos y 
+escuchar sus 
+dificultades en 
+piso. 
+Mapeo tridimensional (cubo de interesados) 
+La actitud se tomó de la disposición al cambio del cuestionario y de lo dicho en las entrevistas. 
+Interesado 
+Poder 
+Interés 
+Actitud 
+Sustento de la 
+actitud 
+Gerente General 
+Alto 
+Alto 
+Partidario 
+Disposición 4,50; 
+pide cambios 
+graduales (E1 
+P12). 
+Jefe de Almacén 
+Alto 
+Alto 
+Partidario 
+Quiere un registro 
+más simple 
+(Almacén E1 = 
+
+--- PAGE 28 ---
+Interesado 
+Poder 
+Interés 
+Actitud 
+Sustento de la 
+actitud 
+5,00). 
+Jefe de Ventas 
+Alto 
+Alto 
+Partidario 
+Necesita saber el 
+stock en el 
+momento (E5 P7). 
+Contador / 
+Administrador 
+Alto 
+Alto 
+Partidario 
+Dedicaría tiempo 
+a aprender si le 
+ahorra los cierres 
+(E2 P12). 
+Especialista en 
+Marketing y e-
+commerce 
+Bajo 
+Alto 
+Partidario 
+La empresa está 
+abierta a nuevas 
+herramientas 
+(Marketing y 
+Sistemas D1 = 
+5,00). 
+Personal de 
+tienda 
+Bajo 
+Alto 
+Neutral 
+Reserva ante 
+registrar cada 
+venta en el 
+momento (Ventas 
+D3 = 3,33). 
+Auxiliar de 
+almacén 
+Bajo 
+Alto 
+Neutral 
+Acepta aprender 
+si no se detiene el 
+trabajo del día 
+(Almacén E3 = 
+4,50). 
+Nivel de involucramiento actual y deseado 
+Interesado 
+Desconocedor 
+Reticente 
+Neutral 
+Partidario 
+Líder 
+Gerente 
+General 
+ 
+ 
+ 
+A 
+D 
+Jefe de 
+Almacén 
+ 
+ 
+ 
+A 
+D 
+Jefe de Ventas 
+ 
+ 
+ 
+A 
+D 
+Contador / 
+Administrador 
+ 
+ 
+ 
+A D 
+ 
+Especialista en 
+Marketing y e-
+ 
+ 
+ 
+A D 
+ 
+
+--- PAGE 29 ---
+Interesado 
+Desconocedor 
+Reticente 
+Neutral 
+Partidario 
+Líder 
+commerce 
+Personal de 
+tienda 
+ 
+ 
+A 
+D 
+ 
+Auxiliar de 
+almacén 
+ 
+ 
+A 
+D 
+ 
+A = nivel actual · D = nivel deseado. 
+3.3 Expectativas y Necesidades de los Interesados 
+Interesado 
+Expectativa principal 
+Qué le afecta hoy 
+Evidencia 
+Gerente General 
+Proteger el inventario, 
+eliminar mermas y 
+asegurar un retorno 
+positivo. 
+No sabe cuánto pierde 
+ni cuándo salió un par 
+faltante. 
+E1 P2, P5, P6 
+Jefe de Almacén 
+Controlar el stock y 
+evitar mermas por 
+ubicación o acceso. 
+Cajas mal ubicadas y 
+llaves sin registro. 
+E3 P3, P6 
+Jefe de Ventas 
+Disponibilidad real y 
+rápida de stock. 
+Ofrece pares que no 
+aparecen, 6 a 8 veces al 
+mes. 
+E5 P2 
+Contador / 
+Administrador 
+Cierres contables sin 
+diferencias 
+inexplicables. 
+Dos días de revisión al 
+mes. 
+E2 P8 
+Especialista en 
+Marketing y e-
+commerce 
+Web y campañas 
+alineadas con el stock 
+real. 
+Publicó 12 pares de un 
+modelo y solo había 9. 
+E7 P2 
+Personal de tienda 
+Confirmar una talla sin 
+demorar al cliente. 
+Esperas de 5 a 10 
+minutos y pares 
+vendidos dos veces. 
+E6 P1 · E6 P3 
+Auxiliar de almacén 
+Encontrar rápido cada 
+par y registrar sin 
+errores. 
+Búsquedas de 8 a 12 
+minutos y anotaciones 
+en papel. 
+E4 P2 · P7 
+3.5 Responsabilidades Actuales: Matriz RACI de los Procesos 
+Matriz de cómo se reparten hoy las responsabilidades. R = responsable, A = quien rinde cuentas, C = 
+consultado, I = informado, – = no participa. Dos procesos no tienen ningún responsable que rinda 
+cuentas (A), lo que es en sí un hallazgo del diagnóstico. 
+
+--- PAGE 30 ---
+Proceso 
+actual 
+Gerente 
+General 
+Jefe de 
+Almacén 
+Auxiliar de 
+almacén 
+Jefe de 
+Ventas 
+Vendedor
+es 
+Marketing 
+y e-
+commerce 
+Contador 
+Recepción 
+de 
+mercaderí
+a 
+I 
+A 
+R 
+I 
+– 
+– 
+C 
+Ubicación 
+en 
+anaqueles 
+– 
+A 
+R 
+– 
+– 
+– 
+– 
+Actualizaci
+ón del 
+Excel de 
+inventario 
+I 
+R 
+R 
+R 
+– 
+– 
+R 
+Conteo de 
+inventario 
+I 
+A 
+R 
+C 
+R 
+– 
+C 
+Confirmac
+ión de 
+stock al 
+cliente 
+– 
+C 
+– 
+A 
+R 
+R 
+– 
+Publicació
+n del 
+stock en 
+web e 
+Instagram 
+– 
+I 
+– 
+C 
+– 
+A / R 
+– 
+Custodia 
+de llaves y 
+acceso al 
+almacén 
+R 
+R 
+– 
+R 
+– 
+– 
+R 
+Conciliaci
+ón 
+contable 
+del 
+inventario 
+I 
+C 
+– 
+– 
+– 
+– 
+A / R 
+Decisión 
+de 
+compra y 
+reposición 
+A 
+C 
+– 
+C 
+– 
+C 
+C 
+
+--- PAGE 31 ---
+Sin responsable que rinda cuentas: actualización del Excel de inventario y custodia de llaves y acceso al 
+almacén. 
+Capítulo 4 · Árbol de Problemas: Causas, Problema Central y Efectos 
+Capítulo 04 · Árbol de problemas. De dónde nacen los descuadres y las mermas, hasta dónde llegan y 
+qué evidencia lo respalda. 
+Marco PMBOK 7: principios Reconocer, evaluar y responder a las interacciones del sistema y Navegar en 
+la complejidad; análisis de causa raíz con evidencia levantada en campo (dominio de Medición). 
+4.1 Estructura del Árbol de Problemas 
+El árbol de problemas ordena el diagnóstico de los capítulos 1, 2 y 3. En la base se ubican cuatro causas 
+directas (en rojo), cada una con las causas indirectas que la originan; al centro, el problema central (en 
+naranja); y en la parte superior, tres efectos directos (en verde) que se combinan en dos efectos 
+indirectos y desembocan en un efecto final. Las flechas indican la dirección de causa a efecto. 
+Imagen: Figura 8, árbol de problemas de Restock E.I.R.L. Elaboración propia a partir del diagnóstico, las 
+entrevistas y los cuestionarios. Disposición: efecto final arriba; debajo, dos efectos indirectos; debajo, 
+tres efectos directos; al centro, el problema central; debajo, cuatro causas directas y, bajo cada una, sus 
+causas indirectas. 
+4.2 Detalle por Nivel con Evidencia 
+E1 a E9 son los participantes del capítulo 2.3; las referencias P indican la pregunta de la entrevista. Las 
+cifras de Likert son los promedios de la dimensión indicada. 
+Nivel 
+Contenido 
+Evidencia 
+Efecto final 
+Pérdida de rentabilidad y de 
+competitividad: la empresa no 
+puede crecer ni ampliar sus 
+canales sin aumentar sus 
+pérdidas. 
+E1 P11 · pérdida estimada de 
+unos S/ 40,000 al año 
+Efecto indirecto 1 
+Pérdidas económicas por 
+mermas de mercadería de alto 
+valor, sustracciones y ventas 
+online canceladas (proviene de 
+los efectos directos 1, 2 y 3). 
+E1 P2 y P4 · Likert Gerencia A 
+(4,25) 
+Efecto indirecto 2 
+Clientes insatisfechos y 
+reputación dañada en web e 
+Instagram por pedidos 
+cancelados (proviene de los 
+efectos directos 1 y 3). 
+E1 P3 · E5 P4 · Likert Ventas B 
+(3,50) 
+Efecto directo 1 
+Desfases continuos entre el 
+Último conteo: 59 de 920 pares 
+
+--- PAGE 32 ---
+Nivel 
+Contenido 
+Evidencia 
+stock físico y el registro 
+contable. 
+con diferencia (6,4 %) · E2 P8 (2 
+días al mes) · Likert Gerencia B 
+(4,12) 
+Efecto directo 2 
+Detección tardía o nula de 
+mermas y sustracciones 
+internas. 
+E1 P6 (4 pares de edición 
+limitada, 2 casos en 12 meses) · 
+Likert Gerencia C (4,38) 
+Efecto directo 3 
+Cancelaciones de compras 
+online por falta de stock real. 
+E1 P4 (9 a 12 pedidos al mes) · 
+E7 P2 · Likert Ventas A (4,25) 
+Problema central 
+Pérdida de trazabilidad y 
+visibilidad en tiempo real del 
+inventario físico, con alta 
+vulnerabilidad ante mermas y 
+accesos no registrados en el 
+almacén de Restock. 
+Problema general del capítulo 1 
+· 13 de 14 dimensiones de 
+diagnóstico en nivel alto 
+Causa directa 1 
+La identificación y la ubicación 
+de cada par dependen de la 
+vista y la memoria del personal. 
+Likert Almacén A (4,12) 
+↳ Causa indirecta 1.1 
+La mercadería se guarda donde 
+hay espacio, sin una posición 
+fija por modelo y talla. 
+E3 P1 · Almacén A1 (3,50) 
+↳ Causa indirecta 1.2 
+Los pares de un mismo modelo 
+en tallas o colores contiguos se 
+confunden a simple vista. 
+E4 P5 · Almacén A2 (4,00) · E6 
+P5 (2 a 3 entregas equivocadas 
+por trimestre) 
+↳ Causa indirecta 1.3 
+La ubicación de cada caja no se 
+anota, por lo que se busca caja 
+por caja cuando un par no está. 
+E4 P2 (8 a 12 min) · Almacén A3 
+(4,50) y A4 (4,50) 
+Causa directa 2 
+Los accesos al almacén y los 
+movimientos de mercadería no 
+dejan registro. 
+Likert Almacén C (4,50) y 
+Gerencia C (4,38) 
+↳ Causa indirecta 2.1 
+Cuatro personas tienen llave y 
+nadie anota quién entra ni a 
+qué hora. 
+E1 P5 · E3 P6 · Almacén C2 
+(5,00) 
+↳ Causa indirecta 2.2 
+Los movimientos se avisan por 
+mensajes sueltos de WhatsApp 
+que no siempre llegan al Excel. 
+E6 P6 · Ventas C1 (4,67) · 
+Almacén B2 (4,00) 
+↳ Causa indirecta 2.3 
+Nadie rinde cuentas por la 
+RACI actual (capítulo 3.5) 
+
+--- PAGE 33 ---
+Nivel 
+Contenido 
+Evidencia 
+custodia del almacén ni por la 
+actualización del inventario. 
+Causa directa 3 
+El inventario se controla a mano 
+en hojas de cálculo separadas 
+de la custodia física. 
+Likert Gerencia B (4,12), 
+Almacén B (4,12), Marketing y 
+Sistemas B (4,12) 
+↳ Causa indirecta 3.1 
+El Excel se actualiza al cierre del 
+día, por una persona  
+E1 P7 · Almacén B1 (5,00) y B3 
+(3,50) 
+↳ Causa indirecta 3.2 
+El conteo completo se hace 
+cada dos meses y toma día y 
+medio con cuatro personas. 
+E3 P4 · Almacén B4 (4,00) 
+↳ Causa indirecta 3.3 
+La web y los canales se 
+actualizan a mano según el 
+Excel, sin verificar el stock físico. 
+E7 P1 y P3 · Marketing A1 (4,50) 
+y A4 (3,50) 
+Causa directa 4 
+El personal trabaja sin 
+procedimientos escritos ni 
+formación en control de 
+inventarios. 
+Likert Gerencia D (4,17) y 
+Almacén D (4,17) 
+↳ Causa indirecta 4.1 
+No hay manuales ni reglas; el 
+oficio se aprende observando a 
+los compañeros más antiguos. 
+E3 P8 · E4 P8 · Almacén D1 
+(4,50) y D2 (4,50) 
+↳ Causa indirecta 4.2 
+No hay un responsable de 
+tecnología con dedicación 
+exclusiva. 
+E7 P6 · Marketing C1 (4,50) 
+4.3 Lectura del Árbol 
+• 
+Dónde se concentra el problema: Las causas con mayor respaldo están en la seguridad y 
+custodia (Likert 4,38 y 4,50) y en el registro manual del inventario (4,12 en tres perfiles). 
+• 
+Cómo se encadenan: Como la ubicación no se registra (causa 1) y los movimientos no dejan 
+rastro (causa 2), el Excel (causa 3) difiere de la realidad; al no existir procedimientos (causa 4), 
+cada persona lo corrige a su manera y la diferencia se amplía. 
+• 
+Qué efecto pesa más: Las ventas online canceladas y los pares sin explicar suman unos S/ 
+40,000 al año según la gerencia y son lo que más afecta la rentabilidad. 
+Capítulo 5 · Árbol de Objetivos y Evaluación de Proyectos Alternativos 
+Capítulo 05 · Objetivos y alternativas. Del problema a la solución: árbol de objetivos, acciones por medio 
+fundamental y la evaluación que define el proyecto a ejecutar. 
+
+--- PAGE 34 ---
+Marco PMBOK 7: principios Enfocarse en el valor y Adaptar según el contexto; dominios de Planificación 
+y de Enfoque de desarrollo y ciclo de vida. Las alternativas se comparan con criterios que salen del 
+contexto de Restock: presupuesto limitado, cambio gradual y personal sin formación técnica. 
+5.1 Árbol de Objetivos 
+El árbol de objetivos convierte cada elemento del árbol de problemas (capítulo 4) en su situación 
+deseada. Las cuatro causas directas pasan a ser medios de primer nivel y sus causas indirectas, medios 
+fundamentales; el problema central se convierte en el objetivo central; y los efectos, en los fines. Las 
+flechas indican la dirección de medio a fin. 
+Imagen: Figura 9, árbol de objetivos de Restock E.I.R.L. Cada medio y fin corresponde a una causa o 
+efecto del árbol de problemas. 
+Nivel 
+Árbol de problemas (cap. 4) 
+Árbol de objetivos 
+Fin último 
+Pérdida de rentabilidad y de 
+competitividad 
+Rentabilidad y capacidad de 
+crecimiento protegidas 
+Fin indirecto 1 
+Pérdidas por mermas, 
+sustracciones y ventas 
+canceladas 
+Pérdidas por mermas y 
+cancelaciones reducidas al 
+mínimo 
+Fin indirecto 2 
+Clientes insatisfechos y 
+reputación dañada 
+Clientes satisfechos y buena 
+reputación en web e Instagram 
+Fin directo 1 
+Desfases entre stock físico y 
+registro contable 
+Stock físico y registro contable 
+coincidentes 
+Fin directo 2 
+Mermas y sustracciones 
+detectadas tarde 
+Incidentes y accesos no 
+autorizados detectados de 
+inmediato 
+Fin directo 3 
+Cancelaciones por falta de stock 
+real 
+Ventas online respaldadas por 
+stock real 
+Objetivo central 
+Pérdida de trazabilidad y 
+visibilidad en tiempo real 
+Trazabilidad y visibilidad en 
+tiempo real del inventario y del 
+almacén 
+Medio 1 
+Identificación y ubicación por 
+vista y memoria 
+Cada par identificado y ubicado 
+de forma verificable 
+Medio fundamental 1.1 
+Mercadería guardada donde 
+hay espacio 
+Posición fija por modelo y talla 
+Medio fundamental 1.2 
+Pares confundidos a simple 
+vista 
+Pares identificables sin 
+ambigüedad 
+Medio fundamental 1.3 
+Ubicación sin anotar 
+Ubicación de cada caja 
+
+--- PAGE 35 ---
+Nivel 
+Árbol de problemas (cap. 4) 
+Árbol de objetivos 
+registrada 
+Medio 2 
+Accesos y movimientos sin 
+registro 
+Accesos y movimientos con 
+registro 
+Medio fundamental 2.1 
+Llaves sin registro de quién 
+entra 
+Entradas al almacén registradas 
+y avisadas 
+Medio fundamental 2.2 
+Avisos sueltos por WhatsApp 
+Movimientos registrados en un 
+solo lugar 
+Medio fundamental 2.3 
+Nadie rinde cuentas por la 
+custodia 
+Responsables definidos para 
+custodia e inventario 
+Medio 3 
+Control manual en hojas 
+separadas 
+Inventario controlado y 
+verificado de forma centralizada 
+Medio fundamental 3.1 
+Excel tardío y con copias 
+Inventario único, actualizado al 
+momento del movimiento 
+Medio fundamental 3.2 
+Conteo completo cada dos 
+meses 
+Conteos cíclicos, rápidos y por 
+zona 
+Medio fundamental 3.3 
+Web actualizada a mano 
+Canales sincronizados con el 
+stock físico 
+Medio 4 
+Personal sin procedimientos ni 
+formación 
+Personal con procedimientos y 
+formación 
+Medio fundamental 4.1 
+Aprendizaje por observación 
+Manuales y capacitación en sitio 
+Medio fundamental 4.2 
+Sin responsable de tecnología 
+Responsable de TI y soporte 
+preventivo 
+5.2 Acciones por Medio Fundamental 
+Para cada medio fundamental se definen las acciones que lo hacen posible. Las acciones 
+complementarias se ejecutan en cualquier caso; las excluyentes (letras a y b) son dos formas distintas de 
+lograr el mismo medio, por lo que solo una de ellas forma parte de cada proyecto. 
+Medio fundamental 
+Código 
+Acción 
+Tipo 
+1.1 Posición fija por 
+modelo y talla 
+A1.1 
+Codificar los anaqueles 
+y asignar una posición 
+por modelo y talla. 
+Complementaria 
+1.2 Pares identificables 
+A1.2 
+Etiquetar cada par y 
+caja con un código por 
+marca, modelo, color y 
+Complementaria 
+
+--- PAGE 36 ---
+Medio fundamental 
+Código 
+Acción 
+Tipo 
+talla. 
+1.3 Ubicación 
+registrada 
+A1.3a 
+Adquirir terminales 
+portátiles rugerizadas 
+(PDAs) con lector de 
+códigos. 
+Excluyente 
+ 
+A1.3b 
+Usar una aplicación de 
+escaneo en los 
+smartphones del 
+personal. 
+Excluyente 
+2.1 Entradas 
+registradas y avisadas 
+A2.1a 
+Instalar contactos 
+magnéticos, detectores 
+de movimiento y un 
+gateway propio con 
+alertas móviles. 
+Excluyente 
+ 
+A2.1b 
+Contratar un servicio 
+de alarma monitoreada 
+por terceros con 
+suscripción mensual. 
+Excluyente 
+2.2 Movimientos en un 
+solo lugar 
+A2.2 
+Registrar entradas, 
+salidas y traslados en el 
+sistema en lugar de 
+avisarlos por 
+WhatsApp. 
+Complementaria 
+2.3 Responsables 
+definidos 
+A2.3 
+Designar al 
+responsable de la 
+custodia del almacén y 
+al de la actualización 
+del inventario. 
+Complementaria 
+3.1 Inventario único y 
+actualizado 
+A3.1 
+Limpiar y migrar el 
+Excel (ETL) a una 
+plataforma en la nube 
+con tablero y copias de 
+seguridad automáticas. 
+Complementaria 
+3.2 Conteos cíclicos 
+A3.2 
+Programar conteos por 
+zona en lugar del 
+conteo completo cada 
+dos meses. 
+Complementaria 
+
+--- PAGE 37 ---
+Medio fundamental 
+Código 
+Acción 
+Tipo 
+3.3 Canales 
+sincronizados 
+A3.3 
+Sincronizar el stock 
+físico con 
+restock.com.pe e 
+Instagram. 
+Complementaria 
+4.1 Manuales y 
+capacitación 
+A4.1 
+Elaborar manuales de 
+procedimientos y 
+capacitar en sitio a 
+todo el personal. 
+Complementaria 
+4.2 Responsable de TI y 
+soporte 
+A4.2 
+Designar un 
+responsable de TI y 
+contratar soporte 
+preventivo de equipos 
+y red. 
+Complementaria 
+5.3 Proyectos Alternativos 
+Al combinar las acciones complementarias con una de cada par de acciones excluyentes se obtienen dos 
+proyectos alternativos. Ambos comparten el núcleo (anaqueles codificados, etiquetas, registro único, 
+responsables, plataforma en la nube, conteos cíclicos, sincronización con la web, capacitación y soporte) 
+y se diferencian en cómo se capturan los datos y cómo se vigila el almacén. 
+ 
+Proyecto alternativo N.º 1 
+Proyecto alternativo N.º 2 
+Nombre 
+PDAs rugerizadas + sensores 
+propios 
+Smartphones + alarma 
+monitoreada por terceros 
+Captura de datos 
+A1.3a: terminales rugerizadas 
+con lector 
+A1.3b: app de escaneo en 
+smartphones 
+Vigilancia del almacén 
+A2.1a: sensores y gateway 
+propios 
+A2.1b: servicio de alarma con 
+suscripción mensual 
+Imagen: Figura 10, medios, acciones y proyectos alternativos. Las acciones en naranja y marrón son 
+excluyentes; las verdes forman parte de ambos proyectos. 
+5.4 Evaluación de los Proyectos Alternativos 
+Para elegir entre ambos proyectos se aplica el método de juicio de expertos: el equipo califica cada 
+alternativa en cinco criterios con puntaje de 1 a 3 (3 es lo más favorable), sustentando cada nota en las 
+evidencias de campo y en los cuestionarios (capítulo 2.3). 
+Imagen: Figura 11, matriz de evaluación de los proyectos alternativos. 
+
+--- PAGE 38 ---
+Criterio 
+Proyecto alternativo N.º 1: PDAs 
++ sensores propios 
+Proyecto alternativo N.º 2: 
+smartphones + alarma 
+monitoreada 
+Viabilidad técnica 
+Alta (3). Las PDAs rugerizadas 
+leen etiquetas con fiabilidad y 
+los sensores propios envían 
+datos directos a la plataforma, 
+lo que atiende los accesos sin 
+registro (Almacén C = 4,50). 
+Media (2). El escaneo con 
+celulares es menos fiable y la 
+alarma de terceros no entrega 
+datos propios para el tablero. 
+Costo total 
+Medio (2). Mayor inversión 
+inicial en PDAs y sensores, sin 
+pagos mensuales de vigilancia. 
+Medio (2). Menor inversión 
+inicial, pero con suscripción 
+mensual permanente. 
+Tiempo de implementación 
+Medio (2). Requiere compra, 
+instalación y calibración de 
+equipos. 
+Corto (3). Los celulares ya 
+existen y la alarma se contrata. 
+Sostenibilidad y adopción 
+Alta (3). Herramientas 
+dedicadas, sin dependencia de 
+un proveedor de vigilancia, y 
+coherentes con el pedido de 
+cambios graduales de la 
+gerencia (Gerencia E3 = 5,00). 
+Media (2). Depende de un 
+proveedor externo y obliga a 
+usar el celular personal para 
+trabajar. 
+Seguridad y trazabilidad 
+Alta (3). Registros propios de 
+accesos y movimientos que 
+sustentan las mermas ante la 
+administración y SUNAT. 
+Media (2). Los registros de 
+acceso dependen de un tercero. 
+Total 
+13 puntos 
+11 puntos 
+Conclusión 
+Se selecciona el Proyecto Alternativo N.º 1, terminales rugerizadas con sensores propios, 
+al obtener el mayor puntaje (13 puntos frente a 11). Es la alternativa técnicamente más 
+sólida, no genera pagos mensuales de vigilancia y deja registros propios para sustentar 
+las mermas, aunque su instalación tome algo más de tiempo. 
+Imágenes por colocar 
+Son lo único que falta para completar el expediente. Las capturas de WhatsApp y de pedidos deben ir 
+sin datos personales de clientes. 
+Figura 
+Se usa en 
+Qué debe mostrar 
+1 
+Portada, capítulo 2 (apertura y 
+Hoja de Excel de inventario 
+
+--- PAGE 39 ---
+Figura 
+Se usa en 
+Qué debe mostrar 
+2.4) 
+abierta en el computador 
+2 
+Capítulo 2.1 y 2.4 
+Organigrama de la empresa (se 
+dibuja con la estructura del 
+punto 2.1) 
+3 
+Portada, capítulo 1 (apertura) y 
+2.4 
+Anaqueles con cajas de 
+sneakers sin identificación por 
+posición 
+4 
+Portada y capítulo 2.4 
+Puerta del almacén y juego de 
+llaves 
+5 
+Portada y capítulo 2.4 
+Captura del grupo de WhatsApp 
+de avisos de stock 
+6 
+Portada y capítulo 2.4 
+Captura de un pedido online 
+cancelado por falta de stock 
+7 
+Capítulo 2.4 
+Hoja del conteo de agosto de 
+2026 
+8 
+Capítulo 4.1 
+Árbol de problemas (se dibuja 
+con la tabla del punto 4.2) 
+9 
+Capítulo 5.1 
+Árbol de objetivos (se dibuja 
+con la tabla del punto 5.1) 
+10 
+Capítulo 5.3 
+Esquema de medios, acciones y 
+proyectos alternativos 
+11 
+Capítulo 5.4 
+Matriz de evaluación de los 
+proyectos alternativos 
+ 
+

@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restock E.I.R.L. — Expediente TI: Diagnóstico del Control de Inventario</title>
+  <meta name="description" content="Expediente de proyecto TI para Restock E.I.R.L., empresa peruana de sneakers de colección. Diagnóstico del control del inventario y seguridad del almacén." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── NAVBAR ─── -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#portada" class="nav-logo">
+        <span class="logo-bracket">[</span>RESTOCK<span class="logo-dot">.</span>TI<span class="logo-bracket">]</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#portada" class="nav-link">Inicio</a></li>
+        <li><a href="#capitulo1" class="nav-link">Cap. 1 — Contexto</a></li>
+        <li><a href="#capitulo2" class="nav-link">Cap. 2 — Evidencias</a></li>
+        <li><a href="#capitulo3" class="nav-link">Cap. 3 — Stakeholders</a></li>
+        <li><a href="#capitulo4" class="nav-link">Cap. 4 — Problemas</a></li>
+        <li><a href="#capitulo5" class="nav-link">Cap. 5 — Solución</a></li>
+        <li><a href="#equipo" class="nav-link">Equipo</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── PORTADA / HERO ─── -->
+  <section id="portada" class="hero">
+    <div class="hero-bg">
+      <img src="hero_sneakers.png" alt="Almacén de sneakers de colección Restock" class="hero-img" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="badge-pill">
+        <span class="badge-dot"></span>
+        Caso de estudio real · Tienda de sneakers de colección
+      </div>
+      <h1 class="hero-title">Diagnóstico del control del inventario y de la seguridad del almacén de <span class="highlight">Restock E.I.R.L.</span></h1>
+      <p class="hero-subtitle">
+        Expediente de proyecto TI para Restock Perú, empresa de zapatillas urbanas de colección con tienda física en Lima y ventas digitales. El estudio identifica por qué el inventario físico no coincide con el registro, por qué los faltantes se descubren tarde y cómo esto afecta las ventas online y la seguridad de una mercadería de alto valor.
+      </p>
+      <div class="hero-meta">
+        <div class="meta-item">
+          <span>Lima, Perú · 2026</span>
+        </div>
+        <div class="meta-item">
+          <span>Ingeniería de Sistemas · Formulación de Proyectos TI</span>
+        </div>
+        <div class="meta-item">
+          <span>restock.com.pe · @restock.pe</span>
+        </div>
+      </div>
+      <div class="hero-problem-card">
+        <div class="problem-label"> Problema General</div>
+        <p class="problem-text">Pérdida de trazabilidad y visibilidad en tiempo real del inventario físico, con alta vulnerabilidad ante mermas y riesgos de seguridad en el almacén de Restock Perú. Se origina en un control manual y descentralizado del inventario en hojas de cálculo y en una custodia de la mercadería que no deja registro de quién entra, qué sale ni cuándo.</p>
+      </div>
+      <a href="#capitulo1" class="btn-primary">Leer el expediente ↓</a>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ─── EVIDENCIAS PORTADA ─── -->
+  <section class="evidencias-portada">
+    <div class="container">
+      <p class="section-label">Fotografías levantadas en campo · Setiembre de 2026</p>
+      <h2 class="section-title">Así trabaja hoy Restock</h2>
+      <p class="section-subtitle">Imágenes que muestran el punto de partida: stock en hojas de cálculo, mercadería de alto valor sin registro de accesos y coordinación suelta por WhatsApp.</p>
+      <div class="evidence-grid">
+        <div class="evidence-card" id="ev-fig1">
+          <div class="evidence-num">Fig. 1</div>
+          <div class="evidence-label">Control manual</div>
+          <div class="evidence-caption">Hoja de Excel de inventario abierta en el computador</div>
+        </div>
+        <div class="evidence-card" id="ev-fig3">
+          <div class="evidence-num">Fig. 3</div>
+          <div class="evidence-label">Almacén</div>
+          <div class="evidence-caption">Anaqueles con cajas de sneakers sin identificación por posición</div>
+        </div>
+        <div class="evidence-card" id="ev-fig4">
+          <div class="evidence-num">Fig. 4</div>
+          <div class="evidence-label">Seguridad</div>
+          <div class="evidence-caption">Puerta del almacén y juego de llaves en circulación</div>
+        </div>
+        <div class="evidence-card" id="ev-fig5">
+          <div class="evidence-num">Fig. 5</div>
+          <div class="evidence-label">Coordinación</div>
+          <div class="evidence-caption">Grupo de WhatsApp donde se avisan los movimientos de stock</div>
+        </div>
+        <div class="evidence-card" id="ev-fig6">
+          <div class="evidence-num">Fig. 6</div>
+          <div class="evidence-label">Venta digital</div>
+          <div class="evidence-caption">Pedido online cancelado por falta de stock</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ÍNDICE CAPÍTULOS ─── -->
+  <section class="chapters-index">
+    <div class="container">
+      <p class="section-label">Estructura del expediente</p>
+      <h2 class="section-title">Del negocio al problema y de este a la solución</h2>
+      <div class="chapters-grid">
+        <a href="#capitulo1" class="chapter-card">
+          <div class="chapter-num">01</div>
+          <div class="chapter-tag">Contexto del negocio</div>
+          <h3 class="chapter-name">Planteamiento del Proyecto y Contexto del Negocio</h3>
+          <p class="chapter-desc">Quiénes somos, cómo vende Restock, qué problema se observa y qué valor está en riesgo.</p>
+          <span class="chapter-arrow">→</span>
+        </a>
+        <a href="#capitulo2" class="chapter-card">
+          <div class="chapter-num">02</div>
+          <div class="chapter-tag">Entorno y evidencias</div>
+          <h3 class="chapter-name">Marco Contextual, Entorno Organizacional y Evidencias de Campo</h3>
+          <p class="chapter-desc">Entrevistas y cuestionarios a todo el personal, evidencias fotográficas y diagnóstico de la situación actual.</p>
+          <span class="chapter-arrow">→</span>
+        </a>
+        <a href="#capitulo3" class="chapter-card">
+          <div class="chapter-num">03</div>
+          <div class="chapter-tag">Stakeholders</div>
+          <h3 class="chapter-name">Gestión Estratégica de Stakeholders</h3>
+          <p class="chapter-desc">Quién decide, quién opera y quién depende del inventario dentro de la empresa: poder, interés, actitud y responsabilidades.</p>
+          <span class="chapter-arrow">→</span>
+        </a>
+        <a href="#capitulo4" class="chapter-card">
+          <div class="chapter-num">04</div>
+          <div class="chapter-tag">Árbol de problemas</div>
+          <h3 class="chapter-name">Árbol de Problemas: Causas, Problema Central y Efectos</h3>
+          <p class="chapter-desc">De dónde nacen los descuadres y las mermas, con la evidencia de las entrevistas y del cuestionario.</p>
+          <span class="chapter-arrow">→</span>
+        </a>
+        <a href="#capitulo5" class="chapter-card chapter-card--highlight">
+          <div class="chapter-num">05</div>
+          <div class="chapter-tag">Objetivos y alternativas</div>
+          <h3 class="chapter-name">Árbol de Objetivos y Evaluación de Proyectos Alternativos</h3>
+          <p class="chapter-desc">Del problema a la solución: objetivos, acciones y la alternativa que se ejecutará.</p>
+          <span class="chapter-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── VOCES DEL EQUIPO ─── -->
+  <section class="voces-section">
+    <div class="container">
+      <p class="section-label">Cuatro voces de la operación</p>
+      <h2 class="section-title">Gerencia, almacén, ventas y sistemas</h2>
+      <p class="section-subtitle">Lo que dijo cada perfil en su entrevista, lo que marcó en la escala Likert y cómo confirma el diagnóstico.</p>
+      <div class="voces-grid">
+        <div class="voz-card">
+          <h3 class="voz-title">Gerencia y Administración</h3>
+          <p class="voz-participantes">Gerente General · Contador / Administrador</p>
+          <div class="voz-instruments">
+            <span class="instrument-tag">Entrevista · 12 preguntas</span>
+            <span class="instrument-tag">18 afirmaciones Likert</span>
+          </div>
+        </div>
+        <div class="voz-card">
+          <h3 class="voz-title">Almacén e Inventarios</h3>
+          <p class="voz-participantes">Jefe de Almacén · Auxiliar de almacén</p>
+          <div class="voz-instruments">
+            <span class="instrument-tag">Entrevista · 8 preguntas</span>
+            <span class="instrument-tag">18 afirmaciones Likert</span>
+          </div>
+        </div>
+        <div class="voz-card">
+          <h3 class="voz-title">Ventas y Tienda</h3>
+          <p class="voz-participantes">Jefe de Ventas · 2 vendedores</p>
+          <div class="voz-instruments">
+            <span class="instrument-tag">Entrevista · 7 preguntas</span>
+            <span class="instrument-tag">15 afirmaciones Likert</span>
+          </div>
+        </div>
+        <div class="voz-card">
+          <h3 class="voz-title">Marketing y E-commerce</h3>
+          <p class="voz-participantes">Especialista en Marketing y e-commerce</p>
+          <div class="voz-instruments">
+            <span class="instrument-tag">Entrevista · 7 preguntas</span>
+            <span class="instrument-tag">15 afirmaciones Likert</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CAPÍTULO 1 ─── -->
+  <section id="capitulo1" class="chapter-section">
+    <div class="container">
+      <div class="chapter-header">
+        <div class="chapter-header-num">01</div>
+        <div class="chapter-header-content">
+          <p class="section-label">Contexto del negocio · PMBOK 7: Entrega y valor</p>
+          <h2 class="section-title">Planteamiento del Proyecto y Contexto del Negocio</h2>
+          <p class="section-subtitle">Quiénes somos, cómo vende Restock, qué problema se observa y qué valor está en riesgo.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">1.1 Información General y Modelo Comercial</h3>
+        <p class="body-text">La empresa opera con la razón social <strong>Restock E.I.R.L.</strong> y el nombre comercial Restock Perú. Es una empresa peruana dedicada a la venta minorista de zapatillas urbanas de colección (sneakers de alta gama), ropa streetwear y accesorios. Trabaja con un modelo híbrido: una tienda física en Lima y ventas digitales por Instagram, WhatsApp y su página web.</p>
+        <p class="body-text">Sus productos tienen alta demanda, precios elevados y lanzamientos en ediciones limitadas, por lo que el stock no admite errores: cada par se identifica por marca, modelo exacto, color y talla. En el último conteo (agosto de 2026) el inventario registrado era de <strong>300 pares y unas 100 prendas y accesorios</strong>, con un precio promedio de <strong>S/ 700 por par</strong>.</p>
+
+        <div class="info-table">
+          <div class="info-row">
+            <div class="info-key"> Qué vende</div>
+            <div class="info-val">Sneakers exclusivos, streetwear y accesorios de marcas como Nike, Jordan, Adidas y OFF-WHITE.</div>
+          </div>
+          <div class="info-row">
+            <div class="info-key"> Dónde vende</div>
+            <div class="info-val">Tienda física en Lima y canales digitales: web (restock.com.pe), Instagram (@restock.pe) y WhatsApp.</div>
+          </div>
+          <div class="info-row">
+            <div class="info-key"> Ventas online</div>
+            <div class="info-val">Unos <strong>180 pedidos al mes</strong>, con un ticket promedio de S/ 780.</div>
+          </div>
+          <div class="info-row">
+            <div class="info-key"> Lo que lo hace delicado</div>
+            <div class="info-val">Alto valor unitario por lote, ediciones limitadas y necesidad de identificar cada par por marca, modelo, color y talla.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">1.2 Diagnóstico Situacional y Planteamiento del Problema</h3>
+        <div class="bullet-cards">
+          <div class="bullet-card bullet-card--red">
+            <div>
+              <h4>Diagnóstico operativo</h4>
+              <p>Existe un descuadre constante entre lo que dicen las hojas de cálculo y lo que realmente hay en los anaqueles. En el último conteo completo se hallaron <strong>475 de los 500 pares registrados (5% de diferencia)</strong>. No se detecta a tiempo si faltan pares, si sobran productos por mal conteo, si una caja quedó mal ubicada o si hubo movimientos no autorizados de mercadería cara.</p>
+            </div>
+          </div>
+          <div class="bullet-card bullet-card--orange">
+            <div>
+              <h4>Causas principales</h4>
+              <p>La ubicación y la identificación de cada par dependen de la memoria y la vista del personal; los accesos al almacén y los movimientos de mercadería no dejan registro; el inventario se concilia a mano en hojas de cálculo separadas de la custodia física; y el personal no recibió formación ni procedimientos escritos de control de inventarios.</p>
+            </div>
+          </div>
+          <div class="bullet-card bullet-card--purple">
+            <div>
+              <h4>Consecuencias directas</h4>
+              <p>Desfases continuos entre stock físico y registro contable; detección tardía o nula de mermas y sustracciones internas; pérdidas por cancelaciones de compras online sin stock real; y descubrimiento tardío de ingresos no programados o incidentes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">1.3 Justificación, Valor en Riesgo y Caso de Negocio</h3>
+        <div class="risk-grid">
+          <div class="risk-card">
+            <div class="risk-num">S/ 40,000</div>
+            <div class="risk-label">pérdida anual estimada por gerencia</div>
+            <div class="risk-sub">S/ 1,000 en pares que no aparecen + S/ 2,000 en utilidad por ventas canceladas al mes</div>
+          </div>
+          <div class="risk-card">
+            <div class="risk-num">9 – 12</div>
+            <div class="risk-label">pedidos online cancelados al mes</div>
+            <div class="risk-sub">De unos 180 pedidos totales · Ticket promedio S/ 780</div>
+          </div>
+          <div class="risk-card">
+            <div class="risk-num">1.5 días</div>
+            <div class="risk-label">duración del conteo completo</div>
+            <div class="risk-sub">Con 4 personas · Cada 2 meses · La tienda cierra medio día</div>
+          </div>
+          <div class="risk-card">
+            <div class="risk-num">2 días</div>
+            <div class="risk-label">revisión de diferencias al cierre mensual</div>
+            <div class="risk-sub">Tiempo del contador para cuadrar Excel con compras y ventas</div>
+          </div>
+        </div>
+        <div class="supuestos-box">
+          <h4>Supuestos y restricciones</h4>
+          <ul>
+            <li>Presupuesto limitado</li>
+            <li>Personal con experiencia en ventas, sin formación técnica</li>
+            <li>El cambio no puede detener las ventas diarias</li>
+            <li>Sin área de TI definida</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">1.5 Portafolio de Productos y Alcance del Estudio</h3>
+        <div class="product-grid">
+          <div class="product-card">
+            <h4>Sneakers de colección</h4>
+            <p>Zapatillas urbanas de alta gama y ediciones limitadas de Nike, Jordan, Adidas y OFF-WHITE. Identificadas por marca, modelo, color y talla.</p>
+            <div class="product-stats">
+              <span>~300 pares en stock</span>
+              <span>S/ 450 – S/ 5,000</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <h4>Ropa streetwear</h4>
+            <p>Prendas urbanas de marcas de colección.</p>
+            <div class="product-stats">
+              <span>~100 unidades</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <h4>Accesorios</h4>
+            <p>Gorras, medias, cordones y otros complementos del rubro streetwear.</p>
+            <div class="product-stats">
+              <span>~100 unidades</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CAPÍTULO 2 ─── -->
+  <section id="capitulo2" class="chapter-section chapter-section--alt">
+    <div class="container">
+      <div class="chapter-header">
+        <div class="chapter-header-num">02</div>
+        <div class="chapter-header-content">
+          <p class="section-label">Entorno y evidencias · PMBOK 7: Adaptar y Navegar</p>
+          <h2 class="section-title">Marco Contextual, Entorno Organizacional y Evidencias de Campo</h2>
+          <p class="section-subtitle">Entorno de la empresa, entrevistas y cuestionarios a todo el personal, evidencias fotográficas y diagnóstico de la situación actual.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">Evidencias fotográficas</h3>
+        <div class="chapter-evidence-grid">
+          <figure class="chapter-evidence-card">
+            <img src="imagenes/WhatsApp%20Image%202026-10-12%20at%2018.43.44.jpeg" alt="Hoja de cálculo digital con pedidos y seguimiento de productos" loading="lazy" />
+            <figcaption>Registro digital de pedidos y seguimiento de productos.</figcaption>
+          </figure>
+          <figure class="chapter-evidence-card">
+            <img src="imagenes/WhatsApp%20Image%202026-10-12%20at%2018.43.45%20(1).jpeg" alt="Área de venta de Restock con calzado exhibido, mostrador y computadora" loading="lazy" />
+            <figcaption>Área de venta y exhibición de calzado en la tienda.</figcaption>
+          </figure>
+          <figure class="chapter-evidence-card">
+            <img src="imagenes/WhatsApp%20Image%202026-10-12%20at%2018.43.45.jpeg" alt="Hoja de cálculo con pedidos, fechas y estados de envío" loading="lazy" />
+            <figcaption>Hoja de cálculo utilizada para consultar pedidos y estados de envío.</figcaption>
+          </figure>
+          <figure class="chapter-evidence-card">
+            <img src="imagenes/WhatsApp%20Image%202026-10-12%20at%2018.43.46.jpeg" alt="Vista general del interior de la tienda Restock con calzado y prendas" loading="lazy" />
+            <figcaption>Vista general del espacio comercial y sus productos.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">2.1 Factores Ambientales de la Empresa (EEFs)</h3>
+        <div class="factors-grid">
+          <div class="factors-col">
+            <h4 class="factors-subtitle"> Factores Internos</h4>
+            <div class="factor-item">
+              <div><strong>Cultura organizacional:</strong> Manejo flexible del negocio y apertura del personal a nuevas herramientas. La disposición al cambio obtiene entre 4,11 y 4,50 en los cuatro perfiles.</div>
+            </div>
+            <div class="factor-item">
+              <div><strong>Estructura:</strong> Jerarquía simple, con propietario o administrador, personal de tienda y encargado de logística. No hay un área de TI definida.</div>
+            </div>
+            <div class="factor-item">
+              <div><strong>Infraestructura tecnológica:</strong> Equipos básicos, internet estándar, sin servidores propios ni monitoreo del almacén; inventario en archivos Excel.</div>
+            </div>
+            <div class="factor-item">
+              <div><strong>Procesos actuales:</strong> Stock en hojas de cálculo y coordinación por WhatsApp, sin seguimiento ni alertas ante pérdidas o movimientos irregulares.</div>
+            </div>
+            <div class="factor-item">
+              <div><strong>Recursos humanos:</strong> Personal con experiencia en ventas, sin capacitación técnica ni en gestión digital de inventario.</div>
+            </div>
+          </div>
+          <div class="factors-col">
+            <h4 class="factors-subtitle"> Factores Externos</h4>
+            <div class="factor-item">
+              <div><strong>Regulaciones:</strong> Ley 29571 (Protección del Consumidor) y Ley 29733 (Protección de Datos Personales), aplicables a la información recogida en la venta online.</div>
+            </div>
+            <div class="factor-item">
+              <div><strong>Proveedores de servicios:</strong> La conectividad y los servicios digitales dependen de terceros, lo que condiciona disponibilidad y costo.</div>
+            </div>
+            <div class="factor-item">
+              <div><strong>Condiciones económicas:</strong> Presupuesto limitado.</div>
+            </div>
+            <div class="factor-item">
+              <div><strong>Competencia:</strong> Tiendas formales e informales de calzado urbano compiten por posicionamiento en redes. Restock puede diferenciarse con mayor seguridad y disponibilidad real de stock.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="organigrama">
+          <h4 class="organigrama-title">Organigrama (Figura 2)</h4>
+          <div class="org-chart">
+            <div class="org-node org-node--top">Gerente General</div>
+            <div class="org-connector-v"></div>
+            <div class="org-level2">
+              <div class="org-branch">
+                <div class="org-node org-node--l2">Jefe de Ventas</div>
+              </div>
+              <div class="org-branch">
+                <div class="org-node org-node--l2">Jefe de Almacén</div>
+              </div>
+              <div class="org-branch">
+                <div class="org-node org-node--l2">Especialista en Marketing</div>
+              </div>
+              <div class="org-branch">
+                <div class="org-node org-node--l2">Desarrollador / Analista TI</div>
+              </div>
+              <div class="org-branch">
+                <div class="org-node org-node--l2">Contador / Administrador</div>
+              </div>
+            </div>
+            <div class="org-note">+ Asesor legal / contable (externo)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">2.2 Activos de los Procesos de la Organización</h3>
+        <div class="opa-list">
+          <div class="opa-item">
+            <div><strong>Procesos y control:</strong> El control del inventario depende de un archivo Excel que actualizan el Jefe de Almacén, el Jefe de Ventas y el Contador al cierre del día, con copias distintas del archivo en circulación.</div>
+          </div>
+          <div class="opa-item">
+            <div><strong>Comunicación y seguimiento:</strong> Los movimientos se avisan por un grupo de WhatsApp de nueve personas, sin formato fijo ni registro estructurado.</div>
+          </div>
+          <div class="opa-item">
+            <div><strong>Normativa y procedimientos:</strong> No existen manuales ni reglas escritas para recibir, ubicar y despachar mercadería; las tareas se aprenden observando a los compañeros más antiguos.</div>
+          </div>
+          <div class="opa-item">
+            <div><strong>Gestión del conocimiento:</strong> Un intento anterior de ordenar el inventario con una aplicación gratuita (hace un año) se abandonó a las tres semanas porque exigía cargar todo a mano y nadie la actualizaba.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">2.3 Levantamiento de Información: Entrevistas y Cuestionarios</h3>
+
+        <div class="participants-table">
+          <div class="pt-header">
+            <span>Código</span><span>Participante</span><span>Perfil</span><span>Instrumentos</span>
+          </div>
+          <div class="pt-row"><span class="pt-code">E1</span><span>Gerente General</span><span class="pt-tag">Gerencia</span><span>Entrevista + cuestionario</span></div>
+          <div class="pt-row"><span class="pt-code">E2</span><span>Contador / Administrador</span><span class="pt-tag">Gerencia</span><span>Entrevista + cuestionario</span></div>
+          <div class="pt-row"><span class="pt-code">E3</span><span>Jefe de Almacén</span><span class="pt-tag">Almacén</span><span>Entrevista + cuestionario</span></div>
+          <div class="pt-row"><span class="pt-code">E4</span><span>Auxiliar de almacén</span><span class="pt-tag">Almacén</span><span>Entrevista + cuestionario</span></div>
+          <div class="pt-row"><span class="pt-code">E5</span><span>Jefe de Ventas</span><span class="pt-tag">Ventas</span><span>Entrevista + cuestionario</span></div>
+          <div class="pt-row"><span class="pt-code">E6</span><span>Vendedor de tienda 1</span><span class="pt-tag">Ventas</span><span>Entrevista + cuestionario</span></div>
+          <div class="pt-row"><span class="pt-code">E7</span><span>Especialista en Marketing y e-commerce</span><span class="pt-tag">Marketing</span><span>Entrevista + cuestionario</span></div>
+        </div>
+        <p class="body-text small-text">Entrevistas del 14 al 26 de setiembre de 2026. Cuestionarios impresos del 28 de setiembre al 2 de octubre de 2026.</p>
+      </div>
+
+      <!-- ENTREVISTAS -->
+      <div class="subsection">
+        <h3 class="subsection-title">2.3.2 Entrevistas por Perfil</h3>
+
+        <!-- E1 E2 -->
+        <div class="interview-block">
+          <div class="interview-header">
+            <div class="interview-code-badge">E1 · E2</div>
+            <div>
+              <h4>Entrevista 1 · Gerencia y Administración</h4>
+              <p>Semi-estructurada, presencial, en la oficina de dirección, con audio. 12 preguntas en 8 dimensiones.</p>
+            </div>
+          </div>
+          <div class="qa-list">
+            <div class="qa-item">
+              <div class="qa-q"><span class="qa-dim">Mermas y pérdidas</span> ¿Con qué frecuencia se entera de que falta un par?</div>
+              <div class="qa-a">«Casi todas las semanas aparece alguna diferencia. Los pares de lanzamiento limitado son los que más duelen.» <em>— E1</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q"><span class="qa-dim">Mermas y pérdidas</span> ¿Cuánto cree que pierde la empresa al año?</div>
+              <div class="qa-a">«Unos 20 mil soles al año, pero es un cálculo mío: nadie lo mide.» <em>— E1</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q"><span class="qa-dim">Ventas canceladas</span> ¿Qué pasa cuando un cliente compra por la web y el par no está?</div>
+              <div class="qa-a">«Se le llama, se le devuelve el dinero o se le ofrece otro par. A veces lo comenta en redes y eso nos afecta.» <em>— E1</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q"><span class="qa-dim">Ventas canceladas</span> ¿Cuántos pedidos online se cancelan al mes?</div>
+              <div class="qa-a">«Entre 9 y 12 al mes, de unos 180. Con un ticket de 780 soles, la utilidad que se pierde ronda los 20 mil al año.» <em>— E1</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q"><span class="qa-dim">Seguridad y accesos</span> Cuando el almacén está cerrado, ¿cómo se entera si alguien entró?</div>
+              <div class="qa-a">«No me entero. Hay cuatro llaves y nadie anota quién entra ni a qué hora.» <em>— E1</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q"><span class="qa-dim">Seguridad y accesos</span> ¿Ha habido faltantes de los que no se pudo saber cuándo salieron?</div>
+              <div class="qa-a">«Dos casos en el último año, cuatro pares de edición limitada, que notamos días después de venderse otros del mismo modelo.» <em>— E1</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q"><span class="qa-dim">Control Excel</span> ¿Cómo se lleva hoy el inventario y quién lo actualiza?</div>
+              <div class="qa-a">«En un Excel. Lo actualizan el jefe de almacén, el jefe de ventas y el contador al cerrar el día, y a veces hay copias distintas.» <em>— E1</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q"><span class="qa-dim">Control Excel</span> ¿Cuánto tiempo toma cuadrar el inventario con la contabilidad?</div>
+              <div class="qa-a">«Cada cierre de mes me toma unos dos días averiguar por qué no cuadra el Excel con las compras y ventas.» <em>— E2</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q"><span class="qa-dim">Decisiones de compra</span> ¿Qué información usa para decidir qué comprar o reponer?</div>
+              <div class="qa-a">«El Excel y mi experiencia. Confianza media: en agosto se pidió reposición de un modelo que ya estaba en una caja mal ubicada.» <em>— E1</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q"><span class="qa-dim">Intentos anteriores</span> ¿Probaron antes alguna forma de ordenar el inventario?</div>
+              <div class="qa-a">«Hace un año probamos una aplicación gratuita. A las tres semanas se dejó de usar porque había que cargar todo a mano y nadie la actualizaba.» <em>— E1</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q"><span class="qa-dim">Actitud al cambio</span> ¿Cómo cree que reaccionaría su equipo ante una forma distinta de trabajar?</div>
+              <div class="qa-a">«Son abiertos si no se les complica. El temor es que se retrase la venta del día.» <em>— E1</em> · «Yo dedicaría tiempo a aprenderlo si me ahorra los cierres.» <em>— E2</em></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- E3 E4 -->
+        <div class="interview-block">
+          <div class="interview-header">
+            <div class="interview-code-badge interview-code-badge--orange">E3 · E4</div>
+            <div>
+              <h4>Entrevista 2 · Almacén e Inventarios</h4>
+              <p>Semi-estructurada, en el almacén, con audio. 9 preguntas.</p>
+            </div>
+          </div>
+          <div class="qa-list">
+            <div class="qa-item">
+              <div class="qa-q">¿Cómo decide dónde guardar mercadería nueva?</div>
+              <div class="qa-a">«Donde hay espacio, y cerca de la salida si rota mucho. No hay una regla escrita.» <em>— E3</em> · «Hago lo que me dice el jefe o lo que veo.» <em>— E4</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q">¿Qué pasa cuando le piden un par y no está donde debería?</div>
+              <div class="qa-a">«Pregunto por WhatsApp y busco caja por caja. Me puedo demorar de 8 a 12 minutos.» <em>— E4</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q">¿Cuántas veces por semana el Excel dice que hay un par y no está?</div>
+              <div class="qa-a">«De 3 a 5 veces por semana.» <em>— E3</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q">¿Cada cuánto se cuenta todo el almacén y cuánto tiempo toma?</div>
+              <div class="qa-a">«Cada dos meses; toma día y medio con cuatro personas y la tienda cierra medio día. En agosto había 920 pares en el Excel y encontramos 861; 31 aparecieron después en otra ubicación o talla y 28 no se explicaron.» <em>— E3</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q">¿Qué modelos o tallas se confunden con más facilidad?</div>
+              <div class="qa-a">«Las Jordan 1 y las Dunk en tallas contiguas, y las cajas parecidas.» <em>— E4</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q">¿Quién tiene llave del almacén y cómo se registra quién entra?</div>
+              <div class="qa-a">«Cuatro llaves: gerente, jefe de almacén, jefe de ventas y administración. No se registra nada.» <em>— E3</em></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- E5 E6 E7 -->
+        <div class="interview-block">
+          <div class="interview-header">
+            <div class="interview-code-badge interview-code-badge--green">E5 · E6</div>
+            <div>
+              <h4>Entrevista 3 · Ventas y Tienda</h4>
+              <p>Semi-estructurada, en la tienda, con audio. 7 preguntas.</p>
+            </div>
+          </div>
+          <div class="qa-list">
+            <div class="qa-item">
+              <div class="qa-q">¿Cómo confirma si hay stock en la talla pedida?</div>
+              <div class="qa-a">«Miro el Excel y pregunto al almacén por WhatsApp. A veces demora de 5 a 10 minutos y el cliente se va.» <em>— E6</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q">¿Cuántas veces al mes ofrece un par que luego no aparece?</div>
+              <div class="qa-a">«Entre 6 y 8 veces al mes en tienda.» <em>— E5</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q">¿Cómo se maneja la venta por Instagram y WhatsApp al mismo tiempo que la tienda?</div>
+              <div class="qa-a">«Se confirma a mano. Una vez le vendimos el mismo par a dos clientes, uno en tienda y otro por Instagram.» <em>— E6</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q">¿Qué reclaman los clientes cuando se cancela una compra?</div>
+              <div class="qa-a">«Se molestan y a veces lo comentan en Instagram. Algunos ya no vuelven.» <em>— E5</em></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="interview-block">
+          <div class="interview-header">
+            <div class="interview-code-badge interview-code-badge--purple">E7</div>
+            <div>
+              <h4>Entrevista 4 · Marketing y E-commerce</h4>
+              <p>Semi-estructurada, en la oficina, con audio. 6 preguntas.</p>
+            </div>
+          </div>
+          <div class="qa-list">
+            <div class="qa-item">
+              <div class="qa-q">¿Cómo se actualiza el stock que muestra la web?</div>
+              <div class="qa-a">«A mano, al final del día, según el Excel.» <em>— E7</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q">¿Han publicado o promocionado un producto que ya no había?</div>
+              <div class="qa-a">«Sí. En el último lanzamiento se promocionaron 12 pares de un modelo y al revisar solo había 9.» <em>— E7</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q">¿Dónde se guarda la información de inventario y cada cuánto se respalda?</div>
+              <div class="qa-a">«Excel en las computadoras de la oficina y en el correo. El respaldo es manual, cada semana o cuando nos acordamos.» <em>— E7</em></div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-q">¿Cómo se protegen los datos personales de los clientes de la venta online?</div>
+              <div class="qa-a">«No hay un procedimiento definido. Los datos están en hojas y en chats.» <em>— E7</em></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CUESTIONARIOS LIKERT -->
+      <div class="subsection">
+        <h3 class="subsection-title">2.3.3 Cuestionarios con Escala Likert</h3>
+        <p class="body-text">Cada persona marcó su nivel de acuerdo en una escala de <strong>1 (totalmente en desacuerdo) a 5 (totalmente de acuerdo)</strong>. Un puntaje alto significa que el problema está presente. De 1,00 a 2,33 es nivel bajo · De 2,34 a 3,66 medio · De 3,67 a 5,00 alto.</p>
+
+        <div class="likert-tabs" id="likertTabs">
+          <button class="likert-tab active" data-target="q1">Gerencia y Admin.</button>
+          <button class="likert-tab" data-target="q2">Almacén e Inv.</button>
+          <button class="likert-tab" data-target="q3">Ventas y Tienda</button>
+          <button class="likert-tab" data-target="q4">Marketing y E-com.</button>
+        </div>
+
+        <div class="likert-content active" id="q1">
+          <div class="likert-dimension">
+            <div class="likert-dim-header">
+              <span>A · Mermas y costos</span>
+              <span class="likert-score high">4,25 — Alto</span>
+            </div>
+            <div class="likert-items">
+              <div class="likert-item"><span>Perdemos dinero cada mes por pares que no aparecen o aparecen tarde.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:80%"></div><span class="likert-val">4,00</span></div></div>
+              <div class="likert-item"><span>Las diferencias de inventario se descubren semanas después de que ocurren.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:90%"></div><span class="likert-val">4,50</span></div></div>
+              <div class="likert-item"><span>No tengo una cifra confiable de cuánto se pierde al año por mermas.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:90%"></div><span class="likert-val">4,50</span></div></div>
+              <div class="likert-item"><span>Las ventas canceladas por falta de stock nos cuestan dinero y clientes.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:80%"></div><span class="likert-val">4,00</span></div></div>
+            </div>
+          </div>
+          <div class="likert-dimension">
+            <div class="likert-dim-header">
+              <span>B · Información para decidir</span>
+              <span class="likert-score high">4,12 — Alto</span>
+            </div>
+            <div class="likert-items">
+              <div class="likert-item"><span>El Excel suele no coincidir con lo que hay realmente en los anaqueles.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:90%"></div><span class="likert-val">4,50</span></div></div>
+              <div class="likert-item"><span>Para decidir compras y reposiciones dependo de datos que no siempre son confiables.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:80%"></div><span class="likert-val">4,00</span></div></div>
+              <div class="likert-item"><span>Cuadrar el inventario con la contabilidad toma más tiempo del que debería.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:70%"></div><span class="likert-val">3,50</span></div></div>
+              <div class="likert-item"><span>No puedo ver el stock real en el momento en que lo necesito.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:90%"></div><span class="likert-val">4,50</span></div></div>
+            </div>
+          </div>
+          <div class="likert-dimension">
+            <div class="likert-dim-header">
+              <span>C · Seguridad y custodia</span>
+              <span class="likert-score high">4,38 — Alto</span>
+            </div>
+            <div class="likert-items">
+              <div class="likert-item"><span>No sabemos con certeza quién entra al almacén fuera del horario de atención.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:90%"></div><span class="likert-val">4,50</span></div></div>
+              <div class="likert-item"><span>Si falta un par, es difícil saber cuándo y cómo salió.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:80%"></div><span class="likert-val">4,00</span></div></div>
+              <div class="likert-item"><span>Una salida no autorizada de mercadería podría pasar días sin que nos enteremos.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:80%"></div><span class="likert-val">4,00</span></div></div>
+              <div class="likert-item"><span>Las ediciones limitadas son lo que más me preocupa proteger.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:100%"></div><span class="likert-val">5,00</span></div></div>
+            </div>
+          </div>
+          <div class="likert-dimension">
+            <div class="likert-dim-header">
+              <span>E · Disposición al cambio</span>
+              <span class="likert-score change">4,50 — Alta disposición</span>
+            </div>
+            <div class="likert-items">
+              <div class="likert-item"><span>Estoy dispuesto a cambiar la forma en que hoy controlamos el inventario.</span><div class="likert-bar-wrap"><div class="likert-bar likert-bar--green" style="width:90%"></div><span class="likert-val">4,50</span></div></div>
+              <div class="likert-item"><span>Mi equipo aceptaría nuevas herramientas si le facilitan el registro diario.</span><div class="likert-bar-wrap"><div class="likert-bar likert-bar--green" style="width:80%"></div><span class="likert-val">4,00</span></div></div>
+              <div class="likert-item"><span>Prefiero cambios graduales que no detengan las ventas diarias.</span><div class="likert-bar-wrap"><div class="likert-bar likert-bar--green" style="width:100%"></div><span class="likert-val">5,00</span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="likert-content" id="q2">
+          <div class="likert-dimension">
+            <div class="likert-dim-header"><span>A · Ubicación e identificación</span><span class="likert-score high">4,12 — Alto</span></div>
+            <div class="likert-items">
+              <div class="likert-item"><span>A veces la mercadería se guarda donde hay espacio y no en un lugar fijo.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:70%"></div><span class="likert-val">3,50</span></div></div>
+              <div class="likert-item"><span>Me cuesta distinguir a simple vista pares muy parecidos (mismo modelo, distinta talla o color).</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:80%"></div><span class="likert-val">4,00</span></div></div>
+              <div class="likert-item"><span>Hay cajas que quedan en una ubicación distinta a la registrada.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:90%"></div><span class="likert-val">4,50</span></div></div>
+              <div class="likert-item"><span>Cuando falta un par, perdemos mucho tiempo buscándolo.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:90%"></div><span class="likert-val">4,50</span></div></div>
+            </div>
+          </div>
+          <div class="likert-dimension">
+            <div class="likert-dim-header"><span>B · Registro e inventario</span><span class="likert-score high">4,12 — Alto</span></div>
+            <div class="likert-items">
+              <div class="likert-item"><span>El Excel se actualiza al cierre del día y no cuando ocurre el movimiento.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:100%"></div><span class="likert-val">5,00</span></div></div>
+              <div class="likert-item"><span>Hay movimientos que se avisan por WhatsApp y no llegan a anotarse en el Excel.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:80%"></div><span class="likert-val">4,00</span></div></div>
+              <div class="likert-item"><span>Existen distintas versiones del archivo de inventario.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:70%"></div><span class="likert-val">3,50</span></div></div>
+              <div class="likert-item"><span>El conteo completo es lento y obliga a detener parte del trabajo.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:80%"></div><span class="likert-val">4,00</span></div></div>
+            </div>
+          </div>
+          <div class="likert-dimension">
+            <div class="likert-dim-header"><span>C · Accesos y custodia</span><span class="likert-score high">4,50 — Alto</span></div>
+            <div class="likert-items">
+              <div class="likert-item"><span>Varias personas tienen llave del almacén.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:80%"></div><span class="likert-val">4,00</span></div></div>
+              <div class="likert-item"><span>No queda registro de quién entra ni a qué hora.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:100%"></div><span class="likert-val">5,00</span></div></div>
+              <div class="likert-item"><span>Alguien podría retirar un par sin que quede constancia.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:80%"></div><span class="likert-val">4,00</span></div></div>
+              <div class="likert-item"><span>Fuera del horario laboral no hay forma de enterarse si se abrió el almacén.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:100%"></div><span class="likert-val">5,00</span></div></div>
+            </div>
+          </div>
+          <div class="likert-dimension">
+            <div class="likert-dim-header"><span>E · Disposición al cambio</span><span class="likert-score change">4,50 — Alta disposición</span></div>
+            <div class="likert-items">
+              <div class="likert-item"><span>Me gustaría un modo más simple de registrar entradas y salidas.</span><div class="likert-bar-wrap"><div class="likert-bar likert-bar--green" style="width:100%"></div><span class="likert-val">5,00</span></div></div>
+              <div class="likert-item"><span>Aprendería a usar un equipo nuevo si me enseñan en el trabajo.</span><div class="likert-bar-wrap"><div class="likert-bar likert-bar--green" style="width:80%"></div><span class="likert-val">4,00</span></div></div>
+              <div class="likert-item"><span>Cualquier cambio debería hacerse sin detener el trabajo del día.</span><div class="likert-bar-wrap"><div class="likert-bar likert-bar--green" style="width:90%"></div><span class="likert-val">4,50</span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="likert-content" id="q3">
+          <div class="likert-dimension">
+            <div class="likert-dim-header"><span>A · Disponibilidad real de stock</span><span class="likert-score high">4,25 — Alto</span></div>
+            <div class="likert-items">
+              <div class="likert-item"><span>He ofrecido un par confirmado en el Excel que luego no se encontró.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:86.6%"></div><span class="likert-val">4,33</span></div></div>
+              <div class="likert-item"><span>Para confirmar una talla debo ir a buscar a los anaqueles o preguntar por WhatsApp.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:86.6%"></div><span class="likert-val">4,33</span></div></div>
+              <div class="likert-item"><span>El stock que se muestra en la web o Instagram no siempre coincide con lo que hay.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:73.4%"></div><span class="likert-val">3,67</span></div></div>
+              <div class="likert-item"><span>Los clientes de ediciones limitadas no toleran que el producto no esté.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:93.4%"></div><span class="likert-val">4,67</span></div></div>
+            </div>
+          </div>
+          <div class="likert-dimension">
+            <div class="likert-dim-header"><span>B · Cancelaciones y reclamos</span><span class="likert-score medium">3,50 — Medio</span></div>
+            <div class="likert-items">
+              <div class="likert-item"><span>Se cancelan pedidos online porque el producto no estaba.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:86.6%"></div><span class="likert-val">4,33</span></div></div>
+              <div class="likert-item"><span>Los clientes reclaman en redes cuando se cancela su compra.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:66.6%"></div><span class="likert-val">3,33</span></div></div>
+              <div class="likert-item"><span>Perdemos ventas por demorar en confirmar la disponibilidad.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:73.4%"></div><span class="likert-val">3,67</span></div></div>
+              <div class="likert-item"><span>Se han entregado productos con error de modelo, color o talla.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:53.4%"></div><span class="likert-val">2,67</span></div></div>
+            </div>
+          </div>
+          <div class="likert-dimension">
+            <div class="likert-dim-header"><span>C · Coordinación e información</span><span class="likert-score high">4,17 — Alto</span></div>
+            <div class="likert-items">
+              <div class="likert-item"><span>Me entero de los movimientos de stock por mensajes sueltos de WhatsApp.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:93.4%"></div><span class="likert-val">4,67</span></div></div>
+              <div class="likert-item"><span>Hay avisos de ventas o llegadas de mercadería que se olvidan de comunicar.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:80%"></div><span class="likert-val">4,00</span></div></div>
+              <div class="likert-item"><span>No tengo una forma única de consultar el stock real.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:86.6%"></div><span class="likert-val">4,33</span></div></div>
+              <div class="likert-item"><span>Atender tienda, Instagram y WhatsApp a la vez genera confusión de stock.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:73.4%"></div><span class="likert-val">3,67</span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="likert-content" id="q4">
+          <div class="likert-dimension">
+            <div class="likert-dim-header"><span>A · Sincronización entre web y stock</span><span class="likert-score high">3,88 — Alto</span></div>
+            <div class="likert-items">
+              <div class="likert-item"><span>El stock de la web se actualiza a mano.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:90%"></div><span class="likert-val">4,50</span></div></div>
+              <div class="likert-item"><span>Hay productos publicados que ya se vendieron en tienda.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:80%"></div><span class="likert-val">4,00</span></div></div>
+              <div class="likert-item"><span>Las campañas se lanzan sin certeza de cuánto stock real hay.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:70%"></div><span class="likert-val">3,50</span></div></div>
+              <div class="likert-item"><span>Los pedidos online se confirman antes de verificar el stock físico.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:70%"></div><span class="likert-val">3,50</span></div></div>
+            </div>
+          </div>
+          <div class="likert-dimension">
+            <div class="likert-dim-header"><span>B · Datos e información</span><span class="likert-score high">4,12 — Alto</span></div>
+            <div class="likert-items">
+              <div class="likert-item"><span>Los datos de inventario están repartidos en varios archivos.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:100%"></div><span class="likert-val">5,00</span></div></div>
+              <div class="likert-item"><span>No existe un registro histórico confiable de los movimientos.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:80%"></div><span class="likert-val">4,00</span></div></div>
+              <div class="likert-item"><span>Obtener un reporte de stock exige armarlo manualmente.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:90%"></div><span class="likert-val">4,50</span></div></div>
+              <div class="likert-item"><span>Los datos de clientes de la venta online no tienen un respaldo ni un control de acceso definidos.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:60%"></div><span class="likert-val">3,00</span></div></div>
+            </div>
+          </div>
+          <div class="likert-dimension">
+            <div class="likert-dim-header"><span>C · Soporte tecnológico</span><span class="likert-score high">4,12 — Alto</span></div>
+            <div class="likert-items">
+              <div class="likert-item"><span>La empresa no tiene un responsable de tecnología con dedicación exclusiva.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:90%"></div><span class="likert-val">4,50</span></div></div>
+              <div class="likert-item"><span>Los equipos e internet son básicos y no se monitorean.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:70%"></div><span class="likert-val">3,50</span></div></div>
+              <div class="likert-item"><span>Si falla un archivo o equipo, no hay copia de respaldo automática.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:90%"></div><span class="likert-val">4,50</span></div></div>
+              <div class="likert-item"><span>Hoy no existe ninguna herramienta para vigilar el almacén.</span><div class="likert-bar-wrap"><div class="likert-bar" style="width:80%"></div><span class="likert-val">4,00</span></div></div>
+            </div>
+          </div>
+          <div class="likert-dimension">
+            <div class="likert-dim-header"><span>D · Disposición al cambio</span><span class="likert-score change">4,50 — Alta disposición</span></div>
+            <div class="likert-items">
+              <div class="likert-item"><span>La empresa está abierta a usar nuevas herramientas.</span><div class="likert-bar-wrap"><div class="likert-bar likert-bar--green" style="width:100%"></div><span class="likert-val">5,00</span></div></div>
+              <div class="likert-item"><span>Hay interés en tener la información del negocio en un solo lugar.</span><div class="likert-bar-wrap"><div class="likert-bar likert-bar--green" style="width:90%"></div><span class="likert-val">4,50</span></div></div>
+              <div class="likert-item"><span>Cualquier cambio exigiría capacitar al personal de ventas y almacén.</span><div class="likert-bar-wrap"><div class="likert-bar likert-bar--green" style="width:80%"></div><span class="likert-val">4,00</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESULTADOS CONSOLIDADOS -->
+      <div class="subsection">
+        <h3 class="subsection-title">2.3.4 Resultados Consolidados</h3>
+        <div class="consolidated-alert">De las 14 dimensiones de diagnóstico, <strong>13 alcanzan un nivel alto</strong> en la escala Likert; solo cancelaciones y reclamos del perfil de ventas queda en nivel medio. La disposición al cambio es <strong>alta en los cuatro perfiles</strong>.</div>
+
+        <div class="results-table">
+          <div class="rt-header">
+            <span>Tema</span><span>Promedios</span><span>Lectura</span>
+          </div>
+          <div class="rt-row">
+            <span>Ubicación e identificación de productos</span>
+            <span class="rt-score high">4,12</span>
+            <span>La mercadería se guarda donde hay espacio y las cajas no coinciden con lo registrado.</span>
+          </div>
+          <div class="rt-row">
+            <span>Registro e inventario manual</span>
+            <span class="rt-score high">4,12 · 4,12 · 4,12</span>
+            <span>Los tres perfiles coinciden: el Excel se actualiza tarde, hay copias distintas y los datos están dispersos.</span>
+          </div>
+          <div class="rt-row">
+            <span>Seguridad y custodia</span>
+            <span class="rt-score high">4,38 · 4,50</span>
+            <span>Es el tema más intenso: no hay registro de quién entra ni cuándo.</span>
+          </div>
+          <div class="rt-row">
+            <span>Mermas, costos y disponibilidad de stock</span>
+            <span class="rt-score high">4,25 · 4,25 · 3,50 · 3,88</span>
+            <span>Hay pérdidas y ofrecimientos de pares que no se encuentran.</span>
+          </div>
+          <div class="rt-row">
+            <span>Coordinación de la información</span>
+            <span class="rt-score high">4,17</span>
+            <span>Los avisos de stock llegan por mensajes sueltos de WhatsApp.</span>
+          </div>
+          <div class="rt-row">
+            <span>Disposición al cambio</span>
+            <span class="rt-score change">4,50 · 4,50 · 4,11 · 4,50</span>
+            <span>Hay apertura general; la condición es que el cambio no detenga las ventas del día.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- LÍNEA BASE -->
+      <div class="subsection">
+        <h3 class="subsection-title">Línea Base de Indicadores</h3>
+        <div class="kpi-grid">
+          <div class="kpi-card"><div class="kpi-num">93,6%</div><div class="kpi-label">Exactitud del inventario (agosto 2026)</div><div class="kpi-sub">861 de 920 pares hallados</div></div>
+          <div class="kpi-card"><div class="kpi-num">28 pares</div><div class="kpi-label">Diferencia sin explicar tras el conteo</div><div class="kpi-sub">≈ S/ 19,600</div></div>
+          <div class="kpi-card"><div class="kpi-num">3 – 5x</div><div class="kpi-label">Veces por semana que el par del Excel no aparece</div></div>
+          <div class="kpi-card"><div class="kpi-num">8 – 12 min</div><div class="kpi-label">Búsqueda de un par mal ubicado</div></div>
+          <div class="kpi-card"><div class="kpi-num">9 – 12</div><div class="kpi-label">Pedidos online cancelados al mes</div><div class="kpi-sub">5,0% a 6,7% del total</div></div>
+          <div class="kpi-card"><div class="kpi-num">4 llaves</div><div class="kpi-label">En circulación sin registro de accesos</div></div>
+          <div class="kpi-card"><div class="kpi-num">1 – 2 h</div><div class="kpi-label">Para armar un reporte de stock</div></div>
+          <div class="kpi-card"><div class="kpi-num">S/ 40,000</div><div class="kpi-label">Pérdida anual estimada por gerencia</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CAPÍTULO 3 ─── -->
+  <section id="capitulo3" class="chapter-section">
+    <div class="container">
+      <div class="chapter-header">
+        <div class="chapter-header-num">03</div>
+        <div class="chapter-header-content">
+          <p class="section-label">Stakeholders · PMBOK 7: Involucrarse eficazmente con los interesados</p>
+          <h2 class="section-title">Gestión Estratégica de Stakeholders</h2>
+          <p class="section-subtitle">Quién decide, quién opera y quién depende del inventario dentro de la empresa: poder, interés, actitud y responsabilidades actuales.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">3.1 Identificación y Registro de Interesados</h3>
+        <div class="stakeholders-grid">
+          <div class="stk-card">
+            <div class="stk-id">STK-01</div>
+            <h4>Gerente General</h4>
+            <p class="stk-area">Dirección</p>
+            <p class="stk-role">Decide compras, reposición y seguridad; responde por las pérdidas.</p>
+          </div>
+          <div class="stk-card">
+            <div class="stk-id">STK-02</div>
+            <h4>Jefe de Almacén</h4>
+            <p class="stk-area">Inventario y operaciones</p>
+            <p class="stk-role">Recibe, ubica y cuenta la mercadería; guarda una de las llaves.</p>
+          </div>
+          <div class="stk-card">
+            <div class="stk-id">STK-03</div>
+            <h4>Jefe de Ventas</h4>
+            <p class="stk-area">Ventas y atención al cliente</p>
+            <p class="stk-role">Confirma stock en tienda y actualiza el Excel; guarda una de las llaves.</p>
+          </div>
+          <div class="stk-card">
+            <div class="stk-id">STK-04</div>
+            <h4>Contador / Administrador</h4>
+            <p class="stk-area">Administrativa y financiera</p>
+            <p class="stk-role">Concilia el inventario con la contabilidad; guarda una de las llaves.</p>
+          </div>
+          <div class="stk-card">
+            <div class="stk-id">STK-05</div>
+            <h4>Especialista en Marketing</h4>
+            <p class="stk-area">Marketing y e-commerce</p>
+            <p class="stk-role">Publica el stock en la web e Instagram y lanza campañas.</p>
+          </div>
+          <div class="stk-card">
+            <div class="stk-id">STK-06</div>
+            <h4>Personal de tienda</h4>
+            <p class="stk-area">Ventas y atención al cliente</p>
+            <p class="stk-role">Ofrece pares al cliente y confirma disponibilidad por WhatsApp.</p>
+          </div>
+          <div class="stk-card">
+            <div class="stk-id">STK-07</div>
+            <h4>Auxiliar de almacén</h4>
+            <p class="stk-area">Inventario y operaciones</p>
+            <p class="stk-role">Busca, acomoda y anota los movimientos físicos.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">3.2 Matriz de Poder e Interés</h3>
+        <div class="power-interest-matrix">
+          <div class="matrix-yaxis">← Poder →</div>
+          <div class="matrix-grid">
+            <div class="matrix-cell matrix-cell--top-left"><div class="matrix-label">Mantener satisfechos</div><p>— Ninguno —</p></div>
+            <div class="matrix-cell matrix-cell--top-right matrix-cell--highlight"><div class="matrix-label">Gestionar de cerca</div>
+              <div class="matrix-tags"><span class="stk-tag">STK-01 Gerente General</span><span class="stk-tag">STK-02 Jefe de Almacén</span><span class="stk-tag">STK-03 Jefe de Ventas</span><span class="stk-tag">STK-04 Contador</span></div>
+            </div>
+            <div class="matrix-cell matrix-cell--bottom-left"><div class="matrix-label">Monitorear</div><p>— Ninguno —</p></div>
+            <div class="matrix-cell matrix-cell--bottom-right"><div class="matrix-label">Mantener informados</div>
+              <div class="matrix-tags"><span class="stk-tag stk-tag--light">STK-05 Marketing</span><span class="stk-tag stk-tag--light">STK-06 Personal tienda</span><span class="stk-tag stk-tag--light">STK-07 Aux. almacén</span></div>
+            </div>
+          </div>
+          <div class="matrix-xaxis">← Interés →</div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">3.3 Expectativas y Necesidades</h3>
+        <div class="expectations-list">
+          <div class="exp-item"><div class="exp-stk">Gerente General</div><div class="exp-need">Proteger el inventario, eliminar mermas y asegurar un retorno positivo.</div><div class="exp-issue">No sabe cuánto pierde ni cuándo salió un par faltante.</div></div>
+          <div class="exp-item"><div class="exp-stk">Jefe de Almacén</div><div class="exp-need">Controlar el stock y evitar mermas por ubicación o acceso.</div><div class="exp-issue">Cajas mal ubicadas y llaves sin registro.</div></div>
+          <div class="exp-item"><div class="exp-stk">Jefe de Ventas</div><div class="exp-need">Disponibilidad real y rápida de stock.</div><div class="exp-issue">Ofrece pares que no aparecen, 6 a 8 veces al mes.</div></div>
+          <div class="exp-item"><div class="exp-stk">Contador / Admin.</div><div class="exp-need">Cierres contables sin diferencias inexplicables.</div><div class="exp-issue">Dos días de revisión al mes.</div></div>
+          <div class="exp-item"><div class="exp-stk">Especialista Marketing</div><div class="exp-need">Web y campañas alineadas con el stock real.</div><div class="exp-issue">Publicó 12 pares de un modelo y solo había 9.</div></div>
+          <div class="exp-item"><div class="exp-stk">Personal de tienda</div><div class="exp-need">Confirmar una talla sin demorar al cliente.</div><div class="exp-issue">Esperas de 5 a 10 minutos y pares vendidos dos veces.</div></div>
+          <div class="exp-item"><div class="exp-stk">Auxiliar de almacén</div><div class="exp-need">Encontrar rápido cada par y registrar sin errores.</div><div class="exp-issue">Búsquedas de 8 a 12 minutos y anotaciones en papel.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CAPÍTULO 4 ─── -->
+  <section id="capitulo4" class="chapter-section chapter-section--dark">
+    <div class="container">
+      <div class="chapter-header">
+        <div class="chapter-header-num">04</div>
+        <div class="chapter-header-content">
+          <p class="section-label">Árbol de problemas · PMBOK 7: Reconocer y evaluar interacciones del sistema</p>
+          <h2 class="section-title">Árbol de Problemas: Causas, Problema Central y Efectos</h2>
+          <p class="section-subtitle">De dónde nacen los descuadres y las mermas, con la evidencia de las entrevistas y del cuestionario.</p>
+        </div>
+      </div>
+
+      <div class="problem-image-block">
+        <img src="problem_visual.png" alt="Visualización del problema de inventario en Restock" class="chapter-img" />
+        <div class="problem-central-card">
+          <div class="pc-label"> Problema Central</div>
+          <p>Pérdida de trazabilidad y visibilidad en tiempo real del inventario físico, con alta vulnerabilidad ante mermas y accesos no registrados en el almacén de Restock.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">4.2 Efectos del Problema</h3>
+        <div class="effects-tree">
+          <div class="effect-final">
+            <div class="effect-badge effect-badge--final">Efecto Final</div>
+            <h4>Pérdida de rentabilidad y de competitividad</h4>
+            <p>La empresa no puede crecer ni ampliar sus canales sin aumentar sus pérdidas. <em>(≈ S/ 40,000 al año)</em></p>
+          </div>
+          <div class="effects-indirect">
+            <div class="effect-node effect-node--indirect">
+              <div class="effect-badge">Efecto Indirecto 1</div>
+              <h4>Pérdidas económicas</h4>
+              <p>Por mermas de mercadería de alto valor, sustracciones y ventas online canceladas.</p>
+            </div>
+            <div class="effect-node effect-node--indirect">
+              <div class="effect-badge">Efecto Indirecto 2</div>
+              <h4>Clientes insatisfechos y reputación dañada</h4>
+              <p>En web e Instagram por pedidos cancelados.</p>
+            </div>
+          </div>
+          <div class="effects-direct">
+            <div class="effect-node effect-node--direct">
+              <div class="effect-badge effect-badge--direct">Efecto Directo 1</div>
+              <p>Desfases continuos entre el stock físico y el registro contable. <em>(59 de 920 pares con diferencia en el último conteo)</em></p>
+            </div>
+            <div class="effect-node effect-node--direct">
+              <div class="effect-badge effect-badge--direct">Efecto Directo 2</div>
+              <p>Detección tardía o nula de mermas y sustracciones internas. <em>(4 pares de edición limitada en 2 casos en 12 meses)</em></p>
+            </div>
+            <div class="effect-node effect-node--direct">
+              <div class="effect-badge effect-badge--direct">Efecto Directo 3</div>
+              <p>Cancelaciones de compras online por falta de stock real. <em>(9 a 12 pedidos al mes)</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">4.2 Causas del Problema</h3>
+        <div class="causes-grid">
+          <div class="cause-block">
+            <div class="cause-header">
+              <div class="cause-num">Causa Directa 1</div>
+              <h4>Identificación y ubicación dependen de la memoria y vista del personal</h4>
+              <div class="cause-likert">Likert Almacén A: <strong>4,12</strong></div>
+            </div>
+            <div class="causes-indirect">
+              <div class="cause-indirect"><span class="ci-num">1.1</span> La mercadería se guarda donde hay espacio, sin posición fija por modelo y talla. <em>(E3 P1 · A1: 3,50)</em></div>
+              <div class="cause-indirect"><span class="ci-num">1.2</span> Los pares de un mismo modelo en tallas o colores contiguos se confunden a simple vista. <em>(E4 P5 · A2: 4,00)</em></div>
+              <div class="cause-indirect"><span class="ci-num">1.3</span> La ubicación de cada caja no se anota, por lo que se busca caja por caja cuando un par no está. <em>(E4 P2: 8-12 min · A3: 4,50)</em></div>
+            </div>
+          </div>
+          <div class="cause-block">
+            <div class="cause-header">
+              <div class="cause-num">Causa Directa 2</div>
+              <h4>Los accesos al almacén y movimientos no dejan registro</h4>
+              <div class="cause-likert">Likert Almacén C: <strong>4,50</strong> · Gerencia C: <strong>4,38</strong></div>
+            </div>
+            <div class="causes-indirect">
+              <div class="cause-indirect"><span class="ci-num">2.1</span> Cuatro personas tienen llave y nadie anota quién entra ni a qué hora. <em>(E1 P5 · E3 P6 · C2: 5,00)</em></div>
+              <div class="cause-indirect"><span class="ci-num">2.2</span> Los movimientos se avisan por mensajes sueltos de WhatsApp que no siempre llegan al Excel. <em>(Ventas C1: 4,67 · Almacén B2: 4,00)</em></div>
+              <div class="cause-indirect"><span class="ci-num">2.3</span> Nadie rinde cuentas por la custodia del almacén ni por la actualización del inventario. <em>(RACI cap. 3.5)</em></div>
+            </div>
+          </div>
+          <div class="cause-block">
+            <div class="cause-header">
+              <div class="cause-num">Causa Directa 3</div>
+              <h4>El inventario se controla a mano en hojas de cálculo separadas de la custodia física</h4>
+              <div class="cause-likert">Likert Gerencia B / Almacén B / Marketing B: <strong>4,12 · 4,12 · 4,12</strong></div>
+            </div>
+            <div class="causes-indirect">
+              <div class="cause-indirect"><span class="ci-num">3.1</span> El Excel se actualiza al cierre del día, por una persona. <em>(E1 P7 · Almacén B1: 5,00)</em></div>
+              <div class="cause-indirect"><span class="ci-num">3.2</span> El conteo completo se hace cada dos meses y toma día y medio con cuatro personas. <em>(E3 P4 · Almacén B4: 4,00)</em></div>
+              <div class="cause-indirect"><span class="ci-num">3.3</span> La web y los canales se actualizan a mano según el Excel, sin verificar el stock físico. <em>(E7 P1 y P3 · Marketing A1: 4,50)</em></div>
+            </div>
+          </div>
+          <div class="cause-block">
+            <div class="cause-header">
+              <div class="cause-num">Causa Directa 4</div>
+              <h4>El personal trabaja sin procedimientos escritos ni formación en control de inventarios</h4>
+              <div class="cause-likert">Likert Gerencia D: <strong>4,17</strong> · Almacén D: <strong>4,17</strong></div>
+            </div>
+            <div class="causes-indirect">
+              <div class="cause-indirect"><span class="ci-num">4.1</span> No hay manuales ni reglas; el oficio se aprende observando a los compañeros más antiguos. <em>(E3 P8 · Almacén D1: 4,50 y D2: 4,50)</em></div>
+              <div class="cause-indirect"><span class="ci-num">4.2</span> No hay un responsable de tecnología con dedicación exclusiva. <em>(E7 P6 · Marketing C1: 4,50)</em></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">4.3 Lectura del Árbol</h3>
+        <div class="reading-cards">
+          <div class="reading-card">
+            <h4>Dónde se concentra el problema</h4>
+            <p>Las causas con mayor respaldo están en la seguridad y custodia (Likert 4,38 y 4,50) y en el registro manual del inventario (4,12 en tres perfiles).</p>
+          </div>
+          <div class="reading-card">
+            <h4>Cómo se encadenan</h4>
+            <p>Como la ubicación no se registra (causa 1) y los movimientos no dejan rastro (causa 2), el Excel (causa 3) difiere de la realidad; al no existir procedimientos (causa 4), cada persona lo corrige a su manera y la diferencia se amplía.</p>
+          </div>
+          <div class="reading-card">
+            <h4>Qué efecto pesa más</h4>
+            <p>Las ventas online canceladas y los pares sin explicar suman unos <strong>S/ 40,000 al año</strong> según la gerencia y son lo que más afecta la rentabilidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CAPÍTULO 5 ─── -->
+  <section id="capitulo5" class="chapter-section">
+    <div class="container">
+      <div class="chapter-header">
+        <div class="chapter-header-num">05</div>
+        <div class="chapter-header-content">
+          <p class="section-label">Objetivos y alternativas · PMBOK 7: Enfocarse en el valor · Adaptar según el contexto</p>
+          <h2 class="section-title">Árbol de Objetivos y Evaluación de Proyectos Alternativos</h2>
+          <p class="section-subtitle">Del problema a la solución: árbol de objetivos, acciones por medio fundamental y la evaluación que define el proyecto a ejecutar.</p>
+        </div>
+      </div>
+
+      <div class="solution-img-block">
+        <img src="solution_visual.png" alt="Solución de inventario tecnológico para Restock" class="chapter-img" />
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">5.1 Árbol de Objetivos</h3>
+        <p class="body-text">El árbol de objetivos convierte cada elemento del árbol de problemas en su situación deseada. Las cuatro causas directas pasan a ser <strong>medios de primer nivel</strong> y sus causas indirectas, <strong>medios fundamentales</strong>; el problema central se convierte en el <strong>objetivo central</strong>; y los efectos, en los <strong>fines</strong>.</p>
+
+        <div class="objectives-tree">
+          <div class="obj-central">
+            <div class="obj-badge">Objetivo Central</div>
+            <p>Recuperar la trazabilidad y visibilidad en tiempo real del inventario físico, reduciendo las mermas y los accesos no registrados en el almacén de Restock.</p>
+          </div>
+          <div class="obj-grid">
+            <div class="obj-col">
+              <h4 class="obj-col-title">De las causas a los medios</h4>
+              <div class="obj-pair"><div class="obj-problem"> Mercadería guardada donde hay espacio</div><div class="obj-solution"> Posición fija por modelo y talla</div></div>
+              <div class="obj-pair"><div class="obj-problem"> Pares confundidos a simple vista</div><div class="obj-solution"> Pares identificables sin ambigüedad</div></div>
+              <div class="obj-pair"><div class="obj-problem"> Ubicación sin anotar</div><div class="obj-solution"> Ubicación de cada caja registrada</div></div>
+              <div class="obj-pair"><div class="obj-problem"> Accesos y movimientos sin registro</div><div class="obj-solution"> Accesos y movimientos con registro</div></div>
+              <div class="obj-pair"><div class="obj-problem"> Avisos sueltos por WhatsApp</div><div class="obj-solution"> Movimientos registrados en un solo lugar</div></div>
+              <div class="obj-pair"><div class="obj-problem"> Control manual en hojas separadas</div><div class="obj-solution"> Inventario controlado y verificado de forma centralizada</div></div>
+              <div class="obj-pair"><div class="obj-problem"> Personal sin procedimientos ni formación</div><div class="obj-solution"> Personal con procedimientos y formación</div></div>
+            </div>
+            <div class="obj-col">
+              <h4 class="obj-col-title">De los efectos a los fines</h4>
+              <div class="fin-card fin-card--final"><div class="fin-badge">Fin Último</div><p>Rentabilidad y capacidad de crecimiento protegidas</p></div>
+              <div class="fin-card"><div class="fin-badge">Fin Indirecto 1</div><p>Pérdidas por mermas y cancelaciones reducidas al mínimo</p></div>
+              <div class="fin-card"><div class="fin-badge">Fin Indirecto 2</div><p>Clientes satisfechos y buena reputación en web e Instagram</p></div>
+              <div class="fin-card fin-card--direct"><div class="fin-badge">Fin Directo 1</div><p>Stock físico y registro contable coincidentes</p></div>
+              <div class="fin-card fin-card--direct"><div class="fin-badge">Fin Directo 2</div><p>Mermas y sustracciones detectadas de inmediato</p></div>
+              <div class="fin-card fin-card--direct"><div class="fin-badge">Fin Directo 3</div><p>Cancelaciones de ventas online eliminadas</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">5.2 Acciones por Medio Fundamental</h3>
+        <div class="actions-table">
+          <div class="at-header"><span>Medio Fundamental</span><span>Código</span><span>Acción</span><span>Tipo</span></div>
+          <div class="at-row"><span>1.1 Posición fija por modelo y talla</span><span class="at-code">A1.1</span><span>Codificar los anaqueles y asignar una posición por modelo y talla.</span><span class="at-type comp">Complementaria</span></div>
+          <div class="at-row"><span>1.2 Pares identificables</span><span class="at-code">A1.2</span><span>Etiquetar cada par y caja con un código por marca, modelo, color y talla.</span><span class="at-type comp">Complementaria</span></div>
+          <div class="at-row at-row--excl"><span>1.3 Ubicación registrada</span><span class="at-code">A1.3a</span><span>Adquirir terminales portátiles rugerizadas (PDAs) con lector de códigos.</span><span class="at-type excl">Excluyente a</span></div>
+          <div class="at-row at-row--excl2"><span></span><span class="at-code">A1.3b</span><span>Usar una aplicación de escaneo en los smartphones del personal.</span><span class="at-type excl2">Excluyente b</span></div>
+          <div class="at-row at-row--excl"><span>2.1 Entradas registradas y avisadas</span><span class="at-code">A2.1a</span><span>Instalar contactos magnéticos, detectores de movimiento y un gateway propio con alertas móviles.</span><span class="at-type excl">Excluyente a</span></div>
+          <div class="at-row at-row--excl2"><span></span><span class="at-code">A2.1b</span><span>Contratar un servicio de alarma monitoreada por terceros con suscripción mensual.</span><span class="at-type excl2">Excluyente b</span></div>
+          <div class="at-row"><span>2.2 Movimientos en un solo lugar</span><span class="at-code">A2.2</span><span>Registrar entradas, salidas y traslados en el sistema en lugar de avisarlos por WhatsApp.</span><span class="at-type comp">Complementaria</span></div>
+          <div class="at-row"><span>2.3 Responsables definidos</span><span class="at-code">A2.3</span><span>Designar al responsable de la custodia del almacén y al de la actualización del inventario.</span><span class="at-type comp">Complementaria</span></div>
+          <div class="at-row"><span>3.1 Inventario único y actualizado</span><span class="at-code">A3.1</span><span>Limpiar y migrar el Excel (ETL) a una plataforma en la nube con tablero y copias de seguridad automáticas.</span><span class="at-type comp">Complementaria</span></div>
+          <div class="at-row"><span>3.2 Conteos cíclicos</span><span class="at-code">A3.2</span><span>Programar conteos por zona en lugar del conteo completo cada dos meses.</span><span class="at-type comp">Complementaria</span></div>
+          <div class="at-row"><span>3.3 Canales sincronizados</span><span class="at-code">A3.3</span><span>Sincronizar el stock físico con restock.com.pe e Instagram.</span><span class="at-type comp">Complementaria</span></div>
+          <div class="at-row"><span>4.1 Manuales y capacitación</span><span class="at-code">A4.1</span><span>Elaborar manuales de procedimientos y capacitar en sitio a todo el personal.</span><span class="at-type comp">Complementaria</span></div>
+          <div class="at-row"><span>4.2 Responsable de TI y soporte</span><span class="at-code">A4.2</span><span>Designar un responsable de TI y contratar soporte preventivo de equipos y red.</span><span class="at-type comp">Complementaria</span></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">5.3 Proyectos Alternativos</h3>
+        <div class="projects-comparison">
+          <div class="project-card project-card--winner">
+            <div class="project-badge"> Proyecto N.º 1 — SELECCIONADO</div>
+            <h4>PDAs rugerizadas + sensores propios</h4>
+            <div class="project-detail"><span> Captura de datos:</span> A1.3a — Terminales rugerizadas con lector de códigos</div>
+            <div class="project-detail"><span> Vigilancia:</span> A2.1a — Sensores y gateway propios con alertas móviles</div>
+            <div class="project-score">13 puntos</div>
+          </div>
+          <div class="project-card">
+            <div class="project-badge project-badge--alt">Proyecto N.º 2</div>
+            <h4>Smartphones + alarma monitoreada por terceros</h4>
+            <div class="project-detail"><span> Captura de datos:</span> A1.3b — App de escaneo en smartphones</div>
+            <div class="project-detail"><span> Vigilancia:</span> A2.1b — Servicio de alarma con suscripción mensual</div>
+            <div class="project-score project-score--alt">11 puntos</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">5.4 Evaluación de los Proyectos Alternativos</h3>
+        <p class="body-text">Método de juicio de expertos. Puntaje de 1 a 3 por criterio (3 es lo más favorable).</p>
+        <div class="eval-table">
+          <div class="et-header"><span>Criterio</span><span>Proyecto N.º 1: PDAs + sensores</span><span>Proyecto N.º 2: Smartphones + alarma</span></div>
+          <div class="et-row">
+            <span>Viabilidad técnica</span>
+            <span><strong class="score-high">3 — Alta.</strong> Las PDAs leen etiquetas con fiabilidad y los sensores propios envían datos directos a la plataforma.</span>
+            <span><strong class="score-med">2 — Media.</strong> El escaneo con celulares es menos fiable y la alarma de terceros no entrega datos propios para el tablero.</span>
+          </div>
+          <div class="et-row">
+            <span>Costo total</span>
+            <span><strong class="score-med">2 — Medio.</strong> Mayor inversión inicial en PDAs y sensores, sin pagos mensuales de vigilancia.</span>
+            <span><strong class="score-med">2 — Medio.</strong> Menor inversión inicial, pero con suscripción mensual permanente.</span>
+          </div>
+          <div class="et-row">
+            <span>Tiempo de implementación</span>
+            <span><strong class="score-med">2 — Medio.</strong> Requiere compra, instalación y calibración de equipos.</span>
+            <span><strong class="score-high">3 — Corto.</strong> Los celulares ya existen y la alarma se contrata.</span>
+          </div>
+          <div class="et-row">
+            <span>Sostenibilidad y adopción</span>
+            <span><strong class="score-high">3 — Alta.</strong> Herramientas dedicadas, sin dependencia de un proveedor de vigilancia, coherentes con el pedido de cambios graduales (Gerencia E3 = 5,00).</span>
+            <span><strong class="score-med">2 — Media.</strong> Depende de un proveedor externo y obliga a usar el celular personal para trabajar.</span>
+          </div>
+          <div class="et-row">
+            <span>Seguridad y trazabilidad</span>
+            <span><strong class="score-high">3 — Alta.</strong> Registros propios de accesos y movimientos que sustentan las mermas ante la administración y SUNAT.</span>
+            <span><strong class="score-med">2 — Media.</strong> Los registros de acceso dependen de un tercero.</span>
+          </div>
+          <div class="et-footer">
+            <span>Total</span>
+            <span class="et-total winner">13 puntos </span>
+            <span class="et-total">11 puntos</span>
+          </div>
+        </div>
+        <div class="conclusion-card">
+          <div>
+            <h4>Conclusión</h4>
+            <p>Se selecciona el <strong>Proyecto Alternativo N.º 1</strong>, terminales rugerizadas con sensores propios, al obtener el mayor puntaje (13 puntos frente a 11). Es la alternativa técnicamente más sólida, no genera pagos mensuales de vigilancia y deja registros propios para sustentar las mermas, aunque su instalación tome algo más de tiempo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EQUIPO ─── -->
+  <section id="equipo" class="team-section">
+    <div class="container">
+      <p class="section-label">Quiénes elaboramos este expediente</p>
+      <h2 class="section-title">Integrantes del Proyecto</h2>
+      <p class="section-subtitle">Equipo formulador de TI · Estudiantes de Ingeniería de Sistemas · Formulación de Proyectos TI</p>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">CG</div>
+          <h4>Garibay Salazar Claudia</h4>
+          <p>Rol: Integrativo / TI</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">PC</div>
+          <h4>Correa Cárdenas Piero</h4>
+          <p>Rol: Integrativo / TI</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">SR</div>
+          <h4>Romero Flores Sebasthian</h4>
+          <p>Rol: Integrativo / TI</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">VB</div>
+          <h4>Barrios Fernández Victor Joel</h4>
+          <p>Rol: Integrativo / TI</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">DT</div>
+          <h4>De la Torre Zúñiga Daniela</h4>
+          <p>Rol: Integrativo / TI</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-logo">[RESTOCK.TI]</div>
+      <p>Expediente de Formulación de Proyectos TI · Ingeniería de Sistemas</p>
+      <p>Restock E.I.R.L. · restock.com.pe · @restock.pe</p>
+      <p class="footer-small">Nota: Los resultados de entrevistas y cuestionarios son simulados para completar el diseño. Reemplaza por los datos reales antes de entregar.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
