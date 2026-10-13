@@ -22,22 +22,35 @@ document.querySelectorAll('.nav-link').forEach(link => {
 // ─── EVIDENCE LIGHTBOX ───
 const evidenceLightbox = document.getElementById('evidenceLightbox');
 const lightboxImage = evidenceLightbox.querySelector('.lightbox-image');
+const lightboxClose = evidenceLightbox.querySelector('.lightbox-close');
+let lightboxTrigger = null;
+
 document.querySelectorAll('.lightbox-trigger').forEach(trigger => {
   trigger.addEventListener('click', () => {
     const image = trigger.querySelector('img');
+    lightboxTrigger = trigger;
     lightboxImage.src = image.src;
     lightboxImage.alt = image.alt;
-    evidenceLightbox.showModal();
+    evidenceLightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lightboxClose.focus();
   });
 });
-evidenceLightbox.querySelector('.lightbox-close').addEventListener('click', () => {
-  evidenceLightbox.close();
-});
+
+const closeEvidenceLightbox = () => {
+  evidenceLightbox.hidden = true;
+  lightboxImage.removeAttribute('src');
+  document.body.style.overflow = '';
+  lightboxTrigger?.focus();
+  lightboxTrigger = null;
+};
+
+lightboxClose.addEventListener('click', closeEvidenceLightbox);
 evidenceLightbox.addEventListener('click', event => {
-  if (event.target === evidenceLightbox) evidenceLightbox.close();
+  if (event.target === evidenceLightbox) closeEvidenceLightbox();
 });
 document.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && evidenceLightbox.open) evidenceLightbox.close();
+  if (event.key === 'Escape' && !evidenceLightbox.hidden) closeEvidenceLightbox();
 });
 
 // ─── ACTIVE NAV LINK ───
