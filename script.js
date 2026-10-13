@@ -19,6 +19,27 @@ document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
+// ─── EVIDENCE LIGHTBOX ───
+const evidenceLightbox = document.getElementById('evidenceLightbox');
+const lightboxImage = evidenceLightbox.querySelector('.lightbox-image');
+document.querySelectorAll('.lightbox-trigger').forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    const image = trigger.querySelector('img');
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt;
+    evidenceLightbox.showModal();
+  });
+});
+evidenceLightbox.querySelector('.lightbox-close').addEventListener('click', () => {
+  evidenceLightbox.close();
+});
+evidenceLightbox.addEventListener('click', event => {
+  if (event.target === evidenceLightbox) evidenceLightbox.close();
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && evidenceLightbox.open) evidenceLightbox.close();
+});
+
 // ─── ACTIVE NAV LINK ───
 const sections = document.querySelectorAll('section[id]');
 const navLinkEls = document.querySelectorAll('.nav-link');

@@ -336,19 +336,27 @@
         <h3 class="subsection-title">Evidencias fotográficas</h3>
         <div class="chapter-evidence-grid">
           <figure class="chapter-evidence-card">
-            <img src="imagenes/WhatsApp%20Image%202026-10-12%20at%2018.43.44.jpeg" alt="Hoja de cálculo digital con pedidos y seguimiento de productos" loading="lazy" />
+            <button class="lightbox-trigger" type="button" aria-label="Ampliar: Hoja de cálculo digital con pedidos y seguimiento de productos">
+              <img src="imagenes/WhatsApp%20Image%202026-10-12%20at%2018.43.44.jpeg" alt="Hoja de cálculo digital con pedidos y seguimiento de productos" loading="lazy" />
+            </button>
             <figcaption>Registro digital de pedidos y seguimiento de productos.</figcaption>
           </figure>
           <figure class="chapter-evidence-card">
-            <img src="imagenes/WhatsApp%20Image%202026-10-12%20at%2018.43.45%20(1).jpeg" alt="Área de venta de Restock con calzado exhibido, mostrador y computadora" loading="lazy" />
+            <button class="lightbox-trigger" type="button" aria-label="Ampliar: Área de venta de Restock con calzado exhibido, mostrador y computadora">
+              <img src="imagenes/WhatsApp%20Image%202026-10-12%20at%2018.43.45%20(1).jpeg" alt="Área de venta de Restock con calzado exhibido, mostrador y computadora" loading="lazy" />
+            </button>
             <figcaption>Área de venta y exhibición de calzado en la tienda.</figcaption>
           </figure>
           <figure class="chapter-evidence-card">
-            <img src="imagenes/WhatsApp%20Image%202026-10-12%20at%2018.43.45.jpeg" alt="Hoja de cálculo con pedidos, fechas y estados de envío" loading="lazy" />
+            <button class="lightbox-trigger" type="button" aria-label="Ampliar: Hoja de cálculo con pedidos, fechas y estados de envío">
+              <img src="imagenes/WhatsApp%20Image%202026-10-12%20at%2018.43.45.jpeg" alt="Hoja de cálculo con pedidos, fechas y estados de envío" loading="lazy" />
+            </button>
             <figcaption>Hoja de cálculo utilizada para consultar pedidos y estados de envío.</figcaption>
           </figure>
           <figure class="chapter-evidence-card">
-            <img src="imagenes/WhatsApp%20Image%202026-10-12%20at%2018.43.46.jpeg" alt="Vista general del interior de la tienda Restock con calzado y prendas" loading="lazy" />
+            <button class="lightbox-trigger" type="button" aria-label="Ampliar: Vista general del interior de la tienda Restock con calzado y prendas">
+              <img src="imagenes/WhatsApp%20Image%202026-10-12%20at%2018.43.46.jpeg" alt="Vista general del interior de la tienda Restock con calzado y prendas" loading="lazy" />
+            </button>
             <figcaption>Vista general del espacio comercial y sus productos.</figcaption>
           </figure>
         </div>
@@ -458,6 +466,8 @@
       <!-- ENTREVISTAS -->
       <div class="subsection">
         <h3 class="subsection-title">2.3.2 Entrevistas por Perfil</h3>
+        <p class="body-text">Consulta el instrumento aplicado para realizar las entrevistas al personal.</p>
+        <a class="btn-primary interview-document-button" href="Instrumento%20de%20Entrevista%20-%20Restock%20EIRL.docx">Abrir instrumento de entrevista (Word)</a>
 
         <!-- E1 E2 -->
         <div class="interview-block">
@@ -1187,10 +1197,83 @@
             <span class="et-total">11 puntos</span>
           </div>
         </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">5.5 Análisis Costo-Beneficio</h3>
+        <p class="body-text">Comparación financiera de las dos alternativas seleccionadas, con proyección a tres años. Los cálculos parten del valor en riesgo del inventario y de las ventas que no se concretan por falta de stock.</p>
+
+        <div class="kpi-grid cb-baseline">
+          <div class="kpi-card"><div class="kpi-num">S/ 40,000</div><div class="kpi-label">Valor en riesgo recuperable al año</div><div class="kpi-sub">S/ 20,000 por mermas y S/ 20,000 por ventas canceladas</div></div>
+          <div class="kpi-card"><div class="kpi-num">S/ 37,000</div><div class="kpi-label">Beneficio tangible anual · Alternativa 1</div><div class="kpi-sub">PDAs rugerizadas y sensores propios</div></div>
+          <div class="kpi-card"><div class="kpi-num">S/ 27,500</div><div class="kpi-label">Beneficio tangible anual · Alternativa 2</div><div class="kpi-sub">Smartphones y alarma monitoreada</div></div>
+        </div>
+        <p class="body-text small-text">La línea base también estima un día y medio de conteo cada dos meses con cuatro personas, además de dos días mensuales dedicados a cierres contables.</p>
+
+        <h4 class="cb-heading">Inversión inicial y costos operativos</h4>
+        <div class="cb-table-wrap">
+          <table class="cb-table">
+            <thead><tr><th>Concepto</th><th>Alternativa 1<br>PDAs + sensores propios</th><th>Alternativa 2<br>Smartphones + alarma</th></tr></thead>
+            <tbody>
+              <tr><td>Dispositivos de captura</td><td>S/ 3,600</td><td>S/ 0</td></tr>
+              <tr><td>Seguridad física y accesos IoT</td><td>S/ 1,800</td><td>S/ 900</td></tr>
+              <tr><td>Etiquetado e infraestructura del almacén</td><td>S/ 1,400</td><td>S/ 1,400</td></tr>
+              <tr><td>Software cloud, base de datos y ETL</td><td>S/ 5,500</td><td>S/ 5,500</td></tr>
+              <tr><td>Capacitación y gestión del cambio</td><td>S/ 1,200</td><td>S/ 1,200</td></tr>
+              <tr class="cb-total"><td>Inversión inicial (CAPEX)</td><td>S/ 13,500</td><td>S/ 9,000</td></tr>
+              <tr><td>Hosting cloud y backups automáticos (anual)</td><td>S/ 1,800</td><td>S/ 1,800</td></tr>
+              <tr><td>Mantenimiento y consumibles (anual)</td><td>S/ 1,400</td><td>S/ 1,400</td></tr>
+              <tr><td>Monitoreo externo (anual)</td><td>S/ 0</td><td>S/ 3,600</td></tr>
+              <tr class="cb-total"><td>Costo operativo anual (OPEX)</td><td>S/ 3,200</td><td>S/ 6,800</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4 class="cb-heading">Beneficios tangibles estimados por año</h4>
+        <div class="cb-table-wrap">
+          <table class="cb-table">
+            <thead><tr><th>Beneficio</th><th>Alternativa 1</th><th>Alternativa 2</th></tr></thead>
+            <tbody>
+              <tr><td>Reducción de mermas y sustracciones</td><td>S/ 17,000</td><td>S/ 12,000</td></tr>
+              <tr><td>Margen recuperado de ventas online</td><td>S/ 16,000</td><td>S/ 13,000</td></tr>
+              <tr><td>Ahorro de horas hombre</td><td>S/ 4,000</td><td>S/ 2,500</td></tr>
+              <tr class="cb-total"><td>Beneficio tangible total</td><td>S/ 37,000</td><td>S/ 27,500</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4 class="cb-heading">Flujo financiero acumulado a tres años</h4>
+        <div class="cb-table-wrap">
+          <table class="cb-table">
+            <thead><tr><th>Rubro</th><th>Alternativa 1</th><th>Alternativa 2</th></tr></thead>
+            <tbody>
+              <tr><td>Beneficios tangibles acumulados</td><td>S/ 111,000</td><td>S/ 82,500</td></tr>
+              <tr><td>CAPEX + OPEX acumulados</td><td>S/ 23,100</td><td>S/ 29,400</td></tr>
+              <tr class="cb-total"><td>Flujo neto acumulado</td><td>+S/ 87,900</td><td>+S/ 53,100</td></tr>
+              <tr><td>Flujo neto en el año 0</td><td>−S/ 13,500</td><td>−S/ 9,000</td></tr>
+              <tr><td>Flujo neto en cada año (1–3)</td><td>+S/ 33,800</td><td>+S/ 20,700</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4 class="cb-heading">Indicadores de rentabilidad reportados</h4>
+        <div class="cb-table-wrap">
+          <table class="cb-table">
+            <thead><tr><th>Indicador</th><th>Alternativa 1</th><th>Alternativa 2</th><th>Diferencia favorable</th></tr></thead>
+            <tbody>
+              <tr><td>Periodo de recuperación</td><td>~4.8 meses</td><td>~5.2 meses</td><td>Alternativa 1</td></tr>
+              <tr><td>ROI a tres años</td><td>651%</td><td>590%</td><td>+61 puntos porcentuales para la Alternativa 1</td></tr>
+              <tr><td>Relación beneficio / costo</td><td>2.80</td><td>2.41</td><td>Alternativa 1</td></tr>
+              <tr class="cb-total"><td>Beneficio económico neto a tres años</td><td>+S/ 87,900</td><td>+S/ 53,100</td><td>+S/ 34,800 para la Alternativa 1</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="body-text small-text cb-note">Los valores de ROI y de relación beneficio/costo se reproducen tal como se presentan en el documento de análisis. El documento no detalla la fórmula ni los supuestos financieros empleados para calcular la relación B/C.</p>
+
         <div class="conclusion-card">
           <div>
-            <h4>Conclusión</h4>
-            <p>Se selecciona el <strong>Proyecto Alternativo N.º 1</strong>, terminales rugerizadas con sensores propios, al obtener el mayor puntaje (13 puntos frente a 11). Es la alternativa técnicamente más sólida, no genera pagos mensuales de vigilancia y deja registros propios para sustentar las mermas, aunque su instalación tome algo más de tiempo.</p>
+            <h4>Conclusión del capítulo</h4>
+            <p>Se selecciona el <strong>Proyecto Alternativo N.º 1</strong>, terminales rugerizadas con sensores propios, al obtener el mayor puntaje técnico (13 frente a 11) y el mayor beneficio neto proyectado a tres años (+S/ 87,900 frente a +S/ 53,100). Aunque requiere S/ 4,500 más de inversión inicial, ahorra S/ 3,600 anuales en monitoreo, recupera la inversión antes y genera S/ 34,800 más de beneficio neto en el horizonte evaluado.</p>
           </div>
         </div>
       </div>
@@ -1242,6 +1325,11 @@
       <p class="footer-small">Nota: Los resultados de entrevistas y cuestionarios son simulados para completar el diseño. Reemplaza por los datos reales antes de entregar.</p>
     </div>
   </footer>
+
+  <dialog class="lightbox" id="evidenceLightbox" aria-label="Vista ampliada de evidencia">
+    <button class="lightbox-close" type="button" aria-label="Cerrar imagen">Cerrar <span aria-hidden="true">&times;</span></button>
+    <img class="lightbox-image" alt="" />
+  </dialog>
 
   <script src="script.js"></script>
 </body>
