@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Restock E.I.R.L. — Expediente TI: Diagnóstico del Control de Inventario</title>
-  <meta name="description" content="Expediente de proyecto TI para Restock E.I.R.L., empresa peruana de sneakers de colección. Diagnóstico del control del inventario y seguridad del almacén." />
+  <title>Restock E.I.R.L. — Inventario y presupuesto</title>
+  <meta name="description" content="Descripción del negocio, situación del inventario, objetivos y presupuesto de alternativas para Restock E.I.R.L." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -20,299 +20,318 @@
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#portada" class="nav-link">Inicio</a></li>
-        <li><a href="#capitulo1" class="nav-link">Cap. 1 — Contexto</a></li>
+        <li><a href="#capitulo1" class="nav-link">Cap. 1 — El negocio</a></li>
         <li><a href="#capitulo2" class="nav-link">Cap. 2 — Evidencias</a></li>
-        <li><a href="#capitulo3" class="nav-link">Cap. 3 — Stakeholders</a></li>
+        <li><a href="#capitulo3" class="nav-link">Cap. 3 — Personas involucradas</a></li>
         <li><a href="#capitulo4" class="nav-link">Cap. 4 — Problemas</a></li>
-        <li><a href="#capitulo5" class="nav-link">Cap. 5 — Solución</a></li>
+        <li><a href="#capitulo5" class="nav-link">Cap. 5 — Objetivos y costos</a></li>
+        <li><a href="#capitulo6" class="nav-link">Cap. 6 — Cronograma del proyecto</a></li>
+        <li><a href="#capitulo7" class="nav-link">Cap. 7 — Diagrama de red</a></li>
         <li><a href="#equipo" class="nav-link">Equipo</a></li>
       </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Menú">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">Menú</button>
     </div>
   </nav>
 
   <!-- ─── PORTADA / HERO ─── -->
   <section id="portada" class="hero">
     <div class="hero-bg">
-      <img src="hero_sneakers.png" alt="Almacén de sneakers de colección Restock" class="hero-img" />
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content">
       <div class="badge-pill">
-        <span class="badge-dot"></span>
-        Caso de estudio real · Tienda de sneakers de colección
+        Proyecto de inventario y seguridad de Restock
       </div>
-      <h1 class="hero-title">Diagnóstico del control del inventario y de la seguridad del almacén de <span class="highlight">Restock E.I.R.L.</span></h1>
+      <h1 class="hero-title">Mejor control de inventario y seguridad para <span class="highlight">Restock E.I.R.L.</span></h1>
       <p class="hero-subtitle">
-        Expediente de proyecto TI para Restock Perú, empresa de zapatillas urbanas de colección con tienda física en Lima y ventas digitales. El estudio identifica por qué el inventario físico no coincide con el registro, por qué los faltantes se descubren tarde y cómo esto afecta las ventas online y la seguridad de una mercadería de alto valor.
+        Presenta la situación actual de Restock, los problemas con el inventario y las alternativas para mejorar el control de sus productos.
       </p>
       <div class="hero-meta">
         <div class="meta-item">
           <span>Lima, Perú · 2026</span>
         </div>
         <div class="meta-item">
-          <span>Ingeniería de Sistemas · Formulación de Proyectos TI</span>
+          <span>Ingeniería de Sistemas · Formulación y Evaluación de Proyectos TI</span>
         </div>
         <div class="meta-item">
           <span>restock.com.pe · @restock.pe</span>
         </div>
       </div>
-      <div class="hero-problem-card">
-        <div class="problem-label"> Problema General</div>
-        <p class="problem-text">Pérdida de trazabilidad y visibilidad en tiempo real del inventario físico, con alta vulnerabilidad ante mermas y riesgos de seguridad en el almacén de Restock Perú. Se origina en un control manual y descentralizado del inventario en hojas de cálculo y en una custodia de la mercadería que no deja registro de quién entra, qué sale ni cuándo.</p>
-      </div>
-      <a href="#capitulo1" class="btn-primary">Leer el expediente ↓</a>
-    </div>
-    <div class="scroll-indicator">
-      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- ─── EVIDENCIAS PORTADA ─── -->
-  <section class="evidencias-portada">
-    <div class="container">
-      <p class="section-label">Fotografías levantadas en campo · Setiembre de 2026</p>
-      <h2 class="section-title">Así trabaja hoy Restock</h2>
-      <p class="section-subtitle">Imágenes que muestran el punto de partida: stock en hojas de cálculo, mercadería de alto valor sin registro de accesos y coordinación suelta por WhatsApp.</p>
-      <div class="evidence-grid">
-        <div class="evidence-card" id="ev-fig1">
-          <div class="evidence-num">Fig. 1</div>
-          <div class="evidence-label">Control manual</div>
-          <div class="evidence-caption">Hoja de Excel de inventario abierta en el computador</div>
-        </div>
-        <div class="evidence-card" id="ev-fig3">
-          <div class="evidence-num">Fig. 3</div>
-          <div class="evidence-label">Almacén</div>
-          <div class="evidence-caption">Anaqueles con cajas de sneakers sin identificación por posición</div>
-        </div>
-        <div class="evidence-card" id="ev-fig4">
-          <div class="evidence-num">Fig. 4</div>
-          <div class="evidence-label">Seguridad</div>
-          <div class="evidence-caption">Puerta del almacén y juego de llaves en circulación</div>
-        </div>
-        <div class="evidence-card" id="ev-fig5">
-          <div class="evidence-num">Fig. 5</div>
-          <div class="evidence-label">Coordinación</div>
-          <div class="evidence-caption">Grupo de WhatsApp donde se avisan los movimientos de stock</div>
-        </div>
-        <div class="evidence-card" id="ev-fig6">
-          <div class="evidence-num">Fig. 6</div>
-          <div class="evidence-label">Venta digital</div>
-          <div class="evidence-caption">Pedido online cancelado por falta de stock</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── ÍNDICE CAPÍTULOS ─── -->
+  <!-- ─── ÍNDICE DE CAPÍTULOS ─── -->
   <section class="chapters-index">
     <div class="container">
-      <p class="section-label">Estructura del expediente</p>
-      <h2 class="section-title">Del negocio al problema y de este a la solución</h2>
+      <p class="section-label">Contenido del proyecto</p>
+      <h2 class="section-title">Del negocio a las alternativas para mejorar</h2>
+      <p class="section-subtitle">Siete capítulos sobre el negocio, su situación actual, las personas involucradas, los objetivos, las alternativas, el cronograma y la red de actividades del proyecto.</p>
       <div class="chapters-grid">
         <a href="#capitulo1" class="chapter-card">
           <div class="chapter-num">01</div>
-          <div class="chapter-tag">Contexto del negocio</div>
-          <h3 class="chapter-name">Planteamiento del Proyecto y Contexto del Negocio</h3>
-          <p class="chapter-desc">Quiénes somos, cómo vende Restock, qué problema se observa y qué valor está en riesgo.</p>
-          <span class="chapter-arrow">→</span>
+          <div class="chapter-tag">Contexto & Valor en Riesgo</div>
+          <h3 class="chapter-name">Restock y su situación actual</h3>
+          <p class="chapter-desc">Descripción de la tienda, conteo de 300 pares, diferencia de 28 pares y productos que ofrece.</p>
         </a>
         <a href="#capitulo2" class="chapter-card">
           <div class="chapter-num">02</div>
-          <div class="chapter-tag">Entorno y evidencias</div>
-          <h3 class="chapter-name">Marco Contextual, Entorno Organizacional y Evidencias de Campo</h3>
-          <p class="chapter-desc">Entrevistas y cuestionarios a todo el personal, evidencias fotográficas y diagnóstico de la situación actual.</p>
-          <span class="chapter-arrow">→</span>
+          <div class="chapter-tag">Entorno & Evidencias</div>
+          <h3 class="chapter-name">La empresa y la información recogida</h3>
+          <p class="chapter-desc">Entrevistas, encuestas, fotografías y datos sobre el trabajo actual.</p>
         </a>
         <a href="#capitulo3" class="chapter-card">
           <div class="chapter-num">03</div>
-          <div class="chapter-tag">Stakeholders</div>
-          <h3 class="chapter-name">Gestión Estratégica de Stakeholders</h3>
-          <p class="chapter-desc">Quién decide, quién opera y quién depende del inventario dentro de la empresa: poder, interés, actitud y responsabilidades.</p>
-          <span class="chapter-arrow">→</span>
+          <div class="chapter-tag">Personas involucradas</div>
+          <h3 class="chapter-name">Personas relacionadas con Restock</h3>
+          <p class="chapter-desc">Roles, nivel de poder, interés, expectativas y dificultades actuales del equipo y de los grupos relacionados con la empresa.</p>
         </a>
         <a href="#capitulo4" class="chapter-card">
           <div class="chapter-num">04</div>
-          <div class="chapter-tag">Árbol de problemas</div>
-          <h3 class="chapter-name">Árbol de Problemas: Causas, Problema Central y Efectos</h3>
-          <p class="chapter-desc">De dónde nacen los descuadres y las mermas, con la evidencia de las entrevistas y del cuestionario.</p>
-          <span class="chapter-arrow">→</span>
+          <div class="chapter-tag">Causas del problema</div>
+          <h3 class="chapter-name">Árbol de Problemas: Causas y Efectos</h3>
+          <p class="chapter-desc">Resumen del problema, sus cinco causas principales y los efectos en el negocio.</p>
         </a>
         <a href="#capitulo5" class="chapter-card chapter-card--highlight">
           <div class="chapter-num">05</div>
-          <div class="chapter-tag">Objetivos y alternativas</div>
-          <h3 class="chapter-name">Árbol de Objetivos y Evaluación de Proyectos Alternativos</h3>
-          <p class="chapter-desc">Del problema a la solución: objetivos, acciones y la alternativa que se ejecutará.</p>
-          <span class="chapter-arrow">→</span>
+          <div class="chapter-tag">Objetivos y presupuesto</div>
+          <h3 class="chapter-name">Objetivos y alternativas</h3>
+          <p class="chapter-desc">Presenta metas, alternativas y los costos de equipos y servicios.</p>
+        </a>
+        <a href="#capitulo6" class="chapter-card">
+          <div class="chapter-num">06</div>
+          <div class="chapter-tag">Cronograma y EDT</div>
+          <h3 class="chapter-name">Cronograma del proyecto TI</h3>
+          <p class="chapter-desc">Muestra las actividades, la línea base, el diagrama de Gantt, los riesgos y los hitos.</p>
+        </a>
+        <a href="#capitulo7" class="chapter-card chapter-card--highlight">
+          <div class="chapter-num">07</div>
+          <div class="chapter-tag">Dependencias de actividades</div>
+          <h3 class="chapter-name">Diagrama de red</h3>
+          <p class="chapter-desc">Representa el orden de las actividades y las tareas que deben completarse antes de otras.</p>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ─── VOCES DEL EQUIPO ─── -->
+  <!-- ─── VOCES DE LA OPERACIÓN ─── -->
   <section class="voces-section">
     <div class="container">
-      <p class="section-label">Cuatro voces de la operación</p>
-      <h2 class="section-title">Gerencia, almacén, ventas y sistemas</h2>
-      <p class="section-subtitle">Lo que dijo cada perfil en su entrevista, lo que marcó en la escala Likert y cómo confirma el diagnóstico.</p>
+      <p class="section-label">Lo que dice el equipo en las entrevistas</p>
+      <h2 class="section-title">Gerencia, almacén, ventas y sistemas: cuatro miradas al mismo problema</h2>
       <div class="voces-grid">
         <div class="voz-card">
-          <h3 class="voz-title">Gerencia y Administración</h3>
-          <p class="voz-participantes">Gerente General · Contador / Administrador</p>
-          <div class="voz-instruments">
-            <span class="instrument-tag">Entrevista · 12 preguntas</span>
-            <span class="instrument-tag">18 afirmaciones Likert</span>
-          </div>
+          <div class="voz-perfil">Gerencia y Administración · E1 / E2</div>
+          <p class="voz-quote">“No sabemos cuánto perdemos en realidad. En el último conteo faltaron 28 pares y a S/ 700 promedio son cerca de 20 mil soles. Además, devolver dinero por ventas canceladas en la web nos cuesta otros 20 mil al año.”</p>
+          <div class="voz-meta">Carlos, Gerente General (E1) · Luis, Contador (E2)</div>
         </div>
         <div class="voz-card">
-          <h3 class="voz-title">Almacén e Inventarios</h3>
-          <p class="voz-participantes">Jefe de Almacén · Auxiliar de almacén</p>
-          <div class="voz-instruments">
-            <span class="instrument-tag">Entrevista · 8 preguntas</span>
-            <span class="instrument-tag">18 afirmaciones Likert</span>
-          </div>
+          <div class="voz-perfil">Almacén e Inventarios · E3 / E4</div>
+          <p class="voz-quote">“Contar el almacén toma día y medio con cuatro personas y cerramos la tienda medio día. Las cajas de Jordan 1 y Dunk se confunden a la vista. Y las cuatro llaves circulan sin que nadie anote quién entra.”</p>
+          <div class="voz-meta">Jorge, Jefe de Almacén (E3) · Kevin, Auxiliar (E4)</div>
         </div>
         <div class="voz-card">
-          <h3 class="voz-title">Ventas y Tienda</h3>
-          <p class="voz-participantes">Jefe de Ventas · 2 vendedores</p>
-          <div class="voz-instruments">
-            <span class="instrument-tag">Entrevista · 7 preguntas</span>
-            <span class="instrument-tag">15 afirmaciones Likert</span>
-          </div>
+          <div class="voz-perfil">Ventas y Tienda · E5 / E6</div>
+          <p class="voz-quote">“Confirmar si un par existe físicamente toma entre 5 y 10 minutos por WhatsApp. A veces le cobramos a un cliente en mostrador mientras por Instagram ya le vendieron el mismo par a otro.”</p>
+          <div class="voz-meta">Marcos, Jefe de Ventas (E5) · Renzo, Vendedor (E6)</div>
         </div>
         <div class="voz-card">
-          <h3 class="voz-title">Marketing y E-commerce</h3>
-          <p class="voz-participantes">Especialista en Marketing y e-commerce</p>
-          <div class="voz-instruments">
-            <span class="instrument-tag">Entrevista · 7 preguntas</span>
-            <span class="instrument-tag">15 afirmaciones Likert</span>
-          </div>
+          <div class="voz-perfil">Marketing y Canales Asistidos · E7</div>
+          <p class="voz-quote">“Promocioné 12 pares de un modelo en Instagram y en almacén solo había 9; tuvimos que cancelar pedidos cobrados. Y cuando el internet de fibra se cae, nos quedamos mudos 4 o 5 horas.”</p>
+          <div class="voz-meta">Valeria, Especialista de Marketing y Enlace TI (E7)</div>
         </div>
       </div>
     </div>
   </section>
 
+
+  <!-- ─── CAPÍTULO 1 ─── -->
+  <!-- ─── CAPÍTULO 1 ─── -->
   <!-- ─── CAPÍTULO 1 ─── -->
   <section id="capitulo1" class="chapter-section">
     <div class="container">
       <div class="chapter-header">
         <div class="chapter-header-num">01</div>
         <div class="chapter-header-content">
-          <p class="section-label">Contexto del negocio · PMBOK 7: Entrega y valor</p>
-          <h2 class="section-title">Planteamiento del Proyecto y Contexto del Negocio</h2>
-          <p class="section-subtitle">Quiénes somos, cómo vende Restock, qué problema se observa y qué valor está en riesgo.</p>
+          <p class="section-label">Capítulo 1 · Situación del Negocio y Pérdidas Actuales</p>
+          <h2 class="section-title">El negocio de Restock y sus productos</h2>
+          <p class="section-subtitle">Qué vende Restock, qué ocurre con sus productos y qué afecta a sus ventas.</p>
         </div>
       </div>
 
+      <!-- 1.1 -->
       <div class="subsection">
-        <h3 class="subsection-title">1.1 Información General y Modelo Comercial</h3>
-        <p class="body-text">La empresa opera con la razón social <strong>Restock E.I.R.L.</strong> y el nombre comercial Restock Perú. Es una empresa peruana dedicada a la venta minorista de zapatillas urbanas de colección (sneakers de alta gama), ropa streetwear y accesorios. Trabaja con un modelo híbrido: una tienda física en Lima y ventas digitales por Instagram, WhatsApp y su página web.</p>
-        <p class="body-text">Sus productos tienen alta demanda, precios elevados y lanzamientos en ediciones limitadas, por lo que el stock no admite errores: cada par se identifica por marca, modelo exacto, color y talla. En el último conteo (agosto de 2026) el inventario registrado era de <strong>300 pares y unas 100 prendas y accesorios</strong>, con un precio promedio de <strong>S/ 700 por par</strong>.</p>
-
+        <h3 class="subsection-title">1.1 ¿A qué se dedica Restock y cómo vende?</h3>
+        <p class="body-text">
+          <strong>Restock E.I.R.L.</strong> (conocida como <em>Restock Perú</em>) es una tienda peruana dedicada a la venta de zapatillas urbanas exclusivas y de colección (marcas como Nike Jordan, Dunk, Adidas Yeezy), además de ropa urbana y accesorios. Vende de dos formas:
+        </p>
         <div class="info-table">
           <div class="info-row">
-            <div class="info-key"> Qué vende</div>
-            <div class="info-val">Sneakers exclusivos, streetwear y accesorios de marcas como Nike, Jordan, Adidas y OFF-WHITE.</div>
+            <div class="info-key">Tienda física en Lima</div>
+            <div class="info-val">Local donde los clientes van a probarse las zapatillas, revisar que sean 100% originales y comprar en caja. Hay siempre entre <strong>S/ 35,000 y S/ 55,000</strong> en zapatillas exhibidas en los estantes abiertos.</div>
           </div>
           <div class="info-row">
-            <div class="info-key"> Dónde vende</div>
-            <div class="info-val">Tienda física en Lima y canales digitales: web (restock.com.pe), Instagram (@restock.pe) y WhatsApp.</div>
+            <div class="info-key">Página web y redes sociales</div>
+            <div class="info-val">Ventas por la página (<code>restock.com.pe</code>), Instagram (<code>@restock.pe</code>) y WhatsApp. Los clientes eligen su par y coordinan el pago por transferencia. Se atienden unos <strong>180 pedidos al mes</strong> con una compra promedio de <strong>S/ 780.00</strong> por cliente.</div>
           </div>
           <div class="info-row">
-            <div class="info-key"> Ventas online</div>
-            <div class="info-val">Unos <strong>180 pedidos al mes</strong>, con un ticket promedio de S/ 780.</div>
-          </div>
-          <div class="info-row">
-            <div class="info-key"> Lo que lo hace delicado</div>
-            <div class="info-val">Alto valor unitario por lote, ediciones limitadas y necesidad de identificar cada par por marca, modelo, color y talla.</div>
+            <div class="info-key">La dificultad del producto</div>
+            <div class="info-val">Son zapatillas de colección con tallas únicas (incluyendo números medios como 8.5 o 9.5). Si se pierde una caja o se vende la talla equivocada, el cliente no acepta reemplazos y la venta se cae por completo.</div>
           </div>
         </div>
       </div>
 
+      <!-- 1.2 -->
       <div class="subsection">
-        <h3 class="subsection-title">1.2 Diagnóstico Situacional y Planteamiento del Problema</h3>
+        <h3 class="subsection-title">1.2 ¿Qué problema ocurre hoy en el almacén y la tienda?</h3>
+        <p class="body-text">
+          Todo el stock se anota a mano en un archivo de Excel que varias personas modifican a la vez, además de mensajes sueltos en WhatsApp y papelitos. La tienda maneja unas <strong>300 zapatillas</strong> y <strong>200 prendas y accesorios</strong>.
+        </p>
         <div class="bullet-cards">
           <div class="bullet-card bullet-card--red">
             <div>
-              <h4>Diagnóstico operativo</h4>
-              <p>Existe un descuadre constante entre lo que dicen las hojas de cálculo y lo que realmente hay en los anaqueles. En el último conteo completo se hallaron <strong>475 de los 500 pares registrados (5% de diferencia)</strong>. No se detecta a tiempo si faltan pares, si sobran productos por mal conteo, si una caja quedó mal ubicada o si hubo movimientos no autorizados de mercadería cara.</p>
+              <h4>Faltan zapatillas en los conteos</h4>
+              <p>En el último conteo general, el Excel decía que debían haber <strong>300 pares</strong>. Al contar a mano solo encontraron <strong>262 pares (87.3% del stock)</strong>. Tras buscar por días aparecieron 10 cajas escondidas (<strong>90.7% final comprobado</strong>), pero <strong>28 pares nunca aparecieron (9.3% de pérdida)</strong>.</p>
             </div>
           </div>
           <div class="bullet-card bullet-card--orange">
             <div>
-              <h4>Causas principales</h4>
-              <p>La ubicación y la identificación de cada par dependen de la memoria y la vista del personal; los accesos al almacén y los movimientos de mercadería no dejan registro; el inventario se concilia a mano en hojas de cálculo separadas de la custodia física; y el personal no recibió formación ni procedimientos escritos de control de inventarios.</p>
+              <h4>Almacén desordenado y llaves sin control</h4>
+              <p>Los estantes no tienen letreros ni códigos. Como las cajas de Jordan y Dunk se parecen mucho a simple vista, el personal tarda entre 8 y 12 minutos buscando cada par. Además, <strong>hay 4 llaves del almacén repartidas</strong> y cualquiera entra sin que quede anotado quién sacó una zapatilla.</p>
             </div>
           </div>
           <div class="bullet-card bullet-card--purple">
             <div>
-              <h4>Consecuencias directas</h4>
-              <p>Desfases continuos entre stock físico y registro contable; detección tardía o nula de mermas y sustracciones internas; pérdidas por cancelaciones de compras online sin stock real; y descubrimiento tardío de ingresos no programados o incidentes.</p>
+              <h4>Problemas con las ventas por internet</h4>
+              <p>Como la página web se actualiza a mano recién al final del día, muchas veces un cliente compra en la tienda un par que minutos después otro cliente paga por WhatsApp. Esto obliga a <strong>cancelar entre 9 y 12 pedidos al mes</strong>, provocando reclamos y clientes molestos en redes sociales.</p>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- 1.3 -->
       <div class="subsection">
-        <h3 class="subsection-title">1.3 Justificación, Valor en Riesgo y Caso de Negocio</h3>
-        <div class="risk-grid">
-          <div class="risk-card">
-            <div class="risk-num">S/ 40,000</div>
-            <div class="risk-label">pérdida anual estimada por gerencia</div>
-            <div class="risk-sub">S/ 1,000 en pares que no aparecen + S/ 2,000 en utilidad por ventas canceladas al mes</div>
-          </div>
-          <div class="risk-card">
-            <div class="risk-num">9 – 12</div>
-            <div class="risk-label">pedidos online cancelados al mes</div>
-            <div class="risk-sub">De unos 180 pedidos totales · Ticket promedio S/ 780</div>
-          </div>
-          <div class="risk-card">
-            <div class="risk-num">1.5 días</div>
-            <div class="risk-label">duración del conteo completo</div>
-            <div class="risk-sub">Con 4 personas · Cada 2 meses · La tienda cierra medio día</div>
-          </div>
-          <div class="risk-card">
-            <div class="risk-num">2 días</div>
-            <div class="risk-label">revisión de diferencias al cierre mensual</div>
-            <div class="risk-sub">Tiempo del contador para cuadrar Excel con compras y ventas</div>
-          </div>
-        </div>
-        <div class="supuestos-box">
-          <h4>Supuestos y restricciones</h4>
-          <ul>
-            <li>Presupuesto limitado</li>
-            <li>Personal con experiencia en ventas, sin formación técnica</li>
-            <li>El cambio no puede detener las ventas diarias</li>
-            <li>Sin área de TI definida</li>
-          </ul>
-        </div>
-      </div>
+        <h3 class="subsection-title">1.3 ¿Cuál es el impacto económico anual de estas diferencias?</h3>
+        <p class="body-text">
+          Al revisar la información con gerencia, almacén, ventas y contabilidad, se estimó un impacto anual de <strong>S/ 51,252 con precios promedio</strong> y de <strong>S/ 71,456 con la valorización auditada de los productos</strong>. El cálculo considera mermas, pedidos cancelados, ventas no concretadas en tienda y horas dedicadas a los conteos:
+        </p>
 
+        <!-- Tabla Resumen Simple de Pérdidas -->
+        <div class="pmo-table-wrap">
+          <table class="pmo-table">
+            <thead>
+              <tr>
+                <th>¿En qué se pierde dinero?</th>
+                <th>Cálculo Base</th>
+                <th>Cálculo Real Auditado</th>
+                <th>¿Quién dio la información y cómo se calculó?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Zapatillas perdidas o desaparecidas</strong></td>
+                <td>S/ 19,600</td>
+                <td><strong class="score-high">S/ 25,640</strong></td>
+                <td><strong>E1 (Gerente General) y E3 (Jefe de Almacén):</strong> 28 pares que faltaron en el último conteo, valorizados al precio real de cada modelo (varias son ediciones caras).</td>
+              </tr>
+              <tr>
+                <td><strong>Ganancia perdida y gastos por pedidos web cancelados</strong></td>
+                <td>S/ 20,000</td>
+                <td><strong class="score-high">S/ 33,612</strong></td>
+                <td><strong>E1 (Gerente) y E2 (Contador):</strong> 126 pedidos cancelados al año (9 a 12 al mes). Se pierde la ganancia real de 26.4% más S/ 60.84 en gastos de banco y envíos por cada pedido devuelto.</td>
+              </tr>
+              <tr class="pmo-highlight">
+                <td><strong>Subtotal reconocido por la Gerencia</strong></td>
+                <td><strong>S/ 39,600</strong></td>
+                <td><strong>S/ 59,252</strong></td>
+                <td>Pérdida directa de dinero que golpea la caja del negocio.</td>
+              </tr>
+              <tr>
+                <td><strong>Ventas perdidas en tienda por no encontrar la talla</strong></td>
+                <td>S/ 6,552</td>
+                <td>S/ 7,104</td>
+                <td><strong>E5 (Jefe de Ventas) y E6 (Vendedor):</strong> Clientes que piden probarse una talla, el vendedor demora buscando y el cliente se cansa y se va sin comprar (unos 42 clientes al año).</td>
+              </tr>
+              <tr>
+                <td><strong>Sueldos pagados por horas perdidas en contar y cuadrar</strong></td>
+                <td>S/ 5,100</td>
+                <td>S/ 5,100</td>
+                <td><strong>E2 (Contador), E3 (Almacén) y E4 (Auxiliar):</strong> 60 días de trabajo al año dedicados solo a contar cajas a mano y buscar errores en Excel (a S/ 85 el día de trabajo en planilla).</td>
+              </tr>
+              <tr class="pmo-total">
+                <td>TOTAL DE DINERO EN RIESGO AL AÑO</td>
+                <td>S/ 51,252</td>
+                <td>S/ 71,456</td>
+                <td>Monto total que el proyecto busca recuperar y proteger.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Explicaciones sencillas de cada punto -->
+        <div class="pmo-callout pmo-callout--info">
+          <div class="pmo-callout-header">
+            <span>1. El valor real de los 28 pares que faltaron (S/ 25,640)</span>
+          </div>
+          <div class="pmo-callout-body">
+            <p>Antes se calculaba un precio promedio simple de S/ 700 por par (S/ 19,600). Pero al revisar la lista real con <strong>E3 (Almacén)</strong> y <strong>E2 (Contador)</strong>, vimos que los pares perdidos son modelos caros de colección:</p>
+            <div class="pmo-table-wrap" style="margin: 0.5rem 0;">
+              <table class="pmo-table">
+                <thead>
+                  <tr>
+                    <th>Grupo de zapatillas</th>
+                    <th>Cantidad</th>
+                    <th>Modelos de ejemplo</th>
+                    <th>Precio real</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>Tier 1: Edición Limitada / Colección</strong></td><td>6 pares</td><td>Air Jordan 1 Travis Scott, Lost & Found</td><td>S/ 1,650</td><td>S/ 9,900</td></tr>
+                  <tr><td><strong>Tier 2: Modelos Exclusivos</strong></td><td>10 pares</td><td>Jordan 4 Military Black, Yeezy 350</td><td>S/ 950</td><td>S/ 9,500</td></tr>
+                  <tr><td><strong>Tier 3: Zapatillas Urbanas Regulares</strong></td><td>12 pares</td><td>Nike Dunk Low Panda, Air Force 1</td><td>S/ 520</td><td>S/ 6,240</td></tr>
+                  <tr class="pmo-total"><td>TOTAL REAL AUDITADO</td><td>28 pares</td><td>Precio promedio real: S/ 915.71 por par</td><td>—</td><td>S/ 25,640</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="small-text">Esto demuestra que se perdió un <strong>30.8% más de dinero</strong> de lo que se pensaba inicialmente.</p>
+          </div>
+        </div>
+
+        <div class="pmo-callout pmo-callout--purple">
+          <div class="pmo-callout-header">
+            <span>2. Las pérdidas se repiten en cada conteo</span>
+          </div>
+          <div class="pmo-callout-body">
+            <p>Los conteos se hacen cada 2 meses. Al revisar los registros con <strong>E3 (Jefe de Almacén)</strong>, se comprobó que siempre faltan zapatillas: en el Conteo Bimestral 1 faltaron 8 pares; en el Conteo Bimestral 2 faltaron 9 pares; y en el Conteo Bimestral 3 faltaron 11 pares. En promedio se pierden <strong>9.33 pares por conteo bimestral</strong> (un <strong>3.11% del inventario</strong> cada dos meses). No fue un caso aislado, es una fuga constante.</p>
+          </div>
+        </div>
+
+      <!-- 1.4 -->
       <div class="subsection">
-        <h3 class="subsection-title">1.5 Portafolio de Productos y Alcance del Estudio</h3>
+        <h3 class="subsection-title">1.4 Productos que vende la tienda</h3>
         <div class="product-grid">
           <div class="product-card">
-            <h4>Sneakers de colección</h4>
-            <p>Zapatillas urbanas de alta gama y ediciones limitadas de Nike, Jordan, Adidas y OFF-WHITE. Identificadas por marca, modelo, color y talla.</p>
+            <h4>Zapatillas de Colección</h4>
+            <p>Zapatillas urbanas exclusivas (Nike Jordan, Dunk, Adidas Yeezy). Modelos difíciles de conseguir y tallas únicas.</p>
             <div class="product-stats">
               <span>~300 pares en stock</span>
-              <span>S/ 450 – S/ 5,000</span>
+              <span>De S/ 450 a S/ 5,000</span>
             </div>
           </div>
           <div class="product-card">
-            <h4>Ropa streetwear</h4>
-            <p>Prendas urbanas de marcas de colección.</p>
+            <h4>Ropa Urbana</h4>
+            <p>Poleras, pantalones y camisetas de marcas de colección streetwear.</p>
             <div class="product-stats">
-              <span>~100 unidades</span>
+              <span>~100 prendas</span>
+              <span>De S/ 250 a S/ 1,200</span>
             </div>
           </div>
           <div class="product-card">
-            <h4>Accesorios</h4>
-            <p>Gorras, medias, cordones y otros complementos del rubro streetwear.</p>
+            <h4>Accesorios y Limpieza</h4>
+            <p>Gorras de colección, medias y kits especiales de limpieza y cuidado para zapatillas.</p>
             <div class="product-stats">
-              <span>~100 unidades</span>
+              <span>~100 artículos</span>
+              <span>Ganancia comercial: 45%</span>
             </div>
           </div>
         </div>
@@ -320,15 +339,14 @@
     </div>
   </section>
 
-  <!-- ─── CAPÍTULO 2 ─── -->
-  <section id="capitulo2" class="chapter-section chapter-section--alt">
+<section id="capitulo2" class="chapter-section chapter-section--alt">
     <div class="container">
       <div class="chapter-header">
         <div class="chapter-header-num">02</div>
         <div class="chapter-header-content">
-          <p class="section-label">Entorno y evidencias · PMBOK 7: Adaptar y Navegar</p>
-          <h2 class="section-title">Marco Contextual, Entorno Organizacional y Evidencias de Campo</h2>
-          <p class="section-subtitle">Entorno de la empresa, entrevistas y cuestionarios a todo el personal, evidencias fotográficas y diagnóstico de la situación actual.</p>
+          <p class="section-label">La empresa y su situación actual</p>
+          <h2 class="section-title">La empresa y la información recogida</h2>
+          <p class="section-subtitle">Descripción de la empresa, entrevistas, encuestas y observaciones de la situación actual.</p>
         </div>
       </div>
 
@@ -381,7 +399,7 @@
       </div>
 
       <div class="subsection">
-        <h3 class="subsection-title">2.1 Factores Ambientales de la Empresa (EEFs)</h3>
+        <h3 class="subsection-title">2.1 Condiciones del entorno de la empresa</h3>
         <div class="factors-grid">
           <div class="factors-col">
             <h4 class="factors-subtitle"> Factores Internos</h4>
@@ -425,28 +443,30 @@
             <div class="org-connector-v"></div>
             <div class="org-level2">
               <div class="org-branch">
-                <div class="org-node org-node--l2">Jefe de Ventas</div>
+                <div class="org-node org-node--l2">Contador / Administrador</div>
               </div>
               <div class="org-branch">
                 <div class="org-node org-node--l2">Jefe de Almacén</div>
               </div>
               <div class="org-branch">
-                <div class="org-node org-node--l2">Especialista en Marketing</div>
+                <div class="org-node org-node--l2">Auxiliar de almacén</div>
               </div>
               <div class="org-branch">
-                <div class="org-node org-node--l2">Desarrollador / Analista TI</div>
+                <div class="org-node org-node--l2">Jefe de Ventas</div>
               </div>
               <div class="org-branch">
-                <div class="org-node org-node--l2">Contador / Administrador</div>
+                <div class="org-node org-node--l2">Vendedor de tienda</div>
+              </div>
+              <div class="org-branch">
+                <div class="org-node org-node--l2">Especialista en Marketing y e-commerce</div>
               </div>
             </div>
-            <div class="org-note">+ Asesor legal / contable (externo)</div>
           </div>
         </div>
       </div>
 
       <div class="subsection">
-        <h3 class="subsection-title">2.2 Activos de los Procesos de la Organización</h3>
+        <h3 class="subsection-title">2.2 Documentos y recursos actuales de la empresa</h3>
         <div class="opa-list">
           <div class="opa-item">
             <div><strong>Procesos y control:</strong> El control del inventario depende de un archivo Excel que actualizan el Jefe de Almacén, el Jefe de Ventas y el Contador al cierre del día, con copias distintas del archivo en circulación.</div>
@@ -464,7 +484,7 @@
       </div>
 
       <div class="subsection">
-        <h3 class="subsection-title">2.3 Levantamiento de Información: Entrevistas y Cuestionarios</h3>
+        <h3 class="subsection-title">2.3 Entrevistas y encuestas</h3>
 
         <div class="participants-table">
           <div class="pt-header">
@@ -481,9 +501,22 @@
         <p class="body-text small-text">Entrevistas del 14 al 26 de setiembre de 2026. Cuestionarios impresos del 28 de setiembre al 2 de octubre de 2026.</p>
       </div>
 
+      <div class="subsection">
+        <h3 class="subsection-title">2.3.1 Revisión de los instrumentos</h3>
+        <p class="body-text">La revisión por juicio de expertos de los instrumentos de entrevista y encuesta estará a cargo de dos docentes de la Escuela Profesional de Ingeniería de Sistemas:</p>
+        <div class="opa-list">
+          <div class="opa-item">
+            <div><strong>Wilson Wilmar Candia Quispe</strong><br>Escuela Profesional de Ingeniería de Sistemas<br>Correo: <a href="mailto:wcandia@untels.edu.pe">wcandia@untels.edu.pe</a></div>
+          </div>
+          <div class="opa-item">
+            <div><strong>Moises Cotacallapa Vilca</strong><br>Escuela Profesional de Ingeniería de Sistemas<br>Correo: <a href="mailto:moshe@untels.edu.pe">moshe@untels.edu.pe</a></div>
+          </div>
+        </div>
+      </div>
+
       <!-- ENTREVISTAS -->
       <div class="subsection">
-        <h3 class="subsection-title">2.3.2 Entrevistas por Perfil</h3>
+        <h3 class="subsection-title">2.3.2 Entrevistas al personal</h3>
         <p class="body-text">Consulta el instrumento aplicado para realizar las entrevistas al personal.</p>
         <a class="btn-primary interview-document-button" href="Instrumento%20de%20Entrevista%20-%20Restock%20EIRL.pdf">Abrir instrumento de entrevista (PDF)</a>
 
@@ -568,7 +601,7 @@
             </div>
             <div class="qa-item">
               <div class="qa-q">¿Cada cuánto se cuenta todo el almacén y cuánto tiempo toma?</div>
-              <div class="qa-a">«Cada dos meses; toma día y medio con cuatro personas y la tienda cierra medio día. En agosto había 920 pares en el Excel y encontramos 861; 31 aparecieron después en otra ubicación o talla y 28 no se explicaron.» <em>— E3</em></div>
+              <div class="qa-a">E3 indicó que el conteo se realiza cada dos meses, toma día y medio con cuatro personas y la tienda cierra medio día. <em>— E3</em></div>
             </div>
             <div class="qa-item">
               <div class="qa-q">¿Qué modelos o tallas se confunden con más facilidad?</div>
@@ -641,7 +674,7 @@
 
       <!-- CUESTIONARIOS LIKERT -->
       <div class="subsection">
-        <h3 class="subsection-title">2.3.3 Cuestionarios con Escala Likert</h3>
+        <h3 class="subsection-title">2.3.3 Encuestas al personal</h3>
         <p class="body-text">Cada persona marcó su nivel de acuerdo en una escala de <strong>1 (totalmente en desacuerdo) a 5 (totalmente de acuerdo)</strong>. Un puntaje alto significa que el problema está presente. De 1,00 a 2,33 es nivel bajo · De 2,34 a 3,66 medio · De 3,67 a 5,00 alto.</p>
 
         <div class="likert-tabs" id="likertTabs">
@@ -810,7 +843,7 @@
 
       <!-- RESULTADOS CONSOLIDADOS -->
       <div class="subsection">
-        <h3 class="subsection-title">2.3.4 Resultados Consolidados</h3>
+        <h3 class="subsection-title">2.3.4 Resumen de resultados</h3>
         <div class="consolidated-alert">De las 14 dimensiones de diagnóstico, <strong>13 alcanzan un nivel alto</strong> en la escala Likert; solo cancelaciones y reclamos del perfil de ventas queda en nivel medio. La disposición al cambio es <strong>alta en los cuatro perfiles</strong>.</div>
 
         <div class="results-table">
@@ -852,10 +885,11 @@
 
       <!-- LÍNEA BASE -->
       <div class="subsection">
-        <h3 class="subsection-title">Línea Base de Indicadores</h3>
+        <h3 class="subsection-title">Datos del último conteo</h3>
+        <p class="small-text">El expediente técnico registra 300 pares: 262 encontrados al primer conteo, 10 recuperados después y 28 sin localizar. La referencia actual es de 272 pares de 300 (90.7%).</p>
         <div class="kpi-grid">
-          <div class="kpi-card"><div class="kpi-num">93,6%</div><div class="kpi-label">Exactitud del inventario (agosto 2026)</div><div class="kpi-sub">861 de 920 pares hallados</div></div>
-          <div class="kpi-card"><div class="kpi-num">28 pares</div><div class="kpi-label">Diferencia sin explicar tras el conteo</div><div class="kpi-sub">≈ S/ 19,600</div></div>
+          <div class="kpi-card"><div class="kpi-num">90.7%</div><div class="kpi-label">Exactitud del último conteo documentado</div><div class="kpi-sub">272 de 300 pares</div></div>
+          <div class="kpi-card"><div class="kpi-num">28 pares</div><div class="kpi-label">Diferencia sin explicar tras el conteo</div><div class="kpi-sub">S/ 19,600 a valor base; S/ 25,640 valorizados por modelo</div></div>
           <div class="kpi-card"><div class="kpi-num">3 – 5x</div><div class="kpi-label">Veces por semana que el par del Excel no aparece</div></div>
           <div class="kpi-card"><div class="kpi-num">8 – 12 min</div><div class="kpi-label">Búsqueda de un par mal ubicado</div></div>
           <div class="kpi-card"><div class="kpi-num">9 – 12</div><div class="kpi-label">Pedidos online cancelados al mes</div><div class="kpi-sub">5,0% a 6,7% del total</div></div>
@@ -873,107 +907,194 @@
       <div class="chapter-header">
         <div class="chapter-header-num">03</div>
         <div class="chapter-header-content">
-          <p class="section-label">Stakeholders · PMBOK 7: Involucrarse eficazmente con los interesados</p>
-          <h2 class="section-title">Gestión Estratégica de Stakeholders</h2>
-          <p class="section-subtitle">Quién decide, quién opera y quién depende del inventario dentro de la empresa: poder, interés, actitud y responsabilidades actuales.</p>
+          <p class="section-label">Personas involucradas en la operación actual</p>
+          <h2 class="section-title">Personas relacionadas con Restock</h2>
+          <p class="section-subtitle">Incluye al equipo, a los clientes y a los proveedores relacionados con las actividades de la empresa.</p>
         </div>
       </div>
 
+      <!-- 3.1 -->
       <div class="subsection">
-        <h3 class="subsection-title">3.1 Identificación y Registro de Interesados</h3>
+        <h3 class="subsection-title">3.1 Personas que participan en la operación</h3>
+        <p class="body-text">
+          Se consideran siete personas que trabajan en Restock E.I.R.L. y tres grupos externos relacionados con sus actividades:
+        </p>
         <div class="stakeholders-grid">
           <div class="stk-card">
-            <div class="stk-id">STK-01</div>
-            <h4>Gerente General</h4>
+            <div class="stk-id">E1</div>
+            <h4>Carlos — Gerente General</h4>
             <p class="stk-area">Dirección</p>
-            <p class="stk-role">Decide compras, reposición y seguridad; responde por las pérdidas.</p>
+            <p class="stk-role">Dirige la empresa y toma las principales decisiones comerciales y financieras.</p>
           </div>
           <div class="stk-card">
-            <div class="stk-id">STK-02</div>
-            <h4>Jefe de Almacén</h4>
-            <p class="stk-area">Inventario y operaciones</p>
-            <p class="stk-role">Recibe, ubica y cuenta la mercadería; guarda una de las llaves.</p>
+            <div class="stk-id">E2</div>
+            <h4>Luis — Contador / Administrador</h4>
+            <p class="stk-area">Administración</p>
+            <p class="stk-role">Lleva las cuentas y los registros de compras, ventas y pérdidas de productos.</p>
           </div>
           <div class="stk-card">
-            <div class="stk-id">STK-03</div>
-            <h4>Jefe de Ventas</h4>
-            <p class="stk-area">Ventas y atención al cliente</p>
-            <p class="stk-role">Confirma stock en tienda y actualiza el Excel; guarda una de las llaves.</p>
+            <div class="stk-id">E3</div>
+            <h4>Jorge — Jefe de Almacén</h4>
+            <p class="stk-area">Almacén</p>
+            <p class="stk-role">Se encarga de los productos guardados, recibe mercadería y prepara pedidos. Tiene una de las cuatro llaves del almacén.</p>
           </div>
           <div class="stk-card">
-            <div class="stk-id">STK-04</div>
-            <h4>Contador / Administrador</h4>
-            <p class="stk-area">Administrativa y financiera</p>
-            <p class="stk-role">Concilia el inventario con la contabilidad; guarda una de las llaves.</p>
+            <div class="stk-id">E4</div>
+            <h4>Kevin — Auxiliar de Almacén</h4>
+            <p class="stk-area">Almacén</p>
+            <p class="stk-role">Ordena cajas, busca productos, coloca etiquetas y realiza conteos.</p>
           </div>
           <div class="stk-card">
-            <div class="stk-id">STK-05</div>
-            <h4>Especialista en Marketing</h4>
-            <p class="stk-area">Marketing y e-commerce</p>
-            <p class="stk-role">Publica el stock en la web e Instagram y lanza campañas.</p>
+            <div class="stk-id">E5</div>
+            <h4>Marcos — Jefe de Ventas</h4>
+            <p class="stk-area">Ventas</p>
+            <p class="stk-role">Supervisa la tienda y coordina las ventas y entregas. Tiene una llave del almacén.</p>
           </div>
           <div class="stk-card">
-            <div class="stk-id">STK-06</div>
-            <h4>Personal de tienda</h4>
-            <p class="stk-area">Ventas y atención al cliente</p>
-            <p class="stk-role">Ofrece pares al cliente y confirma disponibilidad por WhatsApp.</p>
+            <div class="stk-id">E6</div>
+            <h4>Renzo — Vendedor de Tienda</h4>
+            <p class="stk-area">Tienda</p>
+            <p class="stk-role">Atiende a los clientes, cobra y consulta la disponibilidad de tallas.</p>
           </div>
           <div class="stk-card">
-            <div class="stk-id">STK-07</div>
-            <h4>Auxiliar de almacén</h4>
-            <p class="stk-area">Inventario y operaciones</p>
-            <p class="stk-role">Busca, acomoda y anota los movimientos físicos.</p>
+            <div class="stk-id">E7</div>
+            <h4>Valeria — Especialista de Marketing</h4>
+            <p class="stk-area">Ventas por internet</p>
+            <p class="stk-role">Actualiza el catálogo de la página web, publica en redes sociales y atiende pedidos por WhatsApp.</p>
+          </div>
+          <div class="stk-card">
+            <div class="stk-id">X1</div>
+            <h4>Clientes</h4>
+            <p class="stk-area">Grupo externo</p>
+            <p class="stk-role">Compran los productos y pueden compartir su experiencia sobre la atención y disponibilidad.</p>
+          </div>
+          <div class="stk-card">
+            <div class="stk-id">X2</div>
+            <h4>Proveedores e Importadores</h4>
+            <p class="stk-area">Abastecimiento</p>
+            <p class="stk-role">Suministran calzado y ropa a la empresa y coordinan la entrega de los pedidos.</p>
+          </div>
+          <div class="stk-card">
+            <div class="stk-id">X3</div>
+            <h4>Proveedores de servicios</h4>
+            <p class="stk-area">Servicios externos</p>
+            <p class="stk-role">Brindan equipos, acceso a internet y ayuda cuando surgen problemas con esos servicios.</p>
           </div>
         </div>
       </div>
 
+      <!-- 3.2 -->
       <div class="subsection">
-        <h3 class="subsection-title">3.2 Matriz de Poder e Interés</h3>
-        <div class="power-interest-matrix">
-          <div class="matrix-yaxis">← Poder →</div>
-          <div class="matrix-grid">
-            <div class="matrix-cell matrix-cell--top-left"><div class="matrix-label">Mantener satisfechos</div><p>— Ninguno —</p></div>
-            <div class="matrix-cell matrix-cell--top-right matrix-cell--highlight"><div class="matrix-label">Gestionar de cerca</div>
-              <div class="matrix-tags"><span class="stk-tag">STK-01 Gerente General</span><span class="stk-tag">STK-02 Jefe de Almacén</span><span class="stk-tag">STK-03 Jefe de Ventas</span><span class="stk-tag">STK-04 Contador</span></div>
-            </div>
-            <div class="matrix-cell matrix-cell--bottom-left"><div class="matrix-label">Monitorear</div><p>— Ninguno —</p></div>
-            <div class="matrix-cell matrix-cell--bottom-right"><div class="matrix-label">Mantener informados</div>
-              <div class="matrix-tags"><span class="stk-tag stk-tag--light">STK-05 Marketing</span><span class="stk-tag stk-tag--light">STK-06 Personal tienda</span><span class="stk-tag stk-tag--light">STK-07 Aux. almacén</span></div>
-            </div>
-          </div>
-          <div class="matrix-xaxis">← Interés →</div>
+        <h3 class="subsection-title">3.2 Matriz de Poder de los Stakeholders</h3>
+        <div class="pmo-table-wrap">
+          <table class="pmo-table">
+            <thead>
+              <tr>
+                <th>Interesado (Código)</th>
+                <th>Poder</th>
+                <th>Interés</th>
+                <th>Actitud</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="pmo-highlight">
+                <td><strong>Gerente General (E1)</strong></td>
+                <td>Alto</td>
+                <td>Alto</td>
+                <td>Favorable</td>
+              </tr>
+              <tr>
+                <td><strong>Contador / Administrador (E2)</strong></td>
+                <td>Medio</td>
+                <td>Alto</td>
+                <td>Favorable</td>
+              </tr>
+              <tr>
+                <td><strong>Jefe de Almacén (E3)</strong></td>
+                <td>Medio</td>
+                <td>Alto</td>
+                <td>Favorable</td>
+              </tr>
+              <tr>
+                <td><strong>Auxiliar de Almacén (E4)</strong></td>
+                <td>Bajo</td>
+                <td>Alto</td>
+                <td>Favorable</td>
+              </tr>
+              <tr>
+                <td><strong>Jefe de Ventas (E5)</strong></td>
+                <td>Medio</td>
+                <td>Alto</td>
+                <td>Favorable</td>
+              </tr>
+              <tr>
+                <td><strong>Vendedor de Tienda (E6)</strong></td>
+                <td>Bajo</td>
+                <td>Alto</td>
+                <td>Favorable</td>
+              </tr>
+              <tr>
+                <td><strong>Especialista de Marketing (E7)</strong></td>
+                <td>Bajo</td>
+                <td>Alto</td>
+                <td>Favorable</td>
+              </tr>
+              <tr>
+                <td><strong>Clientes (X1)</strong></td>
+                <td>Bajo</td>
+                <td>Alto</td>
+                <td>Crítica</td>
+              </tr>
+              <tr>
+                <td><strong>Proveedores de Calzado (X2)</strong></td>
+                <td>Medio</td>
+                <td>Bajo</td>
+                <td>Neutral</td>
+              </tr>
+              <tr>
+                <td><strong>Proveedores de servicios (X3)</strong></td>
+                <td>Medio</td>
+                <td>Medio</td>
+                <td>Favorable</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
+      <!-- 3.3 -->
       <div class="subsection">
-        <h3 class="subsection-title">3.3 Expectativas y Necesidades</h3>
+        <h3 class="subsection-title">3.3 Necesidades y dificultades actuales</h3>
+        <p class="body-text">
+          Se resumen las principales necesidades expresadas por el equipo y las dificultades que enfrenta actualmente en sus labores:
+        </p>
+
         <div class="expectations-list">
-          <div class="exp-item"><div class="exp-stk">Gerente General</div><div class="exp-need">Proteger el inventario, eliminar mermas y asegurar un retorno positivo.</div><div class="exp-issue">No sabe cuánto pierde ni cuándo salió un par faltante.</div></div>
-          <div class="exp-item"><div class="exp-stk">Jefe de Almacén</div><div class="exp-need">Controlar el stock y evitar mermas por ubicación o acceso.</div><div class="exp-issue">Cajas mal ubicadas y llaves sin registro.</div></div>
-          <div class="exp-item"><div class="exp-stk">Jefe de Ventas</div><div class="exp-need">Disponibilidad real y rápida de stock.</div><div class="exp-issue">Ofrece pares que no aparecen, 6 a 8 veces al mes.</div></div>
-          <div class="exp-item"><div class="exp-stk">Contador / Admin.</div><div class="exp-need">Cierres contables sin diferencias inexplicables.</div><div class="exp-issue">Dos días de revisión al mes.</div></div>
-          <div class="exp-item"><div class="exp-stk">Especialista Marketing</div><div class="exp-need">Web y campañas alineadas con el stock real.</div><div class="exp-issue">Publicó 12 pares de un modelo y solo había 9.</div></div>
-          <div class="exp-item"><div class="exp-stk">Personal de tienda</div><div class="exp-need">Confirmar una talla sin demorar al cliente.</div><div class="exp-issue">Esperas de 5 a 10 minutos y pares vendidos dos veces.</div></div>
-          <div class="exp-item"><div class="exp-stk">Auxiliar de almacén</div><div class="exp-need">Encontrar rápido cada par y registrar sin errores.</div><div class="exp-issue">Búsquedas de 8 a 12 minutos y anotaciones en papel.</div></div>
+          <div class="exp-item"><div class="exp-stk">Carlos (E1)</div><div class="exp-need">Conocer las pérdidas de productos y quiénes ingresan al almacén.</div><div class="exp-issue">La estimación base es de S/ 51,252 y el cálculo auditado asciende a S/ 71,456; no queda registro de los ingresos al almacén.</div></div>
+          <div class="exp-item"><div class="exp-stk">Luis (E2)</div><div class="exp-need">Contar con datos claros de compras, ventas y pérdidas de productos.</div><div class="exp-issue">Dedica dos jornadas al mes a revisar diferencias entre los registros.</div></div>
+          <div class="exp-item"><div class="exp-stk">Jorge (E3)</div><div class="exp-need">Encontrar con facilidad los productos y conocer las cantidades disponibles.</div><div class="exp-issue">Busca productos sin una ubicación clara y dedica un día y medio cada dos meses a los conteos.</div></div>
+          <div class="exp-item"><div class="exp-stk">Kevin (E4)</div><div class="exp-need">Evitar repetir anotaciones durante el trabajo.</div><div class="exp-issue">Registra información en papel y algunas anotaciones se repiten.</div></div>
+          <div class="exp-item"><div class="exp-stk">Marcos (E5)</div><div class="exp-need">Saber qué productos están disponibles antes de ofrecerlos.</div><div class="exp-issue">Pierde entre seis y ocho ventas mensuales por productos que no se encuentran.</div></div>
+          <div class="exp-item"><div class="exp-stk">Renzo (E6)</div><div class="exp-need">Atender consultas sobre tallas sin demoras.</div><div class="exp-issue">Los clientes esperan entre cinco y diez minutos y existe preocupación por los productos exhibidos.</div></div>
+          <div class="exp-item"><div class="exp-stk">Valeria (E7)</div><div class="exp-need">Mantener al día la información publicada en la página web y las redes sociales.</div><div class="exp-issue">Dedica tiempo a resolver problemas con los equipos y la conexión, y se cancelan pedidos cuando no hay productos disponibles.</div></div>
         </div>
       </div>
-    </div>
+
+          </div>
   </section>
 
-  <!-- ─── CAPÍTULO 4 ─── -->
-  <section id="capitulo4" class="chapter-section chapter-section--dark">
+<section id="capitulo4" class="chapter-section chapter-section--dark">
     <div class="container">
       <div class="chapter-header">
         <div class="chapter-header-num">04</div>
         <div class="chapter-header-content">
-          <p class="section-label">Árbol de problemas · PMBOK 7: Reconocer y evaluar interacciones del sistema</p>
-          <h2 class="section-title">Árbol de Problemas: Causas, Problema Central y Efectos</h2>
-          <p class="section-subtitle">De dónde nacen los descuadres y las mermas, con la evidencia de las entrevistas y del cuestionario.</p>
+          <p class="section-label">Árbol de problemas</p>
+          <h2 class="section-title">Problemas de inventario: causas y efectos</h2>
+          <p class="section-subtitle">Resumen de las causas observadas y de sus efectos en la empresa.</p>
         </div>
       </div>
 
-      <div class="problem-image-block">
-        <img src="problem_visual.png" alt="Visualización del problema de inventario en Restock" class="chapter-img" />
+      <div class="problem-statement-block">
         <div class="problem-central-card">
           <div class="pc-label"> Problema Central</div>
           <p>Pérdida de trazabilidad y visibilidad en tiempo real del inventario físico, con alta vulnerabilidad ante mermas y accesos no registrados en el almacén de Restock.</p>
@@ -981,12 +1102,12 @@
       </div>
 
       <div class="subsection">
-        <h3 class="subsection-title">4.2 Efectos del Problema</h3>
+        <h3 class="subsection-title">4.1 Efectos del Problema</h3>
         <div class="effects-tree">
           <div class="effect-final">
             <div class="effect-badge effect-badge--final">Efecto Final</div>
             <h4>Pérdida de rentabilidad y de competitividad</h4>
-            <p>La empresa no puede crecer ni ampliar sus canales sin aumentar sus pérdidas. <em>(≈ S/ 40,000 al año)</em></p>
+            <p>La empresa no puede crecer ni ampliar sus canales sin aumentar sus pérdidas. <em>(estimación de Gerencia: ≈ S/ 40,000 al año)</em></p>
           </div>
           <div class="effects-indirect">
             <div class="effect-node effect-node--indirect">
@@ -1003,7 +1124,7 @@
           <div class="effects-direct">
             <div class="effect-node effect-node--direct">
               <div class="effect-badge effect-badge--direct">Efecto Directo 1</div>
-              <p>Desfases continuos entre el stock físico y el registro contable. <em>(59 de 920 pares con diferencia en el último conteo)</em></p>
+              <p>Desfases entre el registro y las existencias físicas. <em>(En el conteo documentado de 300 pares, 28 quedaron sin localizar.)</em></p>
             </div>
             <div class="effect-node effect-node--direct">
               <div class="effect-badge effect-badge--direct">Efecto Directo 2</div>
@@ -1023,70 +1144,64 @@
           <div class="cause-block">
             <div class="cause-header">
               <div class="cause-num">Causa Directa 1</div>
-              <h4>Identificación y ubicación dependen de la memoria y vista del personal</h4>
+              <h4>No se sabe dónde está cada par: identificación y ubicación física deficientes</h4>
               <div class="cause-likert">Likert Almacén A: <strong>4,12</strong></div>
             </div>
             <div class="causes-indirect">
-              <div class="cause-indirect"><span class="ci-num">1.1</span> La mercadería se guarda donde hay espacio, sin posición fija por modelo y talla. <em>(E3 P1 · A1: 3,50)</em></div>
-              <div class="cause-indirect"><span class="ci-num">1.2</span> Los pares de un mismo modelo en tallas o colores contiguos se confunden a simple vista. <em>(E4 P5 · A2: 4,00)</em></div>
-              <div class="cause-indirect"><span class="ci-num">1.3</span> La ubicación de cada caja no se anota, por lo que se busca caja por caja cuando un par no está. <em>(E4 P2: 8-12 min · A3: 4,50)</em></div>
+              <div class="cause-indirect"><span class="ci-num">1.1</span> Los productos se guardan donde hay espacio, sin una ubicación definida por modelo y talla. <em>(E3 P1 · A1: 3,50)</em></div>
+              <div class="cause-indirect"><span class="ci-num">1.2</span> Las cajas de algunos modelos se parecen y se confunden en tallas contiguas. <em>(E4 P5 · A2: 4,00)</em></div>
             </div>
           </div>
           <div class="cause-block">
             <div class="cause-header">
               <div class="cause-num">Causa Directa 2</div>
-              <h4>Los accesos al almacén y movimientos no dejan registro</h4>
-              <div class="cause-likert">Likert Almacén C: <strong>4,50</strong> · Gerencia C: <strong>4,38</strong></div>
+              <h4>No se sabe qué hay en tiempo real: el registro es manual y se actualiza con retraso</h4>
+              <div class="cause-likert">Likert Gerencia B / Almacén B / Marketing B: <strong>4,12 · 4,12 · 4,12</strong></div>
             </div>
             <div class="causes-indirect">
-              <div class="cause-indirect"><span class="ci-num">2.1</span> Cuatro personas tienen llave y nadie anota quién entra ni a qué hora. <em>(E1 P5 · E3 P6 · C2: 5,00)</em></div>
-              <div class="cause-indirect"><span class="ci-num">2.2</span> Los movimientos se avisan por mensajes sueltos de WhatsApp que no siempre llegan al Excel. <em>(Ventas C1: 4,67 · Almacén B2: 4,00)</em></div>
-              <div class="cause-indirect"><span class="ci-num">2.3</span> Nadie rinde cuentas por la custodia del almacén ni por la actualización del inventario. <em>(RACI cap. 3.5)</em></div>
+              <div class="cause-indirect"><span class="ci-num">2.1</span> Las entradas y salidas se anotan en papeles y se pasan al Excel al final del día. <em>(E1 P7 · Almacén B1: 5,00)</em></div>
+              <div class="cause-indirect"><span class="ci-num">2.2</span> Varias personas editan el Excel y se generan versiones distintas sin una revisión común.</div>
+              <div class="cause-indirect"><span class="ci-num">2.3</span> La página web se actualiza manualmente y no consulta una fuente única de existencias. <em>(E7 P1 y P3 · Marketing A1: 4,50)</em></div>
             </div>
           </div>
           <div class="cause-block">
             <div class="cause-header">
               <div class="cause-num">Causa Directa 3</div>
-              <h4>El inventario se controla a mano en hojas de cálculo separadas de la custodia física</h4>
-              <div class="cause-likert">Likert Gerencia B / Almacén B / Marketing B: <strong>4,12 · 4,12 · 4,12</strong></div>
+              <h4>No se sabe quién movió los productos: faltan controles de acceso y vigilancia</h4>
+              <div class="cause-likert">Likert Almacén C: <strong>4,50</strong> · Gerencia C: <strong>4,38</strong></div>
             </div>
             <div class="causes-indirect">
-              <div class="cause-indirect"><span class="ci-num">3.1</span> El Excel se actualiza al cierre del día, por una persona. <em>(E1 P7 · Almacén B1: 5,00)</em></div>
-              <div class="cause-indirect"><span class="ci-num">3.2</span> El conteo completo se hace cada dos meses y toma día y medio con cuatro personas. <em>(E3 P4 · Almacén B4: 4,00)</em></div>
-              <div class="cause-indirect"><span class="ci-num">3.3</span> La web y los canales se actualizan a mano según el Excel, sin verificar el stock físico. <em>(E7 P1 y P3 · Marketing A1: 4,50)</em></div>
+              <div class="cause-indirect"><span class="ci-num">3.1</span> Cuatro personas tienen llave, pero no se registra quién entra ni cuándo. <em>(E1 P5 · E3 P6 · C2: 5,00)</em></div>
+              <div class="cause-indirect"><span class="ci-num">3.2</span> El almacén no cuenta con registro de aperturas, alertas ni vigilancia continua.</div>
+              <div class="cause-indirect"><span class="ci-num">3.3</span> Los productos de alto valor en exhibición no tienen protección contra hurtos.</div>
             </div>
           </div>
           <div class="cause-block">
             <div class="cause-header">
               <div class="cause-num">Causa Directa 4</div>
-              <h4>El personal trabaja sin procedimientos escritos ni formación en control de inventarios</h4>
+              <h4>La operación no cuenta con procedimientos ni capacitación formales</h4>
               <div class="cause-likert">Likert Gerencia D: <strong>4,17</strong> · Almacén D: <strong>4,17</strong></div>
             </div>
             <div class="causes-indirect">
-              <div class="cause-indirect"><span class="ci-num">4.1</span> No hay manuales ni reglas; el oficio se aprende observando a los compañeros más antiguos. <em>(E3 P8 · Almacén D1: 4,50 y D2: 4,50)</em></div>
-              <div class="cause-indirect"><span class="ci-num">4.2</span> No hay un responsable de tecnología con dedicación exclusiva. <em>(E7 P6 · Marketing C1: 4,50)</em></div>
+              <div class="cause-indirect"><span class="ci-num">4.1</span> No hay reglas escritas para recibir, ordenar y despachar productos; el personal aprende observando. <em>(E3 P8 · Almacén D1: 4,50)</em></div>
+              <div class="cause-indirect"><span class="ci-num">4.2</span> El personal no recibe capacitación ni inducción formal en control de existencias. <em>(Almacén D2: 4,50)</em></div>
+            </div>
+          </div>
+          <div class="cause-block">
+            <div class="cause-header">
+              <div class="cause-num">Causa Directa 5</div>
+              <h4>Los datos y el soporte dependen de medios frágiles</h4>
+              <div class="cause-likert">Marketing C: <strong>3,50</strong> (una respuesta, dato referencial)</div>
+            </div>
+            <div class="causes-indirect">
+              <div class="cause-indirect"><span class="ci-num">5.1</span> La información de productos y clientes circula en archivos y chats sin controles ni copias de seguridad regulares.</div>
+              <div class="cause-indirect"><span class="ci-num">5.2</span> No hay una persona asignada con tiempo para atender los problemas de los sistemas.</div>
+              <div class="cause-indirect"><span class="ci-num">5.3</span> La empresa depende de una sola conexión a internet y las interrupciones afectan la confirmación de pedidos.</div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="subsection">
-        <h3 class="subsection-title">4.3 Lectura del Árbol</h3>
-        <div class="reading-cards">
-          <div class="reading-card">
-            <h4>Dónde se concentra el problema</h4>
-            <p>Las causas con mayor respaldo están en la seguridad y custodia (Likert 4,38 y 4,50) y en el registro manual del inventario (4,12 en tres perfiles).</p>
-          </div>
-          <div class="reading-card">
-            <h4>Cómo se encadenan</h4>
-            <p>Como la ubicación no se registra (causa 1) y los movimientos no dejan rastro (causa 2), el Excel (causa 3) difiere de la realidad; al no existir procedimientos (causa 4), cada persona lo corrige a su manera y la diferencia se amplía.</p>
-          </div>
-          <div class="reading-card">
-            <h4>Qué efecto pesa más</h4>
-            <p>Las ventas online canceladas y los pares sin explicar suman unos <strong>S/ 40,000 al año</strong> según la gerencia y son lo que más afecta la rentabilidad.</p>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -1096,214 +1211,610 @@
       <div class="chapter-header">
         <div class="chapter-header-num">05</div>
         <div class="chapter-header-content">
-          <p class="section-label">Objetivos y alternativas · PMBOK 7: Enfocarse en el valor · Adaptar según el contexto</p>
-          <h2 class="section-title">Árbol de Objetivos y Evaluación de Proyectos Alternativos</h2>
-          <p class="section-subtitle">Del problema a la solución: árbol de objetivos, acciones por medio fundamental y la evaluación que define el proyecto a ejecutar.</p>
+          <p class="section-label">Objetivos y costos</p>
+          <h2 class="section-title">Objetivos y alternativas para el inventario</h2>
+          <p class="section-subtitle">Objetivos y acciones para mejorar el control del inventario y la atención al cliente.</p>
         </div>
       </div>
 
-      <div class="solution-img-block">
-        <img src="solution_visual.png" alt="Solución de inventario tecnológico para Restock" class="chapter-img" />
-      </div>
-
+      <!-- 5.1 -->
       <div class="subsection">
-        <h3 class="subsection-title">5.1 Árbol de Objetivos</h3>
-        <p class="body-text">El árbol de objetivos convierte cada elemento del árbol de problemas en su situación deseada. Las cuatro causas directas pasan a ser <strong>medios de primer nivel</strong> y sus causas indirectas, <strong>medios fundamentales</strong>; el problema central se convierte en el <strong>objetivo central</strong>; y los efectos, en los <strong>fines</strong>.</p>
+        <h3 class="subsection-title">5.1 Objetivo central y metas</h3>
+        <p class="body-text">
+          El árbol presenta los resultados esperados y reúne sus metas medibles en un objetivo central, con un plazo común de cumplimiento.
+        </p>
 
         <div class="objectives-tree">
-          <div class="obj-central">
-            <div class="obj-badge">Objetivo Central</div>
-            <p>"Recuperar el control, la trazabilidad y la visibilidad en tiempo real del inventario físico y de los accesos al almacén de Restock E.I.R.L., incrementando la exactitud del stock del 93.6% al 99% y reduciendo los pedidos online cancelados por falta de producto de 9-12 a menos de 1 al mes, mediante la automatización del registro de movimientos y la estandarización de los procedimientos operativos en un plazo de 6 meses."</p>
+          <div class="objective-level-title">Fines (ramas)</div>
+          <div class="objective-card objective-card--final">
+            <strong>Fin último</strong>
+            <p>Impulsar la competitividad y el crecimiento sostenible de Restock E.I.R.L. mediante un mejor control de productos y la seguridad del almacén.</p>
           </div>
-          <div class="obj-grid">
-            <div class="obj-col">
-              <h4 class="obj-col-title">De las causas a los medios</h4>
-              <div class="obj-pair"><div class="obj-problem"> Mercadería guardada donde hay espacio</div><div class="obj-solution"> Posición fija por modelo y talla</div></div>
-              <div class="obj-pair"><div class="obj-problem"> Pares confundidos a simple vista</div><div class="obj-solution"> Pares identificables sin ambigüedad</div></div>
-              <div class="obj-pair"><div class="obj-problem"> Ubicación sin anotar</div><div class="obj-solution"> Ubicación de cada caja registrada</div></div>
-              <div class="obj-pair"><div class="obj-problem"> Accesos y movimientos sin registro</div><div class="obj-solution"> Accesos y movimientos con registro</div></div>
-              <div class="obj-pair"><div class="obj-problem"> Avisos sueltos por WhatsApp</div><div class="obj-solution"> Movimientos registrados en un solo lugar</div></div>
-              <div class="obj-pair"><div class="obj-problem"> Control manual en hojas separadas</div><div class="obj-solution"> Inventario controlado y verificado de forma centralizada</div></div>
-              <div class="obj-pair"><div class="obj-problem"> Personal sin procedimientos ni formación</div><div class="obj-solution"> Personal con procedimientos y formación</div></div>
+          <div class="objective-connector" aria-hidden="true"></div>
+          <div class="objective-grid objective-grid--three">
+            <div class="objective-card objective-card--indirect">
+              <strong>Fin indirecto 1</strong>
+              <p>Agilizar la atención y fortalecer la confianza de los clientes.</p>
             </div>
-            <div class="obj-col">
-              <h4 class="obj-col-title">De los efectos a los fines</h4>
-              <div class="fin-card fin-card--final"><div class="fin-badge">Fin Último</div><p>Rentabilidad y capacidad de crecimiento protegidas</p></div>
-              <div class="fin-card"><div class="fin-badge">Fin Indirecto 1</div><p>Pérdidas por mermas y cancelaciones reducidas al mínimo</p></div>
-              <div class="fin-card"><div class="fin-badge">Fin Indirecto 2</div><p>Clientes satisfechos y buena reputación en web e Instagram</p></div>
-              <div class="fin-card fin-card--direct"><div class="fin-badge">Fin Directo 1</div><p>Stock físico y registro contable coincidentes</p></div>
-              <div class="fin-card fin-card--direct"><div class="fin-badge">Fin Directo 2</div><p>Mermas y sustracciones detectadas de inmediato</p></div>
-              <div class="fin-card fin-card--direct"><div class="fin-badge">Fin Directo 3</div><p>Cancelaciones de ventas online eliminadas</p></div>
+            <div class="objective-card objective-card--indirect">
+              <strong>Fin indirecto 2</strong>
+              <p>Reducir las pérdidas de productos y proteger la rentabilidad.</p>
+            </div>
+            <div class="objective-card objective-card--indirect">
+              <strong>Fin indirecto 3</strong>
+              <p>Tomar mejores decisiones con información clara y actualizada.</p>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="subsection">
-        <h3 class="subsection-title">5.2 Acciones por Medio Fundamental</h3>
-        <div class="actions-table">
-          <div class="at-header"><span>Medio Fundamental</span><span>Código</span><span>Acción</span><span>Tipo</span></div>
-          <div class="at-row"><span>1.1 Posición fija por modelo y talla</span><span class="at-code">A1.1</span><span>Codificar los anaqueles y asignar una posición por modelo y talla.</span><span class="at-type comp">Complementaria</span></div>
-          <div class="at-row"><span>1.2 Pares identificables</span><span class="at-code">A1.2</span><span>Etiquetar cada par y caja con un código por marca, modelo, color y talla.</span><span class="at-type comp">Complementaria</span></div>
-          <div class="at-row at-row--excl"><span>1.3 Ubicación registrada</span><span class="at-code">A1.3a</span><span>Adquirir terminales portátiles rugerizadas (PDAs) con lector de códigos.</span><span class="at-type excl">Excluyente a</span></div>
-          <div class="at-row at-row--excl2"><span></span><span class="at-code">A1.3b</span><span>Usar una aplicación de escaneo en los smartphones del personal.</span><span class="at-type excl2">Excluyente b</span></div>
-          <div class="at-row at-row--excl"><span>2.1 Entradas registradas y avisadas</span><span class="at-code">A2.1a</span><span>Instalar contactos magnéticos, detectores de movimiento y un gateway propio con alertas móviles.</span><span class="at-type excl">Excluyente a</span></div>
-          <div class="at-row at-row--excl2"><span></span><span class="at-code">A2.1b</span><span>Contratar un servicio de alarma monitoreada por terceros con suscripción mensual.</span><span class="at-type excl2">Excluyente b</span></div>
-          <div class="at-row"><span>2.2 Movimientos en un solo lugar</span><span class="at-code">A2.2</span><span>Registrar entradas, salidas y traslados en el sistema en lugar de avisarlos por WhatsApp.</span><span class="at-type comp">Complementaria</span></div>
-          <div class="at-row"><span>2.3 Responsables definidos</span><span class="at-code">A2.3</span><span>Designar al responsable de la custodia del almacén y al de la actualización del inventario.</span><span class="at-type comp">Complementaria</span></div>
-          <div class="at-row"><span>3.1 Inventario único y actualizado</span><span class="at-code">A3.1</span><span>Limpiar y migrar el Excel (ETL) a una plataforma en la nube con tablero y copias de seguridad automáticas.</span><span class="at-type comp">Complementaria</span></div>
-          <div class="at-row"><span>3.2 Conteos cíclicos</span><span class="at-code">A3.2</span><span>Programar conteos por zona en lugar del conteo completo cada dos meses.</span><span class="at-type comp">Complementaria</span></div>
-          <div class="at-row"><span>3.3 Canales sincronizados</span><span class="at-code">A3.3</span><span>Sincronizar el stock físico con restock.com.pe e Instagram.</span><span class="at-type comp">Complementaria</span></div>
-          <div class="at-row"><span>4.1 Manuales y capacitación</span><span class="at-code">A4.1</span><span>Elaborar manuales de procedimientos y capacitar en sitio a todo el personal.</span><span class="at-type comp">Complementaria</span></div>
-          <div class="at-row"><span>4.2 Responsable de TI y soporte</span><span class="at-code">A4.2</span><span>Designar un responsable de TI y contratar soporte preventivo de equipos y red.</span><span class="at-type comp">Complementaria</span></div>
-        </div>
-      </div>
-
-      <div class="subsection">
-        <h3 class="subsection-title">5.3 Proyectos Alternativos</h3>
-        <div class="projects-comparison">
-          <div class="project-card project-card--winner">
-            <div class="project-badge"> Proyecto N.º 1 — SELECCIONADO</div>
-            <h4>PDAs rugerizadas + sensores propios</h4>
-            <div class="project-detail"><span> Captura de datos:</span> A1.3a — Terminales rugerizadas con lector de códigos</div>
-            <div class="project-detail"><span> Vigilancia:</span> A2.1a — Sensores y gateway propios con alertas móviles</div>
-            <div class="project-score">13 puntos</div>
+          <div class="objective-connector" aria-hidden="true"></div>
+          <div class="objective-card objective-card--direct">
+            <strong>Fin directo</strong>
+            <p>Aumentar la disponibilidad de productos, mejorar la exactitud de los registros y reducir la exposición a pérdidas.</p>
           </div>
-          <div class="project-card">
-            <div class="project-badge project-badge--alt">Proyecto N.º 2</div>
-            <h4>Smartphones + alarma monitoreada por terceros</h4>
-            <div class="project-detail"><span> Captura de datos:</span> A1.3b — App de escaneo en smartphones</div>
-            <div class="project-detail"><span> Vigilancia:</span> A2.1b — Servicio de alarma con suscripción mensual</div>
-            <div class="project-score project-score--alt">11 puntos</div>
+          <div class="objective-connector" aria-hidden="true"></div>
+          <div class="objective-central-layout">
+            <div class="obj-central">
+              <div class="obj-badge">Objetivo Central SMART</div>
+              <p>En un plazo máximo de seis meses, Restock E.I.R.L. mejorará el control del inventario y la atención al cliente para alcanzar una exactitud mínima del 99% (como máximo tres pares sin explicación), limitar a 3 al mes las cancelaciones por falta de productos, consultar la disponibilidad en caja en menos de 10 segundos, ubicar un producto en menos de 2 minutos, registrar el 100% de los accesos al almacén y completar el conteo general en medio día o menos.</p>
+            </div>
+            <div class="objective-smart">
+              <strong>Desglose SMART</strong>
+              <p><b>S · Específico:</b> Mejorar el control de productos y la atención.</p>
+              <p><b>M · Medible:</b> Exactitud, cancelaciones, tiempos de consulta y búsqueda, accesos y duración del conteo.</p>
+              <p><b>A · Alcanzable:</b> Con mejor organización, registros y seguimiento.</p>
+              <p><b>R · Relevante:</b> Protege productos, ventas y atención al cliente.</p>
+              <p><b>T · Temporal:</b> En un máximo de seis meses.</p>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div class="subsection">
-        <h3 class="subsection-title">5.4 Evaluación de los Proyectos Alternativos</h3>
-        <p class="body-text">Método de juicio de expertos. Puntaje de 1 a 3 por criterio (3 es lo más favorable).</p>
-        <div class="eval-table">
-          <div class="et-header"><span>Criterio</span><span>Proyecto N.º 1: PDAs + sensores</span><span>Proyecto N.º 2: Smartphones + alarma</span></div>
-          <div class="et-row">
-            <span>Viabilidad técnica</span>
-            <span><strong class="score-high">3 — Alta.</strong> Las PDAs leen etiquetas con fiabilidad y los sensores propios envían datos directos a la plataforma.</span>
-            <span><strong class="score-med">2 — Media.</strong> El escaneo con celulares es menos fiable y la alarma de terceros no entrega datos propios para el tablero.</span>
+          <div class="objective-connector" aria-hidden="true"></div>
+          <div class="objective-level-title">Medios (raíces)</div>
+          <div class="objective-grid objective-grid--three">
+            <div class="objective-card objective-card--means-direct">
+              <strong>Medio directo 1</strong>
+              <p>Ordenar los productos y definir dónde se guardan.</p>
+            </div>
+            <div class="objective-card objective-card--means-direct">
+              <strong>Medio directo 2</strong>
+              <p>Unificar el registro de entradas, ventas y salidas.</p>
+            </div>
+            <div class="objective-card objective-card--means-direct">
+              <strong>Medio directo 3</strong>
+              <p>Mejorar el cuidado del almacén y el control de acceso.</p>
+            </div>
           </div>
-          <div class="et-row">
-            <span>Costo total</span>
-            <span><strong class="score-med">2 — Medio.</strong> Mayor inversión inicial en PDAs y sensores, sin pagos mensuales de vigilancia.</span>
-            <span><strong class="score-med">2 — Medio.</strong> Menor inversión inicial, pero con suscripción mensual permanente.</span>
-          </div>
-          <div class="et-row">
-            <span>Tiempo de implementación</span>
-            <span><strong class="score-med">2 — Medio.</strong> Requiere compra, instalación y calibración de equipos.</span>
-            <span><strong class="score-high">3 — Corto.</strong> Los celulares ya existen y la alarma se contrata.</span>
-          </div>
-          <div class="et-row">
-            <span>Sostenibilidad y adopción</span>
-            <span><strong class="score-high">3 — Alta.</strong> Herramientas dedicadas, sin dependencia de un proveedor de vigilancia, coherentes con el pedido de cambios graduales (Gerencia E3 = 5,00).</span>
-            <span><strong class="score-med">2 — Media.</strong> Depende de un proveedor externo y obliga a usar el celular personal para trabajar.</span>
-          </div>
-          <div class="et-row">
-            <span>Seguridad y trazabilidad</span>
-            <span><strong class="score-high">3 — Alta.</strong> Registros propios de accesos y movimientos que sustentan las mermas ante la administración y SUNAT.</span>
-            <span><strong class="score-med">2 — Media.</strong> Los registros de acceso dependen de un tercero.</span>
-          </div>
-          <div class="et-footer">
-            <span>Total</span>
-            <span class="et-total winner">13 puntos </span>
-            <span class="et-total">11 puntos</span>
+          <div class="objective-connector" aria-hidden="true"></div>
+          <div class="objective-grid objective-grid--six">
+            <div class="objective-card objective-card--means-indirect">
+              <strong>Medio indirecto 1.1</strong>
+              <p>Definir lugares para guardar cada producto.</p>
+            </div>
+            <div class="objective-card objective-card--means-indirect">
+              <strong>Medio indirecto 1.2</strong>
+              <p>Elegir recursos que se ajusten a las necesidades de la empresa.</p>
+            </div>
+            <div class="objective-card objective-card--means-indirect">
+              <strong>Medio indirecto 2.1</strong>
+              <p>Mantener un registro común y actualizado.</p>
+            </div>
+            <div class="objective-card objective-card--means-indirect">
+              <strong>Medio indirecto 2.2</strong>
+              <p>Preparar al personal en prácticas comunes.</p>
+            </div>
+            <div class="objective-card objective-card--means-indirect">
+              <strong>Medio indirecto 3.1</strong>
+              <p>Acordar reglas claras para ingresar y retirar productos.</p>
+            </div>
+            <div class="objective-card objective-card--means-indirect">
+              <strong>Medio indirecto 3.2</strong>
+              <p>Revisar de forma continua el almacén y sus productos.</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="subsection">
-        <h3 class="subsection-title">5.5 Análisis Costo-Beneficio</h3>
-        <p class="body-text">Comparación financiera de las dos alternativas seleccionadas, con proyección a tres años. Los cálculos parten del valor en riesgo del inventario y de las ventas que no se concretan por falta de stock.</p>
-
-        <div class="kpi-grid cb-baseline">
-          <div class="kpi-card"><div class="kpi-num">S/ 40,000</div><div class="kpi-label">Valor en riesgo recuperable al año</div><div class="kpi-sub">S/ 20,000 por mermas y S/ 20,000 por ventas canceladas</div></div>
-          <div class="kpi-card"><div class="kpi-num">S/ 37,000</div><div class="kpi-label">Beneficio tangible anual · Alternativa 1</div><div class="kpi-sub">PDAs rugerizadas y sensores propios</div></div>
-          <div class="kpi-card"><div class="kpi-num">S/ 27,500</div><div class="kpi-label">Beneficio tangible anual · Alternativa 2</div><div class="kpi-sub">Smartphones y alarma monitoreada</div></div>
-        </div>
-        <p class="body-text small-text">La línea base también estima un día y medio de conteo cada dos meses con cuatro personas, además de dos días mensuales dedicados a cierres contables.</p>
-
-        <h4 class="cb-heading">Inversión inicial y costos operativos</h4>
-        <div class="cb-table-wrap">
-          <table class="cb-table">
-            <thead><tr><th>Concepto</th><th>Alternativa 1<br>PDAs + sensores propios</th><th>Alternativa 2<br>Smartphones + alarma</th></tr></thead>
+        <div class="pmo-table-wrap">
+          <table class="pmo-table">
+            <thead>
+              <tr>
+                <th>Indicador</th>
+                <th>Situación actual</th>
+                <th>Importancia para la empresa</th>
+              </tr>
+            </thead>
             <tbody>
-              <tr><td>Dispositivos de captura</td><td>S/ 3,600</td><td>S/ 0</td></tr>
-              <tr><td>Seguridad física y accesos IoT</td><td>S/ 1,800</td><td>S/ 900</td></tr>
-              <tr><td>Etiquetado e infraestructura del almacén</td><td>S/ 1,400</td><td>S/ 1,400</td></tr>
-              <tr><td>Software cloud, base de datos y ETL</td><td>S/ 5,500</td><td>S/ 5,500</td></tr>
-              <tr><td>Capacitación y gestión del cambio</td><td>S/ 1,200</td><td>S/ 1,200</td></tr>
-              <tr class="cb-total"><td>Inversión inicial (CAPEX)</td><td>S/ 13,500</td><td>S/ 9,000</td></tr>
-              <tr><td>Hosting cloud y backups automáticos (anual)</td><td>S/ 1,800</td><td>S/ 1,800</td></tr>
-              <tr><td>Mantenimiento y consumibles (anual)</td><td>S/ 1,400</td><td>S/ 1,400</td></tr>
-              <tr><td>Monitoreo externo (anual)</td><td>S/ 0</td><td>S/ 3,600</td></tr>
-              <tr class="cb-total"><td>Costo operativo anual (OPEX)</td><td>S/ 3,200</td><td>S/ 6,800</td></tr>
+              <tr class="pmo-highlight">
+                <td><strong>Exactitud del inventario</strong></td>
+                <td>90.7% (272 de 300; 87.3% en el conteo inicial)</td>
+                <td>Permite conocer si los registros coinciden con los productos disponibles.</td>
+              </tr>
+              <tr>
+                <td><strong>Cancelaciones de pedidos online por falta de stock</strong></td>
+                <td>9 a 12 pedidos al mes</td>
+                <td>Afectan las ventas y la experiencia de los clientes.</td>
+              </tr>
+              <tr>
+                <td><strong>Tiempo para consultar disponibilidad en caja</strong></td>
+                <td>5 a 10 minutos (por WhatsApp)</td>
+                <td>Influye en el tiempo de atención en la tienda.</td>
+              </tr>
+              <tr>
+                <td><strong>Tiempo para encontrar un producto en almacén</strong></td>
+                <td>8 a 12 minutos</td>
+                <td>Ocupa parte del tiempo destinado a otras tareas.</td>
+              </tr>
+              <tr>
+                <td><strong>Ingresos al almacén registrados</strong></td>
+                <td>0% (cuatro llaves sin registro)</td>
+                <td>No se puede identificar quién ingresó ni a qué hora.</td>
+              </tr>
+              <tr>
+                <td><strong>Duración del conteo general de productos</strong></td>
+                <td>Un día y medio, con cuatro personas</td>
+                <td>Requiere varias personas y afecta la atención de la tienda.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 5.2 -->
+      <div class="subsection">
+        <h3 class="subsection-title">5.2 Acciones para alcanzar los objetivos</h3>
+        <p class="body-text">
+          Para alcanzar los objetivos se formulan acciones técnicas, clasificadas en <strong>excluyentes</strong> (decisiones tecnológicas de arquitectura) y <strong>complementarias</strong> (indispensables en cualquier escenario):
+        </p>
+        <div class="pmo-table-wrap">
+          <table class="pmo-table">
+            <thead>
+              <tr>
+                <th>Medio Fundamental</th>
+                <th>Código</th>
+                <th>Acción Propuesta</th>
+                <th>Carácter</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>M-1.1 Posición codificada</td><td>A1.1</td><td>Zonificación física e instalación de señalética Pasillo-Estante-Nivel</td><td>Complementaria</td></tr>
+              <tr><td>M-1.2 Identificación unívoca</td><td>A1.2</td><td>Etiquetado individual con códigos 2D DataMatrix (marca, silueta, colorway, talla, serial)</td><td>Complementaria</td></tr>
+              <tr class="pmo-highlight"><td>M-2.1 Captura digital en sitio</td><td>A2.1a</td><td>Pistolas lectoras 2D inalámbricas industriales de alta velocidad (Zebra DS2278)</td><td><strong>Excluyente (a)</strong></td></tr>
+              <tr><td>M-2.1 Captura digital en sitio</td><td>A2.1b</td><td>Aplicación móvil de escaneo mediante la cámara de smartphones personales</td><td><strong>Excluyente (b)</strong></td></tr>
+              <tr><td>M-2.2 Base de datos única</td><td>A2.2</td><td>Migración de Excel a software COTS SaaS omnicanal con base de datos en la nube</td><td>Complementaria</td></tr>
+              <tr><td>M-2.3 Consulta omnicanal</td><td>A2.3</td><td>Sincronización API web/Instagram y consulta en caja en menos de 10 segundos</td><td>Complementaria</td></tr>
+              <tr class="pmo-highlight"><td>M-3.1 Control de acceso</td><td>A3.1a</td><td>Cerradura inteligente biométrica/RFID con bitácora digital auditable de aperturas</td><td><strong>Excluyente (a)</strong></td></tr>
+              <tr><td>M-3.1 Control de acceso</td><td>A3.1b</td><td>Cerradura convencional con cuaderno físico de firmas y control manual de llaves</td><td><strong>Excluyente (b)</strong></td></tr>
+              <tr class="pmo-highlight"><td>M-3.2 Monitoreo de almacén</td><td>A3.2a</td><td>Sensores magnéticos IoT propios en puertas con alertas push directas al smartphone</td><td><strong>Excluyente (a)</strong></td></tr>
+              <tr><td>M-3.2 Monitoreo de almacén</td><td>A3.2b</td><td>Servicio de central receptora de alarmas monitoreada por empresa de seguridad externa</td><td><strong>Excluyente (b)</strong></td></tr>
+              <tr><td>M-3.2 Verificación visual</td><td>A3.2c</td><td>Kit de 4 cámaras IP de alta resolución PoE y NVR con grabación continua para auditoría forense</td><td>Complementaria</td></tr>
+              <tr class="pmo-highlight"><td>M-3.3 Seguridad en tienda</td><td>A3.3a</td><td>Pedestales antihurto EAS acustomagnéticos (AM 58 kHz) y hard tags en calzado exhibido</td><td><strong>Excluyente (a)</strong></td></tr>
+              <tr><td>M-3.3 Seguridad en tienda</td><td>A3.3b</td><td>Vitrinas cerradas con llave mecánica para exhibición de calzado en mostrador</td><td><strong>Excluyente (b)</strong></td></tr>
+              <tr><td>M-4.1 Estandarización</td><td>A4.1</td><td>Elaboración de Procedimientos Operativos Estandarizados (POE)</td><td>Complementaria</td></tr>
+              <tr><td>M-4.2 Capacitación</td><td>A4.2</td><td>Talleres prácticos de capacitación para los 7 colaboradores (E1 a E7)</td><td>Complementaria</td></tr>
+              <tr><td>M-5.1 Respaldo y datos</td><td>A5.1</td><td>Respaldo cloud diario y política técnica de la Ley N.º 29733 de Protección de Datos</td><td>Complementaria</td></tr>
+              <tr><td>M-5.2 Enlace de TI</td><td>A5.2</td><td>Designación formal de Coordinadora de TI y Datos con bolsa de soporte externo</td><td>Complementaria</td></tr>
+              <tr><td>M-5.3 Contingencia</td><td>A5.3</td><td>Router 4G LTE con conmutación por error (failover) automática ante caídas de fibra</td><td>Complementaria</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 5.3 -->
+      <div class="subsection">
+        <h3 class="subsection-title">5.3 Alternativas para mejorar el control</h3>
+        <p class="body-text">
+          Al combinarse las 4 acciones excluyentes (Captura: 2D vs. Celular; Acceso: Biometría vs. Cuaderno; Monitoreo: IoT propio vs. Central externa; Tienda: EAS vs. Vitrinas) surgen formalmente <strong>2⁴ = 16 combinaciones posibles</strong>.
+        </p>
+
+        <div class="bullet-cards">
+          <div class="bullet-card bullet-card--orange">
+            <div>
+              <h4>Alternativa 0 — Línea de Base (No Hacer Nada)</h4>
+              <p>Se mantienen el archivo Excel compartido, la cerradura común con 4 llaves y la ausencia de alarmas en tienda. Inversión inicial de S/ 0, pero perpetúa un <strong>Valor en Riesgo de S/ 51,252 al año</strong> (S/ 153,756 en el horizonte de 3 años sin descontar).</p>
+            </div>
+          </div>
+          <div class="bullet-card bullet-card--purple">
+            <div>
+              <h4>Alternativa 1 — Herramientas propias para el control</h4>
+              <p>Lectores 2D industriales (A2.1a) + Cerradura biométrica/RFID (A3.1a) + Sensores IoT propios (A3.2a) + Sistema EAS acustomagnético (A3.3a), integrando todas las acciones complementarias. Máxima velocidad de captura (&lt; 0.3s) y soberanía operativa sin cuotas mensuales.</p>
+            </div>
+          </div>
+          <div class="bullet-card bullet-card--red">
+            <div>
+              <h4>Alternativa 2 — Baja Tecnología y Tercerización</h4>
+              <p>Escaneo con smartphones personales (A2.1b) + Cuaderno de firmas manual (A3.1b) + Central de alarmas monitoreada por terceros (A3.2b) + Vitrinas cerradas con llave (A3.3b). Menor inversión inicial, pero con una mensualidad permanente que dispara el OPEX.</p>
+            </div>
+          </div>
+          <div class="bullet-card bullet-card--orange">
+            <div>
+              <h4>Alternativa 3 — Intermedia (Smartphones + Seguridad Activa)</h4>
+              <p>Escaneo con smartphones (A2.1b) + Cerradura biométrica (A3.1a) + Sensores IoT propios (A3.2a) + Sistema EAS (A3.3a). Evalúa si prescindir de los lectores 2D genera un ahorro que compense la menor productividad de los vendedores.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pmo-callout pmo-callout--danger">
+          <div class="pmo-callout-header">
+            <span>A.2.6 — Tabla Ejecutiva de Descarte de las 13 Combinaciones Inviables</span>
+          </div>
+          <div class="pmo-callout-body">
+            <p>Se documenta el sustento técnico y operativo por el cual se descartaron las restantes 13 combinaciones resultantes del análisis morfológico de alternativas:</p>
+            <div class="pmo-table-wrap">
+              <table class="pmo-table">
+                <thead>
+                  <tr>
+                    <th>N.º</th>
+                    <th>Combinación Morfológica</th>
+                    <th>Descripción de la Mezcla</th>
+                    <th>Motivo Técnico / Operativo del Descarte</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Comb 2</td><td>A2.1a + A3.1a + A3.2a + A3.3b</td><td>Lectores 2D + Biometría + IoT + Vitrinas con llave</td><td>Incoherencia comercial: alta tecnología en almacén pero experiencia de compra bloqueada en sala por vitrinas que demoran la prueba de calzado.</td></tr>
+                  <tr><td>Comb 3</td><td>A2.1a + A3.1a + A3.2b + A3.3a</td><td>Lectores 2D + Biometría + Central externa + EAS</td><td>Solapamiento de costos: duplica el costo de biometría propia con la cuota mensual de central externa (OPEX inflado innecesariamente).</td></tr>
+                  <tr><td>Comb 4</td><td>A2.1a + A3.1a + A3.2b + A3.3b</td><td>Lectores 2D + Biometría + Central externa + Vitrinas</td><td>Alternativa dominada: combina el alto costo recurrente de la central externa con la ineficiencia operativa de vitrinas en salón.</td></tr>
+                  <tr><td>Comb 5</td><td>A2.1a + A3.1b + A3.2a + A3.3a</td><td>Lectores 2D + Cuaderno firmas + IoT + EAS</td><td>Contradicción flagrante: pistolas láser y sensores IoT de vanguardia conviviendo con un cuaderno de papel vulnerable a firmas falsas.</td></tr>
+                  <tr><td>Comb 6</td><td>A2.1a + A3.1b + A3.2a + A3.3b</td><td>Lectores 2D + Cuaderno + IoT + Vitrinas</td><td>Brecha de trazabilidad: mantiene el almacén a ciegas en accesos y entorpece la atención en sala, anulando la agilidad del escaneo 2D.</td></tr>
+                  <tr><td>Comb 7</td><td>A2.1a + A3.1b + A3.2b + A3.3a</td><td>Lectores 2D + Cuaderno + Central externa + EAS</td><td>Inconsistencia de seguridad: la central no sabe quién entra por el uso de llaves físicas con cuaderno, generando falsas alarmas operativas.</td></tr>
+                  <tr><td>Comb 8</td><td>A2.1a + A3.1b + A3.2b + A3.3b</td><td>Lectores 2D + Cuaderno + Central externa + Vitrinas</td><td>Solución ineficiente: gasto en lectores 2D desperdiciado por cuellos de botella en cuadernos y búsqueda de llaves de vitrinas.</td></tr>
+                  <tr><td>Comb 10</td><td>A2.1b + A3.1a + A3.2a + A3.3b</td><td>Smartphones + Biometría + IoT + Vitrinas</td><td>Doble fricción: personal desmotivado por usar su celular y clientes esperando por llaves de vitrinas; pérdida de ventas presenciales.</td></tr>
+                  <tr><td>Comb 11</td><td>A2.1b + A3.1a + A3.2b + A3.3a</td><td>Smartphones + Biometría + Central externa + EAS</td><td>Ineficiencia financiera: alto OPEX recurrente por monitoreo externo mientras el escaneo en caja sufre lentitud por uso de cámaras.</td></tr>
+                  <tr><td>Comb 12</td><td>A2.1b + A3.1a + A3.2b + A3.3b</td><td>Smartphones + Biometría + Central externa + Vitrinas</td><td>Inviabilidad operativa: máxima lentitud en caja (&gt; 30 segundos) combinada con sobrecosto recurrente de central externa.</td></tr>
+                  <tr><td>Comb 13</td><td>A2.1b + A3.1b + A3.2a + A3.3a</td><td>Smartphones + Cuaderno + IoT propios + EAS</td><td>Falsa seguridad: el sistema EAS suena en puerta pero no se puede auditar si el hurto fue perpetrado por personal interno con llave mecánica.</td></tr>
+                  <tr><td>Comb 14</td><td>A2.1b + A3.1b + A3.2a + A3.3b</td><td>Smartphones + Cuaderno + IoT propios + Vitrinas</td><td>Alternativa precaria: carece de captura profesional y mantiene la vulnerabilidad total de custodia en almacén.</td></tr>
+                  <tr><td>Comb 15</td><td>A2.1b + A3.1b + A3.2b + A3.3a</td><td>Smartphones + Cuaderno + Central externa + EAS</td><td>Desequilibrio técnico: mercadería protegida con EAS pero stock desfasado en sistema por escaneo lento y cuaderno manual en almacén.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="small-text">Estas tres alternativas se comparan por sus costos y características.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5.4 -->
+      <div class="subsection">
+        <h3 class="subsection-title">5.4 Presupuesto de equipos y servicios</h3>
+        <h4 class="cb-heading">Presupuesto Detallado de Equipamiento y Cotizaciones Formales (con IGV)</h4>
+
+        <div class="pmo-table-wrap" style="margin-bottom: 2rem;">
+          <table class="pmo-table">
+            <thead>
+              <tr>
+                <th>Componente / Equipo</th>
+                <th>Especificación Técnica y Modelo</th>
+                <th>Cant.</th>
+                <th>Costo sin IGV</th>
+                <th>Costo con IGV (18%)</th>
+                <th>Función Operativa en la Solución</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Dispositivos de Captura Rápida</strong></td>
+                <td>Lectores inalámbricos 2D Zebra DS2278 con base de transmisión USB</td>
+                <td>2 und</td>
+                <td>S/ 1,177.97</td>
+                <td><strong>S/ 1,390.00</strong></td>
+                <td>Lectura omnidireccional en almacén y caja; consulta de existencias en &lt; 10s.</td>
+              </tr>
+              <tr>
+                <td><strong>Control de Acceso al Almacén</strong></td>
+                <td>Cerradura biométrica ZKTeco TL400B con huella digital + sensores Sonoff</td>
+                <td>1 kit</td>
+                <td>S/ 840.00</td>
+                <td><strong>S/ 991.20</strong></td>
+                <td>Erradica las 4 llaves físicas; registra bitácora forense de ingresos y alerta en tiempo real.</td>
+              </tr>
+              <tr>
+                <td><strong>Protección Antihurto en Salón</strong></td>
+                <td>Pedestales de seguridad acustomagnéticos (AM) + 500 hard tags tipo pinza</td>
+                <td>1 kit</td>
+                <td>S/ 3,620.00</td>
+                <td><strong>S/ 4,271.60</strong></td>
+                <td>Protege las zapatillas en exhibición (S/ 35k-55k) disuadiendo hurtos en piso de venta.</td>
+              </tr>
+              <tr>
+                <td><strong>Sistema de Etiquetado Térmico</strong></td>
+                <td>Impresora Zebra ZD220t + 5,000 etiquetas autoadhesivas de alta durabilidad</td>
+                <td>1 und</td>
+                <td>S/ 1,100.00</td>
+                <td><strong>S/ 1,298.00</strong></td>
+                <td>Rotulado con código de barras de cada caja de calzado y prenda streetwear.</td>
+              </tr>
+              <tr>
+                <td><strong>Software de Inventario Cloud</strong></td>
+                <td>Suscripción anual a software COTS (Bsale / Odoo) con base de datos en la nube</td>
+                <td>1 lic</td>
+                <td>S/ 1,200.00</td>
+                <td><strong>S/ 1,416.00</strong></td>
+                <td>Centraliza el Kardex contable, elimina el Excel y sincroniza tiendas y canales online.</td>
+              </tr>
+              <tr>
+                <td><strong>Circuito Cerrado de Televisión</strong></td>
+                <td>Kit de 4 cámaras IP PoE Full HD + NVR con almacenamiento de 1TB (30 días)</td>
+                <td>1 kit</td>
+                <td>S/ 1,800.00</td>
+                <td><strong>S/ 2,124.00</strong></td>
+                <td>Monitoreo visual continuo en pasillos de almacén y mostrador de atención.</td>
+              </tr>
+              <tr>
+                <td><strong>Conectividad Móvil de Respaldo</strong></td>
+                <td>Router 4G LTE TP-Link Archer MR600 con failover automático y chip de datos</td>
+                <td>1 und</td>
+                <td>S/ 350.00</td>
+                <td><strong>S/ 413.00</strong></td>
+                <td>Mantiene la facturación y ventas asistidas durante los 14-18h de corte mensual de fibra.</td>
+              </tr>
+              <tr>
+                <td><strong>Codificación Inicial de Almacén</strong></td>
+                <td>Servicio de rotulado de anaqueles Pasillo-Estante-Nivel y etiquetado base</td>
+                <td>1 serv</td>
+                <td>S/ 510.00</td>
+                <td><strong>S/ 601.80</strong></td>
+                <td>Zonificación física de depósito para agilizar los conteos cíclicos a menos de 2 horas.</td>
+              </tr>
+              <tr>
+                <td><strong>Seguridad de Datos y Roles</strong></td>
+                <td>Configuración de perfiles de usuario, copias de seguridad y Ley N.º 29733</td>
+                <td>1 serv</td>
+                <td>S/ 800.00</td>
+                <td><strong>S/ 944.00</strong></td>
+                <td>Privilegios segmentados y protección de datos personales de clientes sneakerheads.</td>
+              </tr>
+              <tr>
+                <td><strong>Capacitación al Personal</strong></td>
+                <td>Programa de inducción y manuales de procedimiento (POE) para 7 colaboradores</td>
+                <td>1 serv</td>
+                <td>S/ 500.00</td>
+                <td><strong>S/ 590.00</strong></td>
+                <td>Asegura adopción operativa del personal de almacén y mostrador sin resistencia al cambio.</td>
+              </tr>
+              <tr class="pmo-highlight">
+                <td colspan="3"><strong>SUBTOTAL INVERSIÓN DIRECTA</strong></td>
+                <td><strong>S/ 12,110.00</strong></td>
+                <td><strong>S/ 14,289.80</strong></td>
+                <td>Costo total de equipamiento, software y servicios de implantación.</td>
+              </tr>
+              <tr>
+                <td colspan="3"><strong>Contingencia Técnica Imprevistos (10%)</strong></td>
+                <td>S/ 1,211.00</td>
+                <td>S/ 1,428.98</td>
+                <td>Fondo de reserva para imprevistos de cableado, adaptadores o calibración.</td>
+              </tr>
+              <tr class="pmo-total">
+                <td colspan="3">INVERSIÓN TOTAL REQUERIDA (CAPEX)</td>
+                <td>S/ 13,321.00</td>
+                <td>S/ 15,718.78</td>
+                <td>Monto total con IGV incluido.</td>
+              </tr>
             </tbody>
           </table>
         </div>
 
-        <h4 class="cb-heading">Beneficios tangibles estimados por año</h4>
+        <h4 class="cb-heading">Costos iniciales y anuales por alternativa (CAPEX y OPEX)</h4>
         <div class="cb-table-wrap">
-          <table class="cb-table">
-            <thead><tr><th>Beneficio</th><th>Alternativa 1</th><th>Alternativa 2</th></tr></thead>
+          <table class="pmo-table">
+            <thead>
+              <tr>
+                <th>Concepto Presupuestal</th>
+                <th>Alternativa 1 (Integral 2D)</th>
+                <th>Alternativa 2 (Celulares & Terceros)</th>
+                <th>Alternativa 3 (Intermedia)</th>
+              </tr>
+            </thead>
             <tbody>
-              <tr><td>Reducción de mermas y sustracciones</td><td>S/ 17,000</td><td>S/ 12,000</td></tr>
-              <tr><td>Margen recuperado de ventas online</td><td>S/ 16,000</td><td>S/ 13,000</td></tr>
-              <tr><td>Ahorro de horas hombre</td><td>S/ 4,000</td><td>S/ 2,500</td></tr>
-              <tr class="cb-total"><td>Beneficio tangible total</td><td>S/ 37,000</td><td>S/ 27,500</td></tr>
+              <tr><td>Dispositivos de captura (Lectores 2D vs. Celulares)</td><td>S/ 1,390</td><td>S/ 0</td><td>S/ 0</td></tr>
+              <tr><td>Seguridad de almacén (Cerradura biométrica + IoT)</td><td>S/ 840</td><td>S/ 600</td><td>S/ 840</td></tr>
+              <tr><td>Seguridad en tienda (Pedestales EAS vs. Vitrinas)</td><td>S/ 3,620</td><td>S/ 3,500</td><td>S/ 3,620</td></tr>
+              <tr><td>Etiquetado (Impresora Zebra ZD220t + rollos)</td><td>S/ 1,100</td><td>S/ 1,100</td><td>S/ 1,100</td></tr>
+              <tr><td>Software COTS inventario & base de datos cloud</td><td>S/ 1,200</td><td>S/ 1,200</td><td>S/ 1,200</td></tr>
+              <tr><td>Levantamiento inicial y etiquetado físico</td><td>S/ 510</td><td>S/ 510</td><td>S/ 510</td></tr>
+              <tr><td>Videovigilancia (4 cámaras IP PoE + NVR 1TB)</td><td>S/ 1,800</td><td>S/ 1,800</td><td>S/ 1,800</td></tr>
+              <tr><td>Respaldo cloud y política Ley N.º 29733</td><td>S/ 800</td><td>S/ 800</td><td>S/ 800</td></tr>
+              <tr><td>Router 4G LTE con failover de contingencia</td><td>S/ 350</td><td>S/ 350</td><td>S/ 350</td></tr>
+              <tr><td>Capacitación para 7 colaboradores y manuales POE</td><td>S/ 500</td><td>S/ 500</td><td>S/ 500</td></tr>
+              <tr class="pmo-highlight"><td>Subtotal Inversión Directa</td><td>S/ 12,110</td><td>S/ 10,360</td><td>S/ 10,720</td></tr>
+              <tr><td>Contingencia Técnica (10%)</td><td>S/ 1,211</td><td>S/ 1,036</td><td>S/ 1,072</td></tr>
+              <tr class="pmo-total"><td>INVERSIÓN INICIAL TOTAL (CAPEX)</td><td>S/ 13,321</td><td>S/ 11,396</td><td>S/ 11,792</td></tr>
+              <tr><td>Hosting cloud, base de datos y backups diarios</td><td>S/ 1,200 / año</td><td>S/ 1,200 / año</td><td>S/ 1,200 / año</td></tr>
+              <tr><td>Consumibles de etiquetado y mantenimiento</td><td>S/ 600 / año</td><td>S/ 600 / año</td><td>S/ 600 / año</td></tr>
+              <tr><td>Bolsa de soporte técnico externo especializado</td><td>S/ 1,200 / año</td><td>S/ 1,200 / año</td><td>S/ 1,200 / año</td></tr>
+              <tr><td>Plan de datos 4G de contingencia</td><td>S/ 480 / año</td><td>S/ 480 / año</td><td>S/ 480 / año</td></tr>
+              <tr><td>Suscripción a central externa de alarmas</td><td>S/ 0 / año</td><td>S/ 3,000 / año</td><td>S/ 0 / año</td></tr>
+              <tr class="pmo-total"><td>COSTO OPERATIVO ANUAL (OPEX)</td><td>S/ 3,480 / año</td><td>S/ 6,480 / año</td><td>S/ 3,480 / año</td></tr>
             </tbody>
           </table>
         </div>
 
-        <h4 class="cb-heading">Flujo financiero acumulado a tres años</h4>
-        <div class="cb-table-wrap">
-          <table class="cb-table">
-            <thead><tr><th>Rubro</th><th>Alternativa 1</th><th>Alternativa 2</th></tr></thead>
-            <tbody>
-              <tr><td>Beneficios tangibles acumulados</td><td>S/ 111,000</td><td>S/ 82,500</td></tr>
-              <tr><td>CAPEX + OPEX acumulados</td><td>S/ 23,100</td><td>S/ 29,400</td></tr>
-              <tr class="cb-total"><td>Flujo neto acumulado</td><td>+S/ 87,900</td><td>+S/ 53,100</td></tr>
-              <tr><td>Flujo neto en el año 0</td><td>−S/ 13,500</td><td>−S/ 9,000</td></tr>
-              <tr><td>Flujo neto en cada año (1–3)</td><td>+S/ 33,800</td><td>+S/ 20,700</td></tr>
-            </tbody>
-          </table>
-        </div>
+      </div>
+    </div>
+  </section>
 
-        <h4 class="cb-heading">Indicadores de rentabilidad reportados</h4>
-        <div class="cb-table-wrap">
-          <table class="cb-table">
-            <thead><tr><th>Indicador</th><th>Alternativa 1</th><th>Alternativa 2</th><th>Diferencia favorable</th></tr></thead>
-            <tbody>
-              <tr><td>Periodo de recuperación</td><td>~4.8 meses</td><td>~5.2 meses</td><td>Alternativa 1</td></tr>
-              <tr><td>ROI a tres años</td><td>651%</td><td>590%</td><td>+61 puntos porcentuales para la Alternativa 1</td></tr>
-              <tr><td>Relación beneficio / costo</td><td>2.80</td><td>2.41</td><td>Alternativa 1</td></tr>
-              <tr class="cb-total"><td>Beneficio económico neto a tres años</td><td>+S/ 87,900</td><td>+S/ 53,100</td><td>+S/ 34,800 para la Alternativa 1</td></tr>
-            </tbody>
-          </table>
+  <!-- ─── CAPÍTULO 6 ─── -->
+  <section id="capitulo6" class="chapter-section chapter-section--alt">
+    <div class="container">
+      <div class="chapter-header">
+        <div class="chapter-header-num">06</div>
+        <div class="chapter-header-content">
+          <p class="section-label">Cronograma del proyecto TI</p>
+          <h2 class="section-title">Organización del trabajo y fechas</h2>
+          <p class="section-subtitle">Actividades, responsables, duración prevista y línea base del proyecto de control de inventario y seguridad para Restock.</p>
+          <a class="btn-primary" href="Restock_Cronograma_y_EDT_corregido.pdf">Abrir documento completo de cronograma y EDT (PDF)</a>
         </div>
-        <p class="body-text small-text cb-note">Los valores de ROI y de relación beneficio/costo se reproducen tal como se presentan en el documento de análisis. El documento no detalla la fórmula ni los supuestos financieros empleados para calcular la relación B/C.</p>
+      </div>
 
-        <div class="conclusion-card">
-          <div>
-            <h4>Conclusión del capítulo</h4>
-            <p>Se selecciona el <strong>Proyecto Alternativo N.º 1</strong>, terminales rugerizadas con sensores propios, al obtener el mayor puntaje técnico (13 frente a 11) y el mayor beneficio neto proyectado a tres años (+S/ 87,900 frente a +S/ 53,100). Aunque requiere S/ 4,500 más de inversión inicial, ahorra S/ 3,600 anuales en monitoreo, recupera la inversión antes y genera S/ 34,800 más de beneficio neto en el horizonte evaluado.</p>
+      <div class="subsection">
+        <h3 class="subsection-title">6.1 Alcance y estructura de trabajo</h3>
+        <p class="body-text">El proyecto se desarrollará en un máximo de seis meses. Incluye ordenar y etiquetar los productos, configurar el sistema de inventario, instalar los equipos de seguridad, preparar procedimientos y capacitar al personal.</p>
+        <div class="bullet-cards">
+          <div class="bullet-card bullet-card--orange">
+            <div>
+              <h4>Resultados que se deben alcanzar</h4>
+              <p>Exactitud del inventario de al menos 99%, no más de 3 cancelaciones mensuales por falta de existencias, consultas en caja en menos de 10 segundos, búsqueda de productos en menos de 2 minutos, registro del 100% de los accesos y conteo general en medio día o menos.</p>
+            </div>
           </div>
+          <div class="bullet-card bullet-card--purple">
+            <div>
+              <h4>Etapas principales</h4>
+              <p>Gestión del proyecto; ordenamiento del almacén; sistema de inventario; seguridad y control de acceso; procedimientos, personas y soporte; datos y continuidad; puesta en marcha y validación.</p>
+            </div>
+          </div>
+        </div>
+        <figure class="chapter-evidence-card chapter-diagram" style="margin-top: 1.5rem;">
+          <img src="imagenes/edt_restock.png" alt="Diagrama de la estructura de trabajo del proyecto Restock, organizado en siete componentes y sus actividades" loading="lazy" />
+          <figcaption>Estructura de trabajo del proyecto (EDT): siete componentes y sus paquetes de trabajo.</figcaption>
+        </figure>
+        <p class="small-text"><a href="imagenes/edt_restock.png" target="_blank" rel="noopener">Abrir el diagrama de trabajo en tamaño completo</a></p>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">6.2 Actividades y duración prevista</h3>
+        <div class="pmo-table-wrap">
+          <table class="pmo-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Actividad</th>
+                <th>Depende de</th>
+                <th>O / M / P</th>
+                <th>TE</th>
+                <th>Duración</th>
+                <th>Inicio - fin</th>
+                <th>Inicio - fin tardío</th>
+                <th>Holgura</th>
+                <th>Responsable</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="pmo-highlight"><td>T01</td><td>Preparar EDT, cronograma y línea base</td><td>—</td><td>1 / 1 / 2</td><td>1.17</td><td>1 semana</td><td>S1 - S1</td><td>S1 - S1</td><td>0</td><td>Equipo TI</td></tr>
+              <tr><td>T02</td><td>Comprar equipos y servicios</td><td>T01</td><td>2 / 3 / 5</td><td>3.17</td><td>3 semanas</td><td>S2 - S4</td><td>S3 - S5</td><td>1</td><td>Equipo TI / E2</td></tr>
+              <tr><td>T03</td><td>Contar y depurar el inventario inicial</td><td>T01</td><td>1 / 1 / 2</td><td>1.17</td><td>1 semana</td><td>S2 - S2</td><td>S3 - S3</td><td>1</td><td>E3 / E4</td></tr>
+              <tr><td>T04</td><td>Ordenar el almacén e instalar señalización</td><td>T03</td><td>1 / 2 / 4</td><td>2.17</td><td>2 semanas</td><td>S3 - S4</td><td>S4 - S5</td><td>1</td><td>E3 / Equipo TI</td></tr>
+              <tr class="pmo-highlight"><td>T05</td><td>Etiquetar productos con códigos 2D</td><td>T04, T08, T09</td><td>2 / 3 / 5</td><td>3.17</td><td>3 semanas</td><td>S7 - S9</td><td>S7 - S9</td><td>0</td><td>E4 / E3</td></tr>
+              <tr class="pmo-highlight"><td>T06</td><td>Elegir el sistema de inventario</td><td>T01</td><td>1 / 2 / 4</td><td>2.17</td><td>2 semanas</td><td>S2 - S3</td><td>S2 - S3</td><td>0</td><td>Equipo TI / E2</td></tr>
+              <tr class="pmo-highlight"><td>T07</td><td>Contratar y configurar el sistema</td><td>T06</td><td>1 / 2 / 4</td><td>2.17</td><td>2 semanas</td><td>S4 - S5</td><td>S4 - S5</td><td>0</td><td>Equipo TI / proveedor</td></tr>
+              <tr class="pmo-highlight"><td>T08</td><td>Migrar los datos desde Excel</td><td>T07, T03</td><td>1 / 1 / 2</td><td>1.17</td><td>1 semana</td><td>S6 - S6</td><td>S6 - S6</td><td>0</td><td>Equipo TI / E3</td></tr>
+              <tr class="pmo-highlight"><td>T09</td><td>Instalar lectores e impresora de etiquetas</td><td>T07, T02</td><td>1 / 1 / 2</td><td>1.17</td><td>1 semana</td><td>S6 - S6</td><td>S6 - S6</td><td>0</td><td>Equipo TI</td></tr>
+              <tr class="pmo-highlight"><td>T10</td><td>Conectar la web e Instagram con el stock</td><td>T08</td><td>2 / 3 / 5</td><td>3.17</td><td>3 semanas</td><td>S7 - S9</td><td>S7 - S9</td><td>0</td><td>E7 / Equipo TI</td></tr>
+              <tr class="pmo-highlight"><td>T11</td><td>Probar el registro y las consultas</td><td>T05, T10</td><td>1 / 1 / 2</td><td>1.17</td><td>1 semana</td><td>S10 - S10</td><td>S10 - S10</td><td>0</td><td>Equipo TI / E5</td></tr>
+              <tr><td>T12</td><td>Instalar cerradura y sensores</td><td>T02</td><td>1 / 2 / 4</td><td>2.17</td><td>2 semanas</td><td>S5 - S6</td><td>S9 - S10</td><td>4</td><td>Proveedor / E3</td></tr>
+              <tr><td>T13</td><td>Instalar protección antihurto en tienda</td><td>T02</td><td>1 / 2 / 4</td><td>2.17</td><td>2 semanas</td><td>S5 - S6</td><td>S9 - S10</td><td>4</td><td>Proveedor / E5</td></tr>
+              <tr><td>T14</td><td>Instalar cámaras y grabador</td><td>T02</td><td>1 / 1 / 2</td><td>1.17</td><td>1 semana</td><td>S5 - S5</td><td>S10 - S10</td><td>5</td><td>Proveedor</td></tr>
+              <tr class="pmo-highlight"><td>T15</td><td>Preparar los procedimientos de trabajo</td><td>T04, T07</td><td>2 / 3 / 5</td><td>3.17</td><td>3 semanas</td><td>S6 - S8</td><td>S6 - S8</td><td>0</td><td>Equipo TI / E3</td></tr>
+              <tr class="pmo-highlight"><td>T16</td><td>Capacitar a las siete personas</td><td>T15, T09</td><td>1 / 2 / 4</td><td>2.17</td><td>2 semanas</td><td>S9 - S10</td><td>S9 - S10</td><td>0</td><td>Equipo TI</td></tr>
+              <tr><td>T17</td><td>Designar coordinación de TI y soporte</td><td>T07</td><td>1 / 2 / 4</td><td>2.17</td><td>2 semanas</td><td>S6 - S7</td><td>S9 - S10</td><td>3</td><td>E1 / E7</td></tr>
+              <tr><td>T18</td><td>Instalar conexión de respaldo 4G</td><td>T02</td><td>1 / 1 / 2</td><td>1.17</td><td>1 semana</td><td>S5 - S5</td><td>S10 - S10</td><td>5</td><td>Proveedor / E7</td></tr>
+              <tr><td>T19</td><td>Configurar respaldo de datos y accesos</td><td>T07</td><td>1 / 2 / 4</td><td>2.17</td><td>2 semanas</td><td>S6 - S7</td><td>S9 - S10</td><td>3</td><td>Equipo TI / E7</td></tr>
+              <tr class="pmo-highlight"><td>T20</td><td>Operar en paralelo con Excel y el sistema</td><td>T11, T16, T12, T13, T14, T17, T18, T19</td><td>3 / 4 / 6</td><td>4.17</td><td>4 semanas</td><td>S11 - S14</td><td>S11 - S14</td><td>0</td><td>E3, E5, E7 / Equipo TI</td></tr>
+              <tr class="pmo-highlight"><td>T21</td><td>Contar y medir los indicadores</td><td>T20</td><td>1 / 1 / 2</td><td>1.17</td><td>1 semana</td><td>S15 - S15</td><td>S15 - S15</td><td>0</td><td>E3 / E2</td></tr>
+              <tr class="pmo-highlight"><td>T22</td><td>Realizar ajustes y estabilizar el sistema</td><td>T21</td><td>1 / 2 / 4</td><td>2.17</td><td>2 semanas</td><td>S16 - S17</td><td>S16 - S17</td><td>0</td><td>Equipo TI</td></tr>
+              <tr class="pmo-highlight"><td>T23</td><td>Cerrar el proyecto y registrar aprendizajes</td><td>T22</td><td>1 / 1 / 2</td><td>1.17</td><td>1 semana</td><td>S18 - S18</td><td>S18 - S18</td><td>0</td><td>Equipo TI / E1</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small-text">O = optimista; M = más probable; P = pesimista; TE = (O + 4M + P) / 6. La duración programada se expresa en semanas completas. El inicio y fin tardíos indican el margen en que puede moverse una actividad sin atrasar el cierre.</p>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">6.3 Línea base del cronograma del proyecto TI</h3>
+        <p class="body-text">La línea base reúne las fechas aprobadas para comparar el avance real con lo planificado. El trabajo está programado de S1 a S18; S19 a S24 forman una reserva de seis semanas dentro del plazo máximo de seis meses.</p>
+        <p class="small-text"><strong>Técnica aplicada al Gantt:</strong> método de la ruta crítica, con recorridos hacia adelante y hacia atrás para calcular fechas y holguras.</p>
+        <figure class="chapter-evidence-card chapter-diagram">
+          <img src="imagenes/gantt_linea_base_cronograma.png" alt="Diagrama de Gantt del cronograma de Restock, con 23 actividades, ruta crítica, holguras, hitos y reserva hasta la semana 24" loading="lazy" />
+          <figcaption>Diagrama de Gantt de la línea base del cronograma del proyecto TI. Las barras rojas señalan actividades críticas y las amarillas, hitos.</figcaption>
+        </figure>
+        <p class="small-text"><a href="imagenes/gantt_linea_base_cronograma.png" target="_blank" rel="noopener">Abrir el diagrama de Gantt en tamaño completo</a></p>
+        <div class="pmo-table-wrap" style="margin-top: 1.5rem;">
+          <table class="pmo-table">
+            <thead>
+              <tr><th>Elemento</th><th>Acuerdo de la línea base</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Inicio y cierre previstos</td><td>Inicio en S1 y cierre en S18 (18 semanas).</td></tr>
+              <tr><td>Reserva</td><td>Seis semanas, de S19 a S24 (33% del plazo); la Gerencia General autoriza su uso. Aun sumando los tiempos estimados sin redondear de la ruta más larga (cerca de 19.7 semanas), el proyecto termina antes de S24.</td></tr>
+              <tr><td>Actividades críticas e hitos</td><td>14 de las 23 actividades no tienen holgura y se han definido 9 hitos.</td></tr>
+              <tr><td>Aprobación</td><td>La Gerencia General aprueba la línea base al terminar T01, en S1, con participación de E3, E5 y E7.</td></tr>
+              <tr><td>Seguimiento</td><td>Reunión semanal de 30 minutos e informe quincenal sobre avance, hitos, ruta crítica y riesgos.</td></tr>
+              <tr><td>Medición del avance</td><td>Se asigna 0% antes de iniciar, 50% al comenzar y 100% cuando se acepta el resultado. Se revisan semanalmente los siete componentes principales de la EDT.</td></tr>
+              <tr><td>Alertas y tolerancia</td><td>Se revisa semanalmente un indicador de avance planificado frente al real: verde desde 95%, aviso desde 90% y por debajo de 95%, y alerta por debajo de 90%. Se tolera hasta una semana en tareas con holgura; cualquier atraso crítico se informa de inmediato y más de dos semanas acumuladas requiere una solicitud de cambio.</td></tr>
+              <tr><td>Control de cambios</td><td>Los cambios de fechas, alcance o responsables se registran y evalúan por su efecto en la ruta crítica; la Gerencia General los aprueba antes de actualizar la línea base.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">6.4 Riesgos del cronograma</h3>
+        <div class="pmo-table-wrap">
+          <table class="pmo-table">
+            <thead>
+              <tr><th>Riesgo</th><th>Actividades</th><th>Respuesta prevista</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Demora en la entrega de equipos importados</td><td>T02, T09, T12, T13</td><td>Pedir cotización en S1 y elegir un proveedor con equipos disponibles en el país. T02 tiene una semana de holgura; un atraso mayor se cubre con la reserva y se informa a la Gerencia General.</td></tr>
+              <tr><td>El conteo y el etiquetado detienen las ventas</td><td>T03, T05</td><td>Trabajar por zonas, en bloques de medio día o fuera del horario de atención, sin cerrar la tienda.</td></tr>
+              <tr><td>El personal deja de usar el sistema</td><td>T16, T20</td><td>Registrar productos mediante escaneo, practicar con casos reales y acompañar el piloto. Retirar Excel solo al final.</td></tr>
+              <tr><td>Demora en conectar el sistema con la web e Instagram</td><td>T10, T11</td><td>Iniciar después de migrar los datos, solicitar apoyo al proveedor y tener una carga programada como alternativa.</td></tr>
+              <tr><td>Interrupción de internet durante la migración o el piloto</td><td>T08, T10, T20</td><td>Instalar la conexión 4G de respaldo antes de migrar y cargar datos en horarios de menor uso.</td></tr>
+              <tr><td>Poca disponibilidad del personal</td><td>T15, T16</td><td>Capacitar en sesiones de dos horas por turno y reservar tiempo para E3 y E7.</td></tr>
+              <tr><td>Falta de reglas para proteger datos personales</td><td>T19, T20</td><td>Aprobar la política de protección de datos y los permisos de acceso antes del piloto.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">6.5 Ruta crítica e hitos</h3>
+        <p class="body-text">La ruta crítica planificada se completa en 18 semanas; 14 actividades no tienen holgura. Hay cuatro ramas críticas desde T07: T08–T10–T11 (conexión con web e Instagram), T08–T05–T11 (etiquetado tras migrar los datos), T09–T05–T11 (equipos de lectura y etiquetado) y T15–T16 (procedimientos y capacitación). Deben terminar al final de S10 para iniciar el piloto T20 al comienzo de S11; después siguen T21, T22 y T23.</p>
+        <div class="pmo-table-wrap">
+          <table class="pmo-table">
+            <thead>
+              <tr><th>Hito</th><th>Resultado</th><th>Semana</th><th>Mes aproximado</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>H1</td><td>EDT, cronograma y línea base aprobados</td><td>S1</td><td>1</td></tr>
+              <tr><td>H2</td><td>Inventario inicial depurado y almacén organizado por zonas</td><td>S4</td><td>1</td></tr>
+              <tr><td>H3</td><td>Sistema configurado y datos migrados</td><td>S6</td><td>2</td></tr>
+              <tr><td>H4</td><td>Seguridad instalada: acceso, protección antihurto, cámaras y conexión de respaldo</td><td>S6</td><td>2</td></tr>
+              <tr><td>H5</td><td>Etiquetado completo y pruebas aprobadas</td><td>S10</td><td>3</td></tr>
+              <tr><td>H6</td><td>Siete personas capacitadas</td><td>S10</td><td>3</td></tr>
+              <tr><td>H7</td><td>Todo listo para iniciar el piloto; T20 comienza al inicio de S11</td><td>S10</td><td>3</td></tr>
+              <tr><td>H8</td><td>Metas medidas y revisadas</td><td>S15</td><td>4</td></tr>
+              <tr><td>H9</td><td>Cierre y aceptación del proyecto</td><td>S18</td><td>5</td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- ─── CAPÍTULO 7 ─── -->
+  <section id="capitulo7" class="chapter-section">
+    <div class="container">
+      <div class="chapter-header">
+        <div class="chapter-header-num">07</div>
+        <div class="chapter-header-content">
+          <p class="section-label">Diagrama de red</p>
+          <h2 class="section-title">Orden de las actividades del proyecto</h2>
+          <p class="section-subtitle">La red muestra las dependencias entre las 23 actividades del proyecto de inventario y seguridad de Restock.</p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">7.1 Secuencia y dependencias</h3>
+        <p class="body-text">Cada recuadro representa una actividad e indica su duración en semanas. Las flechas muestran qué tareas deben completarse antes de iniciar otras. Las actividades en rojo están en la ruta crítica; las azules tienen holgura según el cronograma.</p>
+        <p class="small-text"><strong>Técnica aplicada al diagrama de red:</strong> método de diagramación por precedencia (PDM/AON); las actividades se muestran en nodos y las flechas indican dependencias de Final a Inicio.</p>
+        <div class="network-diagram-scroll">
+          <img class="network-diagram" src="imagenes/diagrama_red_proyecto_corregido.png" alt="Diagrama de red corregido con 23 actividades, dependencias, duración y ruta crítica del proyecto Restock" loading="lazy" />
+        </div>
+        <p class="small-text"><a href="imagenes/diagrama_red_proyecto_corregido.png" target="_blank" rel="noopener">Abrir el diagrama de red en tamaño completo</a></p>
+      </div>
+    </div>
+  </section>
+
 
   <!-- ─── EQUIPO ─── -->
   <section id="equipo" class="team-section">
     <div class="container">
       <p class="section-label">Quiénes elaboramos este expediente</p>
       <h2 class="section-title">Integrantes del Proyecto</h2>
-      <p class="section-subtitle">Equipo formulador de TI · Estudiantes de Ingeniería de Sistemas · Formulación de Proyectos TI</p>
+      <p class="section-subtitle">Estudiantes de Ingeniería de Sistemas · Lima, Perú</p>
       <div class="team-grid">
         <div class="team-card">
           <div class="team-avatar">CG</div>
@@ -1338,14 +1849,14 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-logo">[RESTOCK.TI]</div>
-      <p>Expediente de Formulación de Proyectos TI · Ingeniería de Sistemas</p>
+      <p>Expediente Técnico de Inversión en TI · Ingeniería de Sistemas · Formulación y Evaluación de Proyectos TI</p>
       <p>Restock E.I.R.L. · restock.com.pe · @restock.pe</p>
-      <p class="footer-small">Nota: Los resultados de entrevistas y cuestionarios son simulados para completar el diseño. Reemplaza por los datos reales antes de entregar.</p>
+      <p class="footer-small">Expediente Técnico de Inversión en TI auditado, recalculado y reestructurado. Datos y cotizaciones con IGV validados con la Gerencia General (E1) y jefaturas operativas de Restock E.I.R.L. Lima, Perú · 2026.</p>
     </div>
   </footer>
 
   <div class="lightbox" id="evidenceLightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada de evidencia" hidden>
-    <button class="lightbox-close" type="button" aria-label="Cerrar imagen">Cerrar <span aria-hidden="true">&times;</span></button>
+    <button class="lightbox-close" type="button" aria-label="Cerrar imagen">Cerrar</button>
     <img class="lightbox-image" alt="" />
   </div>
 
